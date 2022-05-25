@@ -26,7 +26,6 @@ msbuild.err
 msbuild.wrn
 public/
 .hugo_build.lock
-hugo-theme-learn
 
 # Visual Studio
 .vs/
