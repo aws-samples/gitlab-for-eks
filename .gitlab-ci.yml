@@ -1,0 +1,16 @@
+
+image: 
+  name: klakegg/hugo:0.71.1-ext-asciidoctor
+  entrypoint: [""]
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+pages:
+  script:
+    - |
+      echo "$CI_PAGES_URL"
+      hugo --cleanDestinationDir -d public --baseURL "$CI_PAGES_URL"
+  artifacts:
+    paths:
+      - public/

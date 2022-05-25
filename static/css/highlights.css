@@ -1,0 +1,20 @@
+/* Highligh colors for mark element and spans */
+mark, .hlyellow {
+  background-color: rgb(2255, 247, 175);
+}
+
+.hlpink {
+  background-color: rgb(255,191,206);
+}
+
+.hlblue {
+  background-color: rgb(178,205,251);
+}
+
+.hlorange {
+  background-color: rgb(255,215,174);
+}
+
+.hlgreen {
+  background-color: rgb(169, 250, 169);
+}

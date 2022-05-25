@@ -1,0 +1,46 @@
+@startuml
+skinparam shadowing false
+skinparam sequenceBoxBorderColor #black
+skinparam noteBorderColor #white
+skinparam participantBorderColor #white
+skinparam participantBackgroundColor #white
+
+Title "GitLab K8s Agent\nCI/CD Workflow (Tunnel) Configuration"
+box "Runner Network\nEnvironment" #LightGreen
+ participant "<font color=white>Runner" as Runner #Green
+end box
+note right "Any Network\n(Incl. Internet)"
+end note
+box "GitLab Instance\nor GitLab.com SaaS\nNetwork Environment" #Orange
+  participant "<font color=white>GitLab\nRails Service" as GitLabROR #OrangeRed
+  participant "<font color=white>GitLab\nKAS Service" as GitLabKAS #OrangeRed
+end box
+note right "Any Network2\n(Incl. Internet)"
+end note
+box "Kubernetes\nNetwork Environment" #LightBlue
+ participant "<font color=white>GitLab K8s\n<font color=white>Agent" as KubernetesAgent #Blue
+end box
+
+group GitLab Secure App Control Channels
+  group GitLab K8s Agent Channel
+    KubernetesAgent -\ GitLabKAS: (K1) Initiates SSL Tunnel to 443 on \nKAS dedicated subdomain [Network]
+    KubernetesAgent -/ GitLabKAS: (K2) Registered K8s \nAgent Token [Auth]
+    GitLabKAS -/ GitLabROR: (K3) Registered K8s \nAgent Token [Auth]
+    GitLabKAS o->o KubernetesAgent: (G1) GitOps Manifest Polling \n(when used) [Control]
+  end group
+  group Runner Channel
+    Runner -\ GitLabROR: (R1) Runner Initiates SSL \nTunnel to 443 [Network]
+    Runner -/ GitLabROR: (R2) Registered Runner \nToken [Auth]
+    Runner o<-o GitLabROR: (R3) Runner Job (via Runner \nPolling) [Control]
+    Runner -\ GitLabKAS: (R4) Initiates SSL Tunnel to 443 on \nKAS dedicated subdomain [Network]
+  end group
+  group  Secure CI/CD Control Tunnel to Kubernetes
+    note right of GitLabKAS: This Control Flow Uses The K and R \nFlows Of The Channels Above.
+    GitLabROR o->o Runner: (CD1) Runner Job for \nK8s Agent [Control]
+    Runner o->o GitLabKAS: (CD2) K8s Control Proxy \nInitiate [Control]
+    GitLabKAS o->o KubernetesAgent: (CD4) K8s Control KAS Polled \nBy Agent [Control]
+  end group
+end group
+
+center footer \n\nEach Network Environment must provided suitable network routing, DNS and firewall configuration to allow\nthe connection initiation and return conversations indicated in the lines marked with "[Network]" boxes.\n\nThe GitLab Instance, Runners and Kubernetes Agents may all be in the same network environment - the **most complex case** is depicted because \nit would be the norm if using GitLab.com SaaS with self-hosted runners to manage Kubernetes clusters in a variety of other environments.\n\nAll dark orange boxes are part of a GitLab Instance.\n\nOnly the GitLab K8s integration is required for a pure GitOps workflow (depicted as "(G)").
+@enduml
