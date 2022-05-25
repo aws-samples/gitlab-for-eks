@@ -19,7 +19,7 @@ Parameters:
   CloudFrontDistroId:
     Type: String
     Description: CloudFront distribution ID 
-    Default: E1W5JUOQ7G544C
+    Default: XXXXXXXXX
   GitHubRepo:
     Type: String
     Description: repo name
