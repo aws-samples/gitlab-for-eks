@@ -17,11 +17,12 @@ If infrastructure experience of deploying clusters is desired for participants, 
 
 | Item                                                         | Self-Paced           | Instructor Led                                               |
 | ------------------------------------------------------------ | -------------------- | ------------------------------------------------------------ |
+| A Computer<br />**Note:** no changes will need to be done to the laptop and the operating system does not matter. | Participant Provides | Participant Provides                                         |
 | An AWS Account                                               | Participant Provides | Instructor Provides - 1 Per Class                            |
 | A GitLab Classroom Group                                     | Participant Creates  | Instructor Provides - 1 Per Class                            |
 | An EKS Cluster                                               | Participant Creates  | Instructor Provides - 1 Per Class                            |
 | A GitLab User ID                                             | Participant Creates  | Instructor Provides <br />If Not Running from <br />GitLab.com SaaS |
-| Access to Public Projects in https://gitlab.com/guided-explorations/gl-k8s-agent (or exports of these projects if air gapped) | Participant Accesses | Instructor Exports/Iports for Offline Training               |
+| Access to Public Projects in https://gitlab.com/guided-explorations/gl-k8s-agent (or exports of these projects if air gapped) | Participant Accesses | Instructor Exports/Imports for Offline Training              |
 | A GitLab Self-Managed Runner (Easy Button Setup Provided)<br />**Note:** Only needed when using free accounts and/or an ultimate trial on GitLab.com SaaS. Can use existing runners if using licensed users or self-managed GitLab instances. | Participant Creates  | Instructor Provides - 1 Per Class                            |
 
 ## Time Estimates
