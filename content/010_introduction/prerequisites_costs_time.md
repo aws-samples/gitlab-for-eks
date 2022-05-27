@@ -9,7 +9,7 @@ description: "What You Need To Get Started, Cost Estimates, Time Estimates, Name
 
 ## Instructor-Led Notes
 
-If you are the instructor for an instructor-led version of this workshop, please read [Instructor-Led Notes]({{< relref "instructor-led-notes.md" >}})
+If you are the instructor for an instructor-led version of this workshop, please read [Instructor-Led Notes]({{< relref "./instructor-led-notes.md" >}})
 
 ## What You Must Bring
 

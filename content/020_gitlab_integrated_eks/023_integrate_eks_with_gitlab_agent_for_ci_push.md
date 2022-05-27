@@ -12,10 +12,6 @@ When this section is complete you will have integrated the EKS cluster with GitL
 
 While this section isn’t strictly needed for GitOps scenarios, it is how we deploy the ingress as a managed app. Pure GitOps scenarios in production would not require a runner nor this agent configuration to deploy the ingress.{{% /notice %}}
 
-## Visual Overview of Process
-
-{{%expand "Click Here To Expand a Visual Overview of The Process" %}}![](GitlabK8sAgentInstall.png){{% /expand%}}
-
 ## Configure and Install GitLab Kubernetes Agent for CI Push
 
 > **Keyboard Time**: 20 mins, **Automation Wait Time**: 20 mins

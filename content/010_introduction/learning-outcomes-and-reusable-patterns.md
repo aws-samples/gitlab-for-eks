@@ -15,7 +15,7 @@ Learning outcomes are always a trade-off with time, so this table is provided to
 
 | Activity and Outcomes                                        | Keyboard Time | Automation Wait Time | Total Time   | Do As Prep? <br />(Only When Instructor Led) |
 | ------------------------------------------------------------ | ------------- | -------------------- | ------------ | -------------------------------------------- |
-| **Section 2: Shared Resources Deployment Activities** <br />Prep steps can be deployed once per group if EKS deployment and integration is not the main focus. For individuals or those practicing cluster setup and integration, these can be done by each participant as well<br />**Dependencies:** All labs depend on section 2 because it sets up the cluster and integration.<br />**Outcomes**: Deploy EKS with official AWS IaC in a cost-efficient format for training (performed by instructor for instructor-led) | **65 mins**   | **100 mins**         | **165 mins** |                                              |
+| **Section 2: Shared Resources Deployment Activities** <br />Prep steps can be deployed once per group if EKS deployment and integration is not the main focus. For individuals or those practicing cluster setup and integration, these can be done by each participant as well<br />**Dependencies:** All labs depend on section 2 because it sets up the cluster and GitLab integration.<br />**Outcomes**: Deploy EKS with official AWS IaC [in a cost-efficient format for training](#simple--inexpensive-eks-pattern-reusable-for-training) (performed by instructor for instructor-led) | **65 mins**   | **100 mins**         | **165 mins** |                                              |
 | Prep: GitLab Group and AWS Account                           | 20 mins       | 20 mins              |              | Yes                                          |
 | Prep Lab 2.1: Provision a Kubernetes Cluster Using The AWS EKS Quick Start | 5 mins        | 60 mins              |              | Yes                                          |
 | Prep Lab 2.2: Prepare GitLab classgroup and Deploy a Runner  | 20 mins       | 20 mins              |              | Yes                                          |
@@ -52,7 +52,7 @@ For both major scenarios covered by the Kubernetes Agent, this workshop models d
 
 Demonstrates preservation of GitLab Auto DevOps, Auto Dynamic Review Environments and Security Scanning while using GitLab Agent connection method. Does so for **an entire group heirarchy** similar to the former Certificate Connection Method. Done through strategic group placement of Auto DevOps CI/CD Variables and GitLab Agent registration shown here:
 
-![gl-k8s-agent-least-config-least-privilege](gl-k8s-agent-least-config-least-privilege.png)
+![gl-k8s-agent-least-config-least-privilege](../040_gitlab_gitops_via_agent/gl-k8s-agent-least-config-least-privilege.png)
 
 #### GitOps: Auto DevOps, Dynamic Review Environments and Security Scanning
 
@@ -70,7 +70,7 @@ An Application Build Project image is only tagged as “latest” if the pipelin
 
 **Least Configuration** - template repositories for exercises are designed to be self-abstracting so that there is as little manual code updates to the scaffolding as possible before it is ready to run. For instance, the Application Build Project is simply copied to a new sub-group or new name and it is ready to build. The Environment Deployment project requires a manual update to map it to the correct Application Project and it is ready to run. This capability is a result of the above models of Group Level Integration combined with leveraging existing artifact metadata to detect the latest version of an image for incrementing in the Application Build Project and for version update detection in the Environment Deploment Project as depicted here:
 
-![gl-k8s-agent-least-config-least-privilege](gl-k8s-agent-version-tracking-using-existing-metadata.png)
+![gl-k8s-agent-least-config-least-privilege](../040_gitlab_gitops_via_agent/gl-k8s-agent-version-tracking-using-existing-metadata.png)
 
 #### GitOps: Least Privilege
 

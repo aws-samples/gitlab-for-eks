@@ -13,7 +13,11 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{%expand "Click Here To Expand a Visual Overview of The GitLab Environment Deployment Project Pipeline" %}}![GitOps_Part_2_One_or_More_Env_Deploy_Only_Repos2](GitOps_Part_2_One_or_More_Env_Deploy_Only_Repos2.png){{% /expand%}}
+{{%expand "Click Here To Expand a Visual Overview of The GitLab Environment Deployment Project Pipeline" %}}![GitOps_Part_2_One_or_More_Env_Deploy_Only_Repos2](GitOps_Part_2_One_or_More_Env_Deploy_Only_Repos2.png)
+
+> You will be using #2 and #3 in labs.
+
+{{% /expand%}}
 
 1. While in 'yourpersonalgroup' (created in a prior lab) *Click* **New project** (button) and then *Click* **Import project**
 
