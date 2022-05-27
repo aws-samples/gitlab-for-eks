@@ -12,14 +12,14 @@ description: "Important information for instructor-led sessions conducted in cla
 
 ## Pre-doing
 
-* Do the prereading.
+* Do the prereading :)
 * Instructors should perform the entire set of labs before their first delivery:
-  * For full preparation and understanding of what students are expected to perform.
-  * To have a demo system with completed labs to demonstate any additional concepts or overview. (performing the labs creates a demo environment for you)
-  * To have a hot spare environment if something ends up being wrong with the lab environment - this copy could actually be scaled to handle the class if needed.
-* Instructors may want to validate by performing the entire set of labs 3-5 days before **each** delivery:
-  * AWS, GitLab and AWS Quick Starts all undergo continuous updates - occassionally these updates create challenges for labs.
-  * The labs have been constructed to be as version agnostic as possible - but it is not possible to forsee all possible interactions and challenges.
+  1. For full preparation and understanding of what students are expected to perform.
+  2. To have a demo system with completed labs to demonstate any additional concepts or overview. (performing the labs creates a demo environment for you)
+  3. To have a hot spare environment if something ends up being wrong with the lab environment - this copy could actually be scaled to handle the class if needed.
+* 3-5 days before **each** delivery instructors may want to validate the entire set of labs - but especially section 2:
+  1. AWS, GitLab and AWS Quick Starts all undergo continuous updates - occassionally these updates create challenges for labs.
+  2. The labs have been constructed to be as version agnostic as possible - but it is not possible to forsee all possible interactions and challenges.
 
 ## Prereading
 
