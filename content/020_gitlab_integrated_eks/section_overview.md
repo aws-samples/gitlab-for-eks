@@ -33,4 +33,6 @@ Prep steps can be deployed once per group if EKS deployment and integration is n
 
 ### Visual Overview of Agent Registration Process
 
-{{%expand "Click Here To Expand a Visual Overview of The Agent Registration Process" %}}![](./Agent_Registration_for_DevOps_or_Any_CD_Push to_K8s.png){{% /expand%}}
+{{%expand "Click Here To Expand a Visual Overview of The Agent Registration Process" %}}
+
+![Agent_Registration_for_DevOps_or_Any_CD_Push_to_K8s.png](./Agent_Registration_for_DevOps_or_Any_CD_Push_to_K8s.png){{% /expand%}}
