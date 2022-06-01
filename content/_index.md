@@ -13,7 +13,7 @@ This workshop focuses specifically on using the GitLab Kubernetes Agent to accom
 
 ### New GitLab Kubernetes Agent Based Integration
 
-Previous to the availability of the GitLab Kubernetes Agent, GitLab cluster integration was done via an SSL connection to the Kubernetes Control API endpoint for a cluster. All cluster deployment happened as a matter of CI pushes to the cluster API endpoint.
+Previous to the availability of the GitLab Kubernetes Agent, GitLab cluster integration was done via an SSL connection to the Kubernetes Control API endpoint for a cluster using a certificate (Known as “Certificate Connection”). All cluster deployment happened as a matter of CI pushes to the cluster API endpoint. The Kubernetes Cluster endpoint had to be network accessible to whatever GitLab instance was being used - including if using GitLab.com SaaS.
 
 With the creation of the GitLab Kubernetes Agent three key capabilities are gained:
 
@@ -28,7 +28,7 @@ The first part of this workshop creates a GitLab Integrated EKS cluster using Gi
 
 ### A Production Pattern That is Training Ready
 
-[A Production Pattern That is Training Ready]({{< relref "../010_introduction/learning-outcomes-and-reusable-patterns.md#reusable-patterns-for-production-and-training" >}}
+Read more at: [A Production Pattern That is Training Ready]({{< relref "./010_introduction/learning-outcomes-and-reusable-patterns.md#reusable-patterns-for-production-and-training" >}})
 
 ## In This Workshop
 {{% children style="h3" %}}

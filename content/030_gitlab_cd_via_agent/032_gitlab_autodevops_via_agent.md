@@ -17,16 +17,6 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
 This configuration also works for any kind of GitLab CD to the cluster using Helm and kubectl commands, not only Auto DevOps.
 {{% /notice %}}
 
-## Visual Overview of Process
-
-{{%expand "Click Here To Expand a Visual Overview of The Process" %}}![GitlabAutoDevOpsAppInstall](GitlabAutoDevOpsAppInstall.png){{% /expand%}}
-
-{{%expand "Click Here To Expand a Visual Overview of The GitLab Auto DevOps Pipeline" %}}![Auto_DevOps_Continuous_Delivery_OR_Deployment_Using_Trunk_Based_Dev](Auto_DevOps_Continuous_Delivery_OR_Deployment_Using_Trunk_Based_Dev.png){{% /expand%}}
-
-## Outcomes
-
-
-
 ## Configure An Auto DevOps Project
 
 {{% notice warning %}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer DNS Name\>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.

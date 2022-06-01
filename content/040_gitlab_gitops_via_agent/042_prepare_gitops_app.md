@@ -13,8 +13,6 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{%expand "Click Here To Expand a Visual Overview of The GitLab Application Project Pipeline" %}}![GitOps_Part_1_App_Project_Produces_Quality_Tested_Artifacts](GitOps_Part_1_App_Project_Produces_Quality_Tested_Artifacts.png){{% /expand%}}
-
 {{% notice warn %}}
 
 Before continuning make sure to use DNSChecker.com to check if both `the Load Balancer DNS Name` and `Load Balancer IP`**.nip.io** have propagated through global DNS and wait (or troubleshoot) if they have not.
