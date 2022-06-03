@@ -26,6 +26,10 @@ observability:
 
 For common errors and more troubleshooting information visit [Troubleshooting the GitLab agent for Kubernetes](https://docs.gitlab.com/ee/user/clusters/agent/troubleshooting.html)
 
+### Cluster or Agent Gets In an Uncertain State
+
+When the EKS QuickStart was used to build the cluster, you can locate the ASG for the cluster nodes and scale to zero and back to the number that was in place. This takes some time (probably 15 minutes for a 2 node cluster) so it may need to be an absolutely last resort in an active classroom environment.
+
 ## Classroom
 
 ### Scaling Down ASGs

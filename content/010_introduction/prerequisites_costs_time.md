@@ -17,7 +17,7 @@ If infrastructure experience of deploying clusters is desired for participants, 
 
 | Item                                                         | Self-Paced           | Instructor Led                                               |
 | ------------------------------------------------------------ | -------------------- | ------------------------------------------------------------ |
-| A Computer<br />**Note:** no changes will need to be done to the laptop and the operating system does not matter. | Participant Provides | Participant Provides                                         |
+| A Computer<br />**Note:** no changes will need to be done to the laptop and the operating system does not matter as the Web IDE is how all code editing occurs in these workshops. | Participant Provides | Participant Provides                                         |
 | An AWS Account                                               | Participant Provides | Instructor Provides - 1 Per Class                            |
 | A GitLab Classroom Group                                     | Participant Creates  | Instructor Provides - 1 Per Class                            |
 | An EKS Cluster                                               | Participant Creates  | Instructor Provides - 1 Per Class                            |

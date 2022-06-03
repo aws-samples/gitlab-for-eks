@@ -124,7 +124,7 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 > These variables references in KUBE_NAMESPACE ensure that all branches in all projects in the downbound group hiearchy remain unique and therefore isolated on Kubernetes.
 
 {{% notice warning %}}
-AUTO_DEPLOY_IMAGE_VERSION and DAST_AUTO_DEPLOY_IMAGE_VERSION versoin pegging is necessary at this time to prevent errors with deployment. This may be able to be removed when this issue is resolved: [Error when ingressClassName is supported by API but not by the ingress controller](https://gitlab.com/gitlab-org/cluster-integration/auto-deploy-image/-/issues/206)
+AUTO_DEPLOY_IMAGE_VERSION and DAST_AUTO_DEPLOY_IMAGE_VERSION version pegging is necessary at this time to prevent errors with deployment. This may be able to be removed when this issue is resolved: [Error when ingressClassName is supported by API but not by the ingress controller](https://gitlab.com/gitlab-org/cluster-integration/auto-deploy-image/-/issues/206)
 {{% /notice %}}
 
 {{% notice tip %}}
@@ -205,7 +205,7 @@ When this section is complete applications deployed to the EKS cluster using Aut
 
 25. If there are red X's instead of IPs, wait and keep clicking "Search" until you see IP addresses.
 
-26. Copy the DNS name <mark>\<the Load Balancer DNS Name\>.nip.io</mark>
+26. Copy the DNS name <mark>\<the Load Balancer IP\>.nip.io</mark>
 
 27. In the GitLab group 'classgroup' *Click* **Settings > CI/CD**
 
