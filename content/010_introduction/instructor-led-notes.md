@@ -1,6 +1,6 @@
 ---
 title: "Instructor-Led Notes"
-weight: 03
+weight: 04
 chapter: true
 draft: false
 description: "Important information for instructor-led sessions conducted in classrooms."

@@ -1,6 +1,6 @@
 ---
 title: "Tuning and Troubleshooting Guide"
-weight: 04
+weight: 05
 chapter: true
 draft: false
 description: "How to troubleshoot problems and tune classroom setups."

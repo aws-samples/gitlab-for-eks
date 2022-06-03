@@ -1,6 +1,6 @@
 ---
 title: "Reporting Problems or Suggesting Features"
-weight: 05
+weight: 06
 chapter: true
 draft: false
 description: "How to report problems."

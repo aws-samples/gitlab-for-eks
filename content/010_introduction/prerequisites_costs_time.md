@@ -1,6 +1,6 @@
 ---
 title: "Prerequisites and Costs"
-weight: 02
+weight: 03
 chapter: true
 draft: false
 description: "What You Need To Get Started, Cost Estimates, Time Estimates, Name Substitutions."
