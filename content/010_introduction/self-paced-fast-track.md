@@ -8,7 +8,8 @@ description: "Get Started With Zero Extra Reading."
 
 # Self-Paced Learner Fast Track
 
-If you are a self-paced learner you can completely skip the Introduction section and simply do all the labs [Starting in section 2](../020_gitlab_integrated_eks).
+If you are a self-paced learner you can completely skip the Introduction section and simply do all the labs [Starting in section 2]({{< relref "../020_gitlab_integrated_eks" >}})
+
 
 You do need at least an AWS account and a GitLab account on a GitLab instance somewhere to get started.
 
