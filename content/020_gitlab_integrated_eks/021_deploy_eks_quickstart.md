@@ -59,7 +59,7 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
    {{% /notice %}}
 
-9. [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2azuseast2&param_AvailabilityZones=us-east-2b,us-east-2c&param_RemoteAccessCIDR=198.51.100.0/24&param_KeyPairName=spot2azuseast2&param_ConfigSetName=spot-t2-medium-v120-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast2&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard)  (and all others at their default value). You may customize the parameters before submitting the template.
+9. [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2azuseast2&param_AvailabilityZones=us-east-2b,us-east-2c&param_RemoteAccessCIDR=198.51.100.0/24&param_KeyPairName=spot2azuseast2&param_ConfigSetName=spot-t2-medium-v120-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast2&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)  (and all others at their default value). You may customize the parameters before submitting the template.
 
    | CF GUI Name                  | CF Parameter Name  | Value                           |                                                              |
    | ---------------------------- | ------------------ | ------------------------------- | ------------------------------------------------------------ |
@@ -75,6 +75,7 @@ In order to take advantage of spot support and specifying the Kubernetes version
    | Maximum number of nodes      | MaxNumberOfNodes   | 3                               | **IMPORTANT Instructor-Led:** Adjust for class size, about 1 node per 5 students. |
    | Node group type              | NodeGroupType      | Unmanaged                       |                                                              |
    | Node instance family         | NodeInstanceFamily | Standard                        | Auto DevOps will not work on ARM clusters                    |
+   | Cluster Autoscaler           | ClusterAutoScaler  | Enabled                         |                                                              |
 
 10. Verify the above values - **including any name substitutions you have elected to make.** 
 
