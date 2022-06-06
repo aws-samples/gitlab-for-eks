@@ -145,75 +145,89 @@ When this section is complete applications deployed to the EKS cluster using Aut
 
 1. In 'classgroup/cluster-management' *Start* the **Web IDE**.
 
-2. *Edit* the file 'helmfile.yaml'
+2. In the file navigation, *Click* **.gitlab-ci.yml**
+
+3. Under the job ‘**detect-helm2-releases**’, *Locate* the line starting with **image:**
+
+4. At the end of the line change the portion after the colon (“:”) to **v1.6.0**
+
+   > Final result: image: "registry.gitlab.com/gitlab-org/cluster-integration/cluster-applications:v1.6.0”
+
+5. Under the job ‘**apply**’, *Locate* the line starting with **image:**
+
+6. At the end of the line change the portion after the colon (“:”) to **v1.6.0**
+
+   > Final result: image: "registry.gitlab.com/gitlab-org/cluster-integration/cluster-applications:v1.6.0"
+
+7. *Edit* the file 'helmfile.yaml'
 
    > In the following commands ONLY delete the hash character (<mark class="hlpink">#</mark>) character to preserve the needed yaml indentations
 
-3. To enable cert manager with nip.io SSL *Uncomment* the line <mark class="hlgreen">- path: applications/cert-manager/helmfile.yaml</mark>
+8. To enable cert manager with nip.io SSL *Uncomment* the line <mark class="hlgreen">- path: applications/cert-manager/helmfile.yaml</mark>
 
-4. To enable the ingress controller *Uncomment* the line <mark class="hlgreen">- path: applications/ingress/helmfile.yaml</mark>
+9. To enable the ingress controller *Uncomment* the line <mark class="hlgreen">- path: applications/ingress/helmfile.yaml</mark>
 
-5. To configure cert-manager, Edit <mark class="hlgreen">applications/cert-manager/helmfile.yaml</mark>
+10. To configure cert-manager, Edit <mark class="hlgreen">applications/cert-manager/helmfile.yaml</mark>
 
-6. **IMPORTANT**: At the bottom of the file find <mark class="hlgreen">email: example@example.com</mark> and change <mark class="hlgreen">example@example.com</mark> to a valid email address.
+11. **IMPORTANT**: At the bottom of the file find <mark class="hlgreen">email: example@example.com</mark> and change <mark class="hlgreen">example@example.com</mark> to a valid email address.
 
-7. To configure ingress, Edit <mark class="hlgreen">applications/ingress/values.yaml</mark>
+12. To configure ingress, Edit <mark class="hlgreen">applications/ingress/values.yaml</mark>
 
-8. At the bottom add the following (ENSURE that the indenting of <mark class="hlgreen">config:</mark> aligns with <mark class="hlgreen">podAnnotations:</mark> above it)
+13. At the bottom add the following (ENSURE that the indenting of <mark class="hlgreen">config:</mark> aligns with <mark class="hlgreen">podAnnotations:</mark> above it)
 
-   ```
-     config:
-       # pass the X-Forwarded-* headers directly from the upstream
-       use-forwarded-headers: "true"
-   ```
+    ```
+      config:
+        # pass the X-Forwarded-* headers directly from the upstream
+        use-forwarded-headers: "true"
+    ```
 
-9. *Click* **Create commit...**
+14. *Click* **Create commit...**
 
-10. *Select* **Commit to master branch**
+15. *Select* **Commit to master branch**
 
-11. *Click* **Commit**
+16. *Click* **Commit**
 
-12. Wait for the deployment to complete successfully by watching the pipeline that was just created by your commit.
+17. Wait for the deployment to complete successfully by watching the pipeline that was just created by your commit.
 
     **Note:** You can also use the bastion host to run `kubectl get pods --all-namespaces` and look for some pods starting with `certmanager` and some starting with `ingress`
 
-13. To see the new AWS load balancer created by the ingress chart, in the 'AWS EC2 Console', in the left hand navigation, under 'Load balancing', *Click* **Load Balancers** 
+18. To see the new AWS load balancer created by the ingress chart, in the 'AWS EC2 Console', in the left hand navigation, under 'Load balancing', *Click* **Load Balancers** 
 
-14. If there is more than one load balancer, examine their 'Tag' details until you find one with the **Key = kubernetes.io/cluster/spot2azuseast2** with **Value = owned**
+19. If there is more than one load balancer, examine their 'Tag' details until you find one with the **Key = kubernetes.io/cluster/spot2azuseast2** with **Value = owned**
 
-15. Once you have located the appropriate load balancer, in the details tabs *Click* **Description**
+20. Once you have located the appropriate load balancer, in the details tabs *Click* **Description**
 
-16. Find 'DNS Name' and *Copy* <mark>\<the Load Balancer DNS Name\></mark>
+21. Find 'DNS Name' and *Copy* <mark>\<the Load Balancer DNS Name\></mark>
 
-17. In a web browser open https://dnschecker.org
+22. In a web browser open https://dnschecker.org
 
-18. Under 'DNS Check', over top 'example.com', *Paste* <mark>\<the Load Balancer DNS Name\></mark>
-
-19. *Click* **Search**
-
-20. If you setup EKS for 2 availability zones, you should see 2 IP addresses being returned by most or all locations.
-
-21. If there are red X's instead of IPs, wait and keep clicking "Search" until you see IP addresses.
-
-22. Copy one of the <mark>\<the Load Balancer IP\></mark>'s
-
-23. On https://dnschecker.org, *Paste* the  <mark>\<the Load Balancer IP\></mark> over the <mark>\<the Load Balancer DNS Name\></mark> and append <mark>.nip.io</mark> (take note of both dots)
+23. Under 'DNS Check', over top 'example.com', *Paste* <mark>\<the Load Balancer DNS Name\></mark>
 
 24. *Click* **Search**
 
+25. If you setup EKS for 2 availability zones, you should see 2 IP addresses being returned by most or all locations.
+
+26. If there are red X's instead of IPs, wait and keep clicking "Search" until you see IP addresses.
+
+27. Copy one of the <mark>\<the Load Balancer IP\></mark>'s
+
+28. On https://dnschecker.org, *Paste* the  <mark>\<the Load Balancer IP\></mark> over the <mark>\<the Load Balancer DNS Name\></mark> and append <mark>.nip.io</mark> (take note of both dots)
+
+29. *Click* **Search**
+
     > If nip.io is fast, you will see it resolves to the same IP address. Auto DevOps URLs and SSL will not work correctly until this is resolving, but configuration can continue and it will likely be done by the time all configuration is done.
 
-25. If there are red X's instead of IPs, wait and keep clicking "Search" until you see IP addresses.
+30. If there are red X's instead of IPs, wait and keep clicking "Search" until you see IP addresses.
 
-26. Copy the DNS name <mark>\<the Load Balancer IP\>.nip.io</mark>
+31. Copy the DNS name <mark>\<the Load Balancer IP\>.nip.io</mark>
 
-27. In the GitLab group 'classgroup' *Click* **Settings > CI/CD**
+32. In the GitLab group 'classgroup' *Click* **Settings > CI/CD**
 
     > KUBE_INGRESS_BASE_DOMAIN is used for Auto DevOps - therefore we are configuring it at the top group level for which we would like the cluster in question to be usable for Auto DevOps for all downbound groups and projects.
 
-28. Next to 'Variables' *Click* **Expand**
+33. Next to 'Variables' *Click* **Expand**
 
-29. *Click* **Add variable** once for each table row (or update the variables if they are already there)
+34. *Click* **Add variable** once for each table row (or update the variables if they are already there)
 
     | Key                      | Value                                              | Protect | Mask |
     | ------------------------ | -------------------------------------------------- | ------- | ---- |
