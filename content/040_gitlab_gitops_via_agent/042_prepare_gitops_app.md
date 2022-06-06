@@ -41,6 +41,8 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 9. Under Project visibility, *Select* **Public**
 
+   > The project and group are made public simply to accommodate the usage of the “Pipeline Subscriptions” in a later lab. Making your project and groups public is not required for other project linking methods.
+
 10. *Deselect* **Users can request access**
 
 11. Scroll down to locate and *Click* **Save changes**
@@ -59,7 +61,7 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 17. On the Container Registry page click the item ending in “/main”
 
-     > You should see a version tag, a git short sha tag and a latest tag that all have the same value for “Digest”
+     > You should see a version tag, a git short sha tag and a latest-prod tag that all have the same value for “Digest”
 
 18. On the left navigation bar, *Click* **CI/CD => Pipelines**
 
