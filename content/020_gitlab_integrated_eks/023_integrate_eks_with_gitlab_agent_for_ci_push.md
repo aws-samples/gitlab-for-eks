@@ -26,7 +26,7 @@ This specific agent configuration combined with the values and placement of the 
 
 IMPORTANT: This Guide assumes you have a runner available to configure the agent.
 
-{{< admonition type=info title="Target Outcomes" open=true >}}
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
 1. Agent registration and installation.
 2. Configuration of the class group and all subgroups to use **Traditional Runner CD Push** to a Kubernetes cluster.
 {{% /admonition %}}
@@ -161,7 +161,7 @@ AUTO_DEPLOY_IMAGE_VERSION and DAST_AUTO_DEPLOY_IMAGE_VERSION version pegging is 
 
 ### Update Cluster Management Project to Install the NGINX Ingress and Cert Manager
 
-{{< admonition type=info title="Target Outcomes" open=true >}}
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
 1. Applications deployed to the EKS cluster using Auto DevOps will have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support, which requires:
 2. External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
 3. And SSL urls (via cert-manager).
