@@ -40,13 +40,13 @@ autoHeadingID = true
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "mine"
-  custom_css = [ "css/highlights.css" ]
+  custom_css = [ "css/highlights.css"]
 
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-[[menu.shortcuts]] 
+[[menu.shortcuts]]
 name = "<i class='fas fa-graduation-cap'></i> Start a GitLab Trial"
 url = "https://about.gitlab.com/free-trial/"
 weight = 10

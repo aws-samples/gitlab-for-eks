@@ -273,3 +273,10 @@ When this section is complete applications deployed to the EKS cluster using Aut
 {{% notice tip %}}
 Applications deployed to the EKS cluster using Auto DevOps will now have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support with SSL urls.
 {{% /notice %}}
+
+{{< admonition type=tip title="This is a tip" open=true >}}
+A **tip** banner
+
+another [line](https://google.com)
+
+{{< /admonition >}}
