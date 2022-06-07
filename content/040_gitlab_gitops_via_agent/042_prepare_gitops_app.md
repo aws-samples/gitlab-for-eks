@@ -13,15 +13,15 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice warn %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 Before continuning make sure to use DNSChecker.com to check if both `the Load Balancer DNS Name` and `Load Balancer IP`**.nip.io** have propagated through global DNS and wait (or troubleshoot) if they have not.
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 This project auto-increments images with a simple semantic version (prereleases not supported). You can also force a specific version number and tell it which part of the version number to auto-increment.
-{{% /notice %}}
+{{< /admonition >}}
 
 1. While in 'yourpersonalgroup' (created in a prior lab) *Click* **New project** (button) and then *Click* **Import project**
 
@@ -131,7 +131,7 @@ This project auto-increments images with a simple semantic version (prereleases 
 
     > You should now have two variables in 'yourpersonalgroup' that contains READ_REG_USER and READ_REG_TOKEN with the values from the Deploy Token creation.
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 
 This least privilege approach publishes registry read credentials to the entire subgroup heirarchy for all registries in the same heirarchy. This is a handy method when there are many Application Projects whose images are being used by many Environment Deployment Projects that share a common parent group.
-{{% /notice %}}
+{{< /admonition >}}

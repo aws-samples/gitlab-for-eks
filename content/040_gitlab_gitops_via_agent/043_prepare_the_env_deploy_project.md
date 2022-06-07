@@ -174,8 +174,8 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 69. The image reference and version tag should match the staging manifest (hello-world.staging.yaml)
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 The manifests are not yet monitored by the GitLab Agent, but once they are, the action of updating them in the project is all that is necessary for the GitLab Agent to find them and update the Kubernetes Cluster to match the manifest.
-{{% /notice %}}
+{{< /admonition >}}
 

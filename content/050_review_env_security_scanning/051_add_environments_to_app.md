@@ -55,10 +55,10 @@ In this Lab you will update the application project to have a review application
 
 9. *Click* **Commit**
 
-{{% notice info%}}
+{{< admonition type=info title="Info" open=true >}}
 
 These simple steps enable Auto DevOps Dynamic Review Environments and Security Scanning.
-{{% /notice %}}
+{{< /admonition >}}
 
 10. In the left navigation *Click* **Hello World** (The project name banner) 
 
@@ -80,11 +80,11 @@ These simple steps enable Auto DevOps Dynamic Review Environments and Security S
 
 18. For the job ‘production_manual’, *Click* **[the Play button]**
 
-{{% notice info%}}
+{{< admonition type=info title="Info" open=true >}}
 
 The environments in the Application Build Project are built using CD Push through the GitLab Agent and are only for testing and qualifying the Application Container. The environment called ‘Production’ simply means that the container is “production ready” if it passes all tests and gets into that review environment. The ‘promote-image-to-latest’ job is what actually signals downstream Environment Deployment Projects that a new version has been published. The DevOps methodology and processes you use should determine how much testing and qualification is done in this Application Build Project and how much is done in Environment Deployment Projects. There could be a lot of testing in both if downstream environments want to double check or have additional checks before deploying to actual production endpoints.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 19. **[Automation wait: ~3 min]** Wait for the browser_performance job to complete successfully and the Play button to appear on the ‘promote-image-to-latest’ job. 
 
@@ -98,8 +98,8 @@ The environments in the Application Build Project are built using CD Push throug
 
     > It should have been built moments ago. There should also be a new version tag with the same value for ‘Digest’
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 This last step is what updates the image tags so that the version that was just tested is marked as ready for Environment Deployment projects to consume.
 
-{{% /notice %}}
+{{< /admonition >}}

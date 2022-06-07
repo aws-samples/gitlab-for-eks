@@ -33,11 +33,11 @@ In this Lab you will update the application project to have a review application
 
 7. *Select* **Create a new branch**
 
-   {{% notice info%}}
+   {{< admonition type=info title="Info" open=true >}}
 
    The action of creating a new branch is what triggers an MR and a per-feature branch review app. Commiting to the main branch would avoid the creation of a feature branch review environment - but this also prevents the developer’s Single Pane of Glass (SPOG) assessment of their changes in the Merge Request view and prevents multiple developers working on changes to the same codebase.
 
-   {{% /notice %}}
+   {{< /admonition >}}
 
 7. Leave the default branch name.
 
@@ -83,10 +83,10 @@ In this Lab you will update the application project to have a review application
 
 27. In the main page body, next to ‘Security scanning detected…’, *Click* **Expand**
 
-{{% notice info%}}
+{{< admonition type=info title="Info" open=true >}}
 
 All the security findings and code quality updates in a Merge Request are just for the code that has been changed from the branch you branched from. The context that these are from code that was just changed and the timing during the regular development cycle both function to increases motiviation to handle the found vulnerabilities. In this case the findings are from the entire default branch because a merge of these findings has not yet been performed.
 
 In production development the developer would now iteratively update this branch to get their code working as intended and resolve all CI checks and test resultsthat are generated during that procses.
 
-{{% /notice %}}
+{{< /admonition >}}

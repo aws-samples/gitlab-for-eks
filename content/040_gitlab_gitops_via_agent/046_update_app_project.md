@@ -69,11 +69,11 @@ In this Lab you will update the background color of the application and track th
 
 23. Search the job log (manually or with your brower’s ‘in page search’ feature) for the text “Changes to be committed” (near the bottom)
 
-{{% notice tip%}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 This job only did a commit back to the World Greetings Environment 1 project - it did not do any CD push operations. Since we are also using CI processes in this workshop it can be easy to mistakenly think this job pushed the changes, rather than the GitLab Agent in the cluster pulling them.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 24. In the left navigation, *Click* **Repository => Files**
 
@@ -91,29 +91,29 @@ This job only did a commit back to the World Greetings Environment 1 project - i
 
 31. *Find* `- image: `
 
-{{% notice tip%}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 The version differences between the current state of these two manifests is what explains the results you will see when viewing the active environments in the next steps.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 32. *Click* **Deployments => Environments**
 
 33. **[Automation wait: ~3 min]** Keep refreshing until staging deployment activities complete.
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests.
 
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **If you are in an instructor-led workshop, the instructor may need to access the cluster for you.** If you were to run into unusual deployment problems, you would need to login to the Kubernetes Cluster and run the below command. To do this, login to the EKS Bastion host the same was as was done in “Prep Lab 2.3: Use GitLab K8s Agent to Integrate The Cluster with GitLab” to install the GitLab Agent. Then run this command `kubectl logs -f -l=app=gitlab-agent -n gitlab-agent`
 
 For common errors and more troubleshooting information visit [Troubleshooting the GitLab agent for Kubernetes](https://docs.gitlab.com/ee/user/clusters/agent/troubleshooting.html)
 
-{{% /notice %}}
+{{< /admonition >}}
 
 34. On the ‘staging’ line, to the right, *Click* **Open**
 
@@ -129,11 +129,11 @@ For common errors and more troubleshooting information visit [Troubleshooting th
 
 40. **[Automation wait: ~3 min]** Keep refreshing until production deployment activities complete.
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 41. *Click* **Deployments => Environments**
 
@@ -143,8 +143,8 @@ For all GitOps mode projects, when the deployment shows complete in the Environm
 
     > You should see that the production environment is now the new color.
 
-{{% notice tip%}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 While it is not necessarily easy to observe directly from GitLab, it is the GitLab Agent that is pulling the changes into the cluster. You can understand more about this flow by examining the box ‘GitLab K8s Agent Channel’ in the [GitLab K8s Agent Connections and Flows diagram]({{< relref "../070_architecture_patterns/gitlab-agent-connections" >}}).
 
-{{% /notice %}}
+{{< /admonition >}}

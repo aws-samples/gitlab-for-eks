@@ -8,9 +8,9 @@ description: "How to report problems."
 
 # Reporting Problems or Suggesting Features
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 Please use the  [Tuning and Troubleshooting Guide]({{< relref "./tuning_and_troubleshooting.md" >}}) to perform any troubleshooting before to solve problems or to generate good problem data to report.
-{{% /notice %}}
+{{< /admonition >}}
 
 ## With Exercise Steps
 

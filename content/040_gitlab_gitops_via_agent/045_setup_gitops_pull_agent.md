@@ -13,11 +13,11 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **Check With The Instructor**: If you are in an Instructor-Led course where multiple participants are sharing the same GitLab group and Kubernetes cluster, it is important that all changes to the agent configuration file are retained.  The instructor may elect to make these changes for each participant to avoid file saving conflicts and/or information overwriting. Using Merge Requests would be likely to generate many merge conflicts and slow the class progress signficantly.**If you are not in an instructor-led course, perform the lab as described.**
 
-{{% /notice %}}
+{{< /admonition >}}
 
 1. In a web browser *Navigate to* **classgroup/cluster-management**
 
@@ -61,11 +61,11 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 
 11. **[Automation wait: ~3 min]** Keep refreshing until staging deployment activities complete.
 
-    {{% notice warning%}}
+    {{< admonition type=warning title="Warning" open=true >}}
 
-    For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests
+For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests
 
-    {{% /notice %}}
+    {{< /admonition >}}
 
 12. **[Automation wait: ~3 min]** Wait after the status shows complete…
 
@@ -81,8 +81,8 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 
 16. Keep refreshing the brower window if the site is not yet displaying.
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests. Also note that on the very first time the agent is configured to monitor your manifests - all environments are deployed. From this point forward the manifests will be updated sequentially and will require approval for production.
 
-{{% /notice %}}
+{{< /admonition >}}

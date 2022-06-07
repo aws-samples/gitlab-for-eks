@@ -8,9 +8,9 @@ description: "Provision a value-added EKS spot cluster by using the official AWS
 
 # Prep Lab 2.1: Provision a Kubernetes Cluster Using The AWS EKS Quick Start
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 When this section is complete you will have used an AWS Official Infrastructure as Code offering to deploy an EKS cluster ready to integrate with GitLab.
-{{% /notice %}}
+{{< /admonition >}}
 
 ## Deploy Official AWS EKS QuickStart with Spot Nodes
 
@@ -26,9 +26,9 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
 2. In the EC2 Console for us-east-2, on the left navigation under 'Network & Security', *Click* **Key Pairs**
 
-   {{% notice warning %}}
+   {{< admonition type=warning title="Warning" open=true >}}
    While this exercise only ever uses SSM to access the Bastion host, the CloudFormation form always requires a Key Pair. You will not end up using this key pair, but it must be available for the stack to succeed.
-   {{% /notice %}}
+   {{< /admonition >}}
 
 3. In the upper right of the page, *Click* **Create key pair**
 
@@ -53,11 +53,11 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
 8. Wait for the deployment to complete successfully.
 
-   {{% notice warning %}}
+   {{< admonition type=warning title="Warning" open=true >}}
 
    **IMPORTANT FOR Instructor-Led** - setup 1 EKS node per 5 students. This can be easily adjusted later and these are spot instances.
 
-   {{% /notice %}}
+   {{< /admonition >}}
 
 9. [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2azuseast2&param_AvailabilityZones=us-east-2b,us-east-2c&param_RemoteAccessCIDR=198.51.100.0/24&param_KeyPairName=spot2azuseast2&param_ConfigSetName=spot-t2-medium-v120-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast2&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)  (and all others at their default value). You may customize the parameters before submitting the template.
 

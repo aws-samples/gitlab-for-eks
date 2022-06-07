@@ -93,17 +93,17 @@ This keeps classroom logistics simple.
 
 It is also what leads to the limitation of having all projects be public - if a Kubernetes agent registration is done in the same project as the manifest files, then the project does not have to be public.
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 In a real world scenario there can be many GitLab Agents in many GitLab groups and projects integrating to the same Kubernetes cluster and/or agents integrating to many independent clusters. The agents can be registered at any group level and could be dedicated to just CI/CD Push or just GitOps.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 ## Simple & Inexpensive EKS Pattern Reusable for Training
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 A key difference between the legacy GitLab Kubernetes Certificate cluster connection and the GitLab Kubernetes agent configuration is that you cannot multi-attach a single cluster agent to multiple locations in the group heirachy.
-{{% /notice %}}
+{{< /admonition >}}
 
 ### Rapid Deployment & Simplicity
 

@@ -13,14 +13,14 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice tip %}}
-This configuration also works for any kind of GitLab CD to the cluster using Helm and kubectl commands, not only Auto DevOps.
-{{% /notice %}}
+{{< admonition type=tip title="Tip" open=true >}}
+This configuration also works for any kind of **GitLab Runner Push CD** to the cluster using Helm and kubectl commands, not only Auto DevOps.
+{{< /admonition >}}
 
 ## Configure An Auto DevOps Project
 
-{{% notice warning %}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer IP>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.
-{{% /notice %}}
+{{< admonition type=warning title="Warning" open=true >}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer IP>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.
+{{< /admonition >}}
 
 1. While in 'yourpersonalgroup' *Click* **New project** (button) and then *Click* **Import project**
 

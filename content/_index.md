@@ -22,9 +22,9 @@ With the creation of the GitLab Kubernetes Agent three key capabilities are gain
 3. When CI/CD based pushes are still desired, the GitLab Runner now "tunnels" through the agent connection. This improves the security posture of GitLab's existing CI/CD integration even when GitOps agent management is not being used. This is the pattern used for continuing to use Auto DevOps pipelines when integrating EKS using the GitLab K8s Agent.
 4. A CI runner is generally still needed to build the application containers that are used by the GitLab Agent GitOps deployment mode.
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 The first part of this workshop creates a GitLab Integrated EKS cluster using GitLabs most recent integration technology the GitLab Kubernetes Agent. It does it in a simple, inexpensive and secure way. **The EKS cluster setup sections can be used to create a GitLab Integrated EKS cluster for any kind of GitLab training, demoing or experimenting.**
-{{% /notice %}}
+{{< /admonition >}}
 
 ### A Production Pattern That is Training Ready
 

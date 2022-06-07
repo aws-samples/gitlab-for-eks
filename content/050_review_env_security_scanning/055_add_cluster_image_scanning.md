@@ -13,17 +13,17 @@ description: "Cluster image security scanning configuration."
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice tip%}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 Cluster image scanning is able to add security findings for images used in your cluster that are not a part of your development process and therefore do not get routinely scanned during CI of the application. This scanning currently focuses on the cluster’s images and not other aspects of cluster security. The other security scanning we’ve been configuring has explictly to do with development - this scanning is part of GitLab’s Protect stage - part of operational integrity that can be enabled via the GitLab Agent.
 
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **Check With The Instructor**: If you are in an Instructor-Led course where multiple participants are sharing the same GitLab group and Kubernetes cluster, the instructor may elect to make these changes. **If you are not in an instructor-led course, perform the lab as described.**
 
-{{% /notice %}}
+{{< /admonition >}}
 
 1. Open 'classgroup/cluster-management’
 
@@ -70,8 +70,8 @@ Cluster image scanning is able to add security findings for images used in your 
 
     > Notice the list of vulnerabilities.
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 To speed up the class results we set the cluster scanner to every minute. If this is a long lived cluster it would be prudent to update the starboard:cadence above to once a day or less.
 
-{{% /notice %}}
+{{< /admonition >}}

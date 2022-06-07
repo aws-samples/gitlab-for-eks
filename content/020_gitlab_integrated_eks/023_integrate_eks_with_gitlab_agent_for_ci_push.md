@@ -20,17 +20,16 @@ When this section is complete you will have integrated the EKS cluster with GitL
 >
 > Guides Through: [Installing the agent for Kubernetes](https://docs.gitlab.com/ee/user/clusters/agent/install) 
 
-{{< admonition type=tip title="tip" open=true >}}
+{{< admonition type=tip title="Tip" open=true >}}
 This specific agent configuration combined with the values and placement of the CI/CD variables starting with “KUBE_” accomplish CI Push integration for the entire heirarchy of projects under 'classgroup'. This mimics the way that GitLabs legacy certificate connection method was able to integrate and entire heirarchy of projects - so this specific configuration may be useful in your actual development processes. A cluster integrated in this way will not appear in the group list of Kubernetes Clusters in the GitLab UI.
 {{% /admonition %}}
 
 IMPORTANT: This Guide assumes you have a runner available to configure the agent.
 
-> **Learning Outcomes:** 
->
-> **1.** Agent registration and installation.
->
-> **2.** Configuration of the class group to use Traditional Runner CD Push to a kubernetes cluster.
+{{< admonition type=info title="Target Outcomes" open=true >}}
+1. Agent registration and installation.
+2. Configuration of the class group and all subgroups to use **Traditional Runner CD Push** to a Kubernetes cluster.
+{{% /admonition %}}
 
 This guide uses the **GitLab CI/CD workflow** and the **Single project** approach for agent install and cluster management.
 
@@ -93,19 +92,19 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 
        > Ignore pipeline failures.
 
-   15. To exit the editor, in the left navigation bar at the top, *Click* **Cluster Management** (the project name)
+   14. To exit the editor, in the left navigation bar at the top, *Click* **Cluster Management** (the project name)
 
-   16. From the left sidebar, *Select* **Infrastructure > Kubernetes clusters**.
+   15. From the left sidebar, *Select* **Infrastructure > Kubernetes clusters**.
 
-   17. Click **Connect a cluster** (button). (DO NOT Click the down arrow next to the button)
+   16. Click **Connect a cluster** (button). (DO NOT Click the down arrow next to the button)
 
-   18. In the field **Select an agent or enter a new name to create new** Click the dropdown list arrow, select <mark class="hlgreen">spot2azuseast2-agent1</mark> and *Click* **Register** (button)
+   17. In the field **Select an agent or enter a new name to create new** Click the dropdown list arrow, select <mark class="hlgreen">spot2azuseast2-agent1</mark> and *Click* **Register** (button)
 
-   19. GitLab generates a registration token for this agent. Securely store this secret token. You need it to install the agent in your cluster and to [update the agent](https://docs.gitlab.com/ee/user/clusters/agent/install/#update-the-agent-version) to another version.
+   18. GitLab generates a registration token for this agent. Securely store this secret token. You need it to install the agent in your cluster and to [update the agent](https://docs.gitlab.com/ee/user/clusters/agent/install/#update-the-agent-version) to another version.
 
-   20. **IMPORTANT:** Copy the command under **Recommended installation method**. You need it when you use the one-liner installation method to install the agent in your cluster. (or you can leave this popup open to copy the command in the next section)
+   19. **IMPORTANT:** Copy the command under **Recommended installation method**. You need it when you use the one-liner installation method to install the agent in your cluster. (or you can leave this popup open to copy the command in the next section)
 
-   21. Do not close the dialog nor browser window until you have successfully run the command.
+   20. Do not close the dialog nor browser window until you have successfully run the command.
 
 3. Install the agent by:
 
@@ -149,9 +148,10 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 AUTO_DEPLOY_IMAGE_VERSION and DAST_AUTO_DEPLOY_IMAGE_VERSION version pegging is necessary at this time to prevent errors with deployment. This may be able to be removed when this issue is resolved: [Error when ingressClassName is supported by API but not by the ingress controller](https://gitlab.com/gitlab-org/cluster-integration/auto-deploy-image/-/issues/206)
 {{< /admonition >}}
 
-{{< admonition type=tip title="Tip" open=true >}}
-The EKS cluster is now integrated using the GitLab Kubernetes Agent is now available and could be used as-is to manage cluster integration that is purely GitOps oriented (no CI / CD pushes into the cluster). In fact, the agent is now used in the next section to pull some managed apps onto the cluster that are needed for Auto DevOps operation.
-{{< /admonition >}}
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+1. Agent registration and installation.
+2. Configuration of the class group and all subgroups to use **Traditional Runner CD Push** to a Kubernetes cluster.
+{{% /admonition %}}
 
 ## Configuring Ingress with Built-in nip.io SSL for Auto DevOps
 
@@ -161,9 +161,15 @@ The EKS cluster is now integrated using the GitLab Kubernetes Agent is now avail
 
 ### Update Cluster Management Project to Install the NGINX Ingress and Cert Manager
 
-{{< admonition type=info title="Info" open=true >}}
-When this section is complete applications deployed to the EKS cluster using Auto DevOps will have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support with SSL urls - including GitOps Application Build projects.
-{{< /admonition >}}
+{{< admonition type=info title="Target Outcomes" open=true >}}
+1. Applications deployed to the EKS cluster using Auto DevOps will have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support, which requires:
+2. External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
+3. And SSL urls (via cert-manager).
+{{% /admonition %}}
+
+{{< admonition type=warning title="Not For Production" open=true >}}
+Production application setups would generally not use this specific Ingress install, nor cert-manager or nip.io - these are all used for the convenience of quick demo and training setups.
+{{% /admonition %}}
 
 1. In 'classgroup/cluster-management' *Start* the **Web IDE**.
 
@@ -270,7 +276,8 @@ When this section is complete applications deployed to the EKS cluster using Aut
     | ------------------------ | -------------------------------------------- | ------- | ---- |
     | KUBE_INGRESS_BASE_DOMAIN | <mark>\<the Load Balancer IP\>.nip.io</mark> | No      | No   |
 
-{{< admonition type=tip title="Tip" open=true >}}
-Applications deployed to the EKS cluster using Auto DevOps will now have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support with SSL urls.
-
-{{< /admonition >}}
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+1. Applications deployed to the EKS cluster using Auto DevOps will have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support, which requires:
+2. External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
+3. And SSL urls (via cert-manager).
+{{% /admonition %}}

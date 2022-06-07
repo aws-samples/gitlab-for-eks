@@ -34,7 +34,7 @@ When the EKS QuickStart was used to build the cluster, you can locate the ASG fo
 
 ### User validation required
 
-![error-uservalidation](/Users/dsanoy/Documents/repos/GITOPS/gitlab-for-eks/content/010_introduction/images/error-uservalidation.png)
+![error-uservalidation](images/error-uservalidation.png)
 
 Resolution: You have missed the last steps of Prep Lab 2.2 for disabling group runners (and you or participants are using a free account).
 
@@ -50,15 +50,15 @@ If this classroom setup is long lived for any reason, the ASGs can used schedule
 
 ### GitLab CI Is Too Slow for Classroom
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 While it may be tempting to use shared runners, deploying your own fleet gives you 100% control over the scale and responsiveness of runners. Since automation waiting time is a big part of this workshop it is a signficant advantage to have control over this part of the resourcing.
 
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 The provisioning Prep Lab contains this warning: “**IMPORTANT FOR Instructor-Led** - setup 1 runner instance per 5 students. This can be easily adjusted later and these are spot instances.”
-{{% /notice %}}
+{{< /admonition >}}
 
 If the course is being run on GitLab.com with free GitLab.com accounts for participants and/or the instructor and an Ultimate Trial enabled (only works for 30 days from initial trial enablement), the using  [GitLab HA Scaling Runner Vending Machine for AWS EC2 ASG](https://gitlab.com/guided-explorations/aws/gitlab-runner-autoscaling-aws-asg/) to deploy runnres is required.
 
@@ -72,15 +72,15 @@ If this is a post deployment step, simply update the ASG that is controlling the
 
 To scale the cluster, [open the ASG console](https://us-east-2.console.aws.amazon.com/ec2autoscaling/home?region=us-east-2#/details) (this link presumes us-east-2, but you can change the region if you deployed elsewhere). Locate the ASG associated with your EKS cluster which also has “UnmanagedASG” in it’s name. Locate the ASG associated with your runners - if you used the exercise defaults to deploy it, is shoudl be called “linux-docker-spotonly”. To change the size, follow [Set capacity limits on your Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-capacity-limits.html). 
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 Should you choose to scale the runner fleet down, do so by editing the ASG Desire Count so that proper GitLab Runner deregistration processes are triggered.
-{{% /notice %}}
+{{< /admonition >}}
 
 ### EKS Cluster Seems Slow and/or is Not Autoscaling Appropriately for Classroom
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 The provisioning Prep Lab contains this warning: “**IMPORTANT FOR Instructor-Led** - setup 1 EKS node per 5 students. This can be easily adjusted later and these are spot instances.”
-{{% /notice %}}
+{{< /admonition >}}
 
 While the Cluster Autoscaler should be active you can also take manual control of the minimum size by manipulating the Minimum size of the cluster. 
 

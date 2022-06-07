@@ -7,10 +7,14 @@ desscription: "Using the Gitlab Agent to deploy applications to EKS clusters thr
 ## In this s#pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 **Instructor-Led Note**: [The visuals in this section are also provided as progressive disclosure Visual MicroStory Slides here](../010_introduction/Animated_Visual_MicroStory_Slides_for_GitLab_Kubernetes_Agent_Workshop.pptx)
-{{% /notice %}}
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip" open=true >}}
+This configuration also works for any kind of **GitLab Runner Push CD** to the cluster using Helm and kubectl commands, not only Auto DevOps.
+{{< /admonition >}}
 
 ### Section 3: GitLab CD and Auto DevOps via The GitLab Kubernetes Agent 
 

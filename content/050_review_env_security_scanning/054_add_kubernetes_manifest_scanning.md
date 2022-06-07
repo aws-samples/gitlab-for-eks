@@ -13,11 +13,11 @@ description: "Security scanning in the application project."
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice tip%}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 This lab configures the security scanning of fully rendered Kubernetes manifests for security problems.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 1. Open 'yourpersonalgroup/world-greetings-env-1’
 

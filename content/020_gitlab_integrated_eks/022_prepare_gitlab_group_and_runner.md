@@ -7,9 +7,9 @@ description: "Setup the most secure and capable method of integrating Kubernetes
 
 # Prep Lab 2.2: Prepare GitLab classgroup and Deploy a Runner
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 When this section is complete you will have integrated the EKS cluster with GitLab using the GitLab Kubernetes Agent.
-{{% /notice %}}
+{{< /admonition >}}
 
 ## Configure a New GitLab classgroup
 
@@ -45,12 +45,12 @@ When this section is complete you will have integrated the EKS cluster with GitL
 
 > **Scenarios:** Instructor-Led
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 Participant account provisioning will vary depending on the type of GitLab instance being used for participants. On GitLab.com SaaS, it can be as simple as having participants register for a free account and sending you their GitLab User Name. If in a self-managed GitLab instance or a GitLab.com SaaS company namespace, participants may already have accounts associated with your organization.
 This is unnecessary if you are doing the training self-paced for yourself.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 1. While in  'classgroup', *Click* **Group information > Members**
 
@@ -72,29 +72,29 @@ This is unnecessary if you are doing the training self-paced for yourself.
 >
 > Guides Through: [GitLab HA Scaling Runner Vending Machine for AWS EC2 ASG](https://gitlab.com/guided-explorations/aws/gitlab-runner-autoscaling-aws-asg/)
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 If you are operating on a GitLab instance and GitLab group where runners are already operational and **usable by all participants** - then this section may be unnecessary. Where it is known to be necessary is if participants accounts are free GitLab.com SaaS accounts and you do not wish to have them each register with a Credit Card to gain access to free runner minutes.
 
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **IMPORTANT FOR Instructor-Led** - be sure to test labs with a GitLab account configured identically to participants (not your production GItLab account if it has extra permissions or licensing) to be sure participants will have the runner access you intend them to have.
 
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **IMPORTANT FOR Instructor-Led** - While it may be tempting to use shared runners, deploying your own fleet gives you 100% control over the scale and responsiveness of runners. Since automation waiting time is a big part of this workshop it is a signficant advantage to have control over this part of the resourcing.
 
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **IMPORTANT FOR Instructor-Led** - setup 1 runner instance per 5 students. This can be easily adjusted later and these are spot instances.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 1. In 'classgroup', *Click* **CI/CD > Runners**
 2. Near the top right, *Click* **Register a group runner** (button)
@@ -114,6 +114,6 @@ If you are operating on a GitLab instance and GitLab group where runners are alr
 14. To the right of ‘Runners’ *Click* **Expand**
 15. Under ‘Enable shared runners for this group’ ensure the toggle button is OFF (default is ON)
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 The Runner ASG Desired Count and Maximum Count can be editted and updated to scale up the runner fleet if you find things are running slow. Should you choose to scale the runner fleet down, do so by editing the ASG Desire Count so that proper GitLab Runner deregistration processes are triggered.
-{{% /notice %}}
+{{< /admonition >}}

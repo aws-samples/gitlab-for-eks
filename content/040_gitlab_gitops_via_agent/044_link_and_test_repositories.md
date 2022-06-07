@@ -13,10 +13,10 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 
 These methods of linking the projects are loosely coupled. The benefits of this approach are described in [Loose Project Coupling](https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1#loose-project-coupling) 
-{{% /notice %}}
+{{< /admonition >}}
 
 ### Scheduled Pipeline Model
 
@@ -44,10 +44,10 @@ These methods of linking the projects are loosely coupled. The benefits of this 
 
 ### [Extra Credit] Pipeline Subscription Model
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **If you are in an instructor-led workshop, please ask the instructor before performing this lab** as it could affect workshop timing or the stability of additional assigned labs. All your upbound groups and the hello-world must be public for pipeline subscriptions to work.
-{{% /notice %}}
+{{< /admonition >}}
 
 > Pipeline subscriptions allow an Environment Deployment Project to trigger nearly immediately after the Application Project completes a build.
 
@@ -69,10 +69,10 @@ These methods of linking the projects are loosely coupled. The benefits of this 
 
 ### [Extra Credit] Run Pipeline With NEXTVERSIONTOUSE Variable To Specify Version
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **If you are in an instructor-led workshop, please ask the instructor before performing this lab** as it could affect workshop timing or the stability of additional assigned labs. If used in production this method would not be paired with any auto-update mechanism above because that mechanism would dynamically install the latest.
-{{% /notice %}}
+{{< /admonition >}}
 
 > This method can also be used to roll back an environment.
 
@@ -109,7 +109,7 @@ These methods of linking the projects are loosely coupled. The benefits of this 
 
 ### [Extra Credit] Create an MR with NEXTVERSIONTOUSE File To Specify Version
 
-{{% notice warning%}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 **If you are in an instructor-led workshop, please ask the instructor before performing this lab** as it could affect workshop timing or the stability of additional assigned labs. This section is just to let you know that you can create a Merge Request that creates or updates a file called NEXTVERSIONTOUSE that only contains the desired version on the first and only line in the file. This enables MR review by as many people as necessary to gather approvals before environment deployments are performed. If you have previously done MRs in GitLab, you could do this procedure to experience an MR approval based workflow in an Environment Deployment Project. 
-{{% /notice %}}
+{{< /admonition >}}

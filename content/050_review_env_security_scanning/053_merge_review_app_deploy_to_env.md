@@ -85,22 +85,22 @@ In this Lab you will merge your MR and see the changes through deployment in the
 
 31. **IMPORTANT:** Once it is available on the job ‘promote-image-to-latest’ *Click* **[the Play button]**
 
-{{% notice info%}}
+{{< admonition type=info title="Info" open=true >}}
 
 The environments in the Application Build Project are only for testing and qualifying the build - even the one called ‘Production’. The ‘promote-image-to-latest’ is what actually signals downstream Environment Deployment Projects that a new version has been published. The DevOps methodology and processes you use should determine how much testing and qualification is done in this Application Build Project and how much is done in Environment Deployment Projects. There could be a lot of testing in both if downstream environments want to double check or have additional checks before deploying to actual production endpoints.
 
-{{% /notice %}}
+{{< /admonition >}}
 
 ## Part B: GitOps CD Pull Changes to Production
 
 >**Keyboard Time**: 10 mins, **Automation Wait Time**: 5 mins
 >**Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice info%}}
+{{< admonition type=info title="Info" open=true >}}
 
 While these lab steps completely close the loop with an end-to-end change with review environments and security scanning, since you have seen this flow already, it is optional to push this particular change all the way to production..
 
-{{% /notice %}}
+{{< /admonition >}}
 
 1. Open 'yourpersonalgroup/world-greetings-env-1’
 
@@ -154,10 +154,10 @@ While these lab steps completely close the loop with an end-to-end change with r
 
     > This is your change in the actual production environment. Keep in mind there could be many Environment Deployment Projects that consume the Application Build Project ‘hello-world’ container image. They could be using schedules, manual triggering by running pipelines or merge requests. For the supported methods in these working example projects you can read more here.
 
-{{% notice info%}}
+{{< admonition type=info title="Info" open=true >}}
 
 In this scenario we had a branch review environment, then a staging and production environment for the Application Build Project. If the Application Build Project is used only by the same environment types which are also directly managed by the same DevOps team as the Application Build Project, then it may make sense to ensure there is enough testing in the Application Build Project that Environment Deployment Projects can simply ship the application to production (disable staging).
 
 However, if the artifacts (container in this case) of the Application Build Project are used by many different types of environments and/or by Ops teams that have seperation of security or duties from the Application Build Project team, then there could be a lot of testing in downstream Environment Deployment Projects as well.
 
-{{% /notice %}}
+{{< /admonition >}}
