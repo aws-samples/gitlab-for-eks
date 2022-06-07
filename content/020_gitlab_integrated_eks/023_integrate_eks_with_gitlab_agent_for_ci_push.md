@@ -163,8 +163,8 @@ AUTO_DEPLOY_IMAGE_VERSION and DAST_AUTO_DEPLOY_IMAGE_VERSION version pegging is 
 
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 1. Applications deployed to the EKS cluster using Auto DevOps will have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support, which requires:
-2. External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
-3. And SSL urls (via cert-manager).
+2. Can resolve External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
+3. With SSL urls (via cert-manager).
 {{% /admonition %}}
 
 {{< admonition type=warning title="Not For Production" open=true >}}
@@ -278,6 +278,6 @@ Production application setups would generally not use this specific Ingress inst
 
 {{< admonition type=success title="Accomplished Outcomes" open=true >}}
 1. Applications deployed to the EKS cluster using Auto DevOps will have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support, which requires:
-2. External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
-3. And SSL urls (via cert-manager).
+2. Can resolve External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
+3. With SSL urls (via cert-manager).
 {{% /admonition %}}

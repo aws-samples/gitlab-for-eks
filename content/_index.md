@@ -7,7 +7,7 @@ pre: '<i class="fa fa-film" aria-hidden="true"></i>'
 ---
 
 
-# Integrating Amazon EKS with the GitLab Kubernetes Agent
+# Ultimate GitOps with GitLab Agent for AWS EKS
 
 This workshop focuses specifically on using the GitLab Kubernetes Agent to accomplish integration of a GitLab Instance (including GitLab.com SaaS) with an EKS cluster for managing cluster applications that are built and tested by GitLab. 
 
