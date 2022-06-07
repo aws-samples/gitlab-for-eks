@@ -21,7 +21,7 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 1. While in 'yourpersonalgroup' (created in a prior lab) *Click* **New project** (button) and then *Click* **Import project**
 
-2. On the 'Import project' page, *Click* **Repo by URL**
+2. On the 'Import project' page, *Click* **Repository by URL**
 
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1.git**
 

@@ -19,12 +19,12 @@ This configuration also works for any kind of GitLab CD to the cluster using Hel
 
 ## Configure An Auto DevOps Project
 
-{{% notice warning %}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer DNS Name\>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.
+{{% notice warning %}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer IP>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.
 {{% /notice %}}
 
 1. While in 'yourpersonalgroup' *Click* **New project** (button) and then *Click* **Import project**
 
-2. On the 'Import project' page, *Click* **Repo by URL**
+2. On the 'Import project' page, *Click* **Repository by URL**
 
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gl-ci/simply-simple-notes.git**
 

@@ -25,7 +25,7 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 1. While in 'yourpersonalgroup' (created in a prior lab) *Click* **New project** (button) and then *Click* **Import project**
 
-2. On the 'Import project' page, *Click* **Repo by URL**
+2. On the 'Import project' page, *Click* **Repository by URL**
 
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/apps/hello-world.git**
 
