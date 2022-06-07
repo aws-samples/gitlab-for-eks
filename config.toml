@@ -40,7 +40,7 @@ autoHeadingID = true
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "mine"
-  custom_css = [ "css/highlights.css"]
+  custom_css = [ "css/highlights.css", "css/admonition.css"]
 
 
 [outputs]
