@@ -179,7 +179,7 @@ div.notices p:first-child:before {
   }
 
 .admonition .admonition-content {
-    font-size: 16px;
+    font-size: 19px;
     padding: .5rem 0
   }
 
@@ -285,7 +285,7 @@ div.notices p:first-child:before {
     background-color: rgba(100, 221, 23, 0.1);
     border-left-color: #64dd17
   }
-  
+
   .admonition.question .admonition-title {
     border-bottom-color: rgba(100, 221, 23, 0.1);
     background-color: rgba(100, 221, 23, 0.25)

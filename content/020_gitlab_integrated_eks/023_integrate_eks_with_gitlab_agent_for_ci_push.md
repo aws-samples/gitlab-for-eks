@@ -7,10 +7,10 @@ description: "Setup the most secure and capable method of integrating Kubernetes
 
 # Prep Lab 2.3: Use GitLab K8s Agent to Integrate The Cluster with GitLab
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 When this section is complete you will have integrated the EKS cluster with GitLab using the GitLab Kubernetes Agent.
 
-{{% /notice %}}
+{{% /admonition %}}
 
 ## Configure and Install GitLab Kubernetes Agent for CI Push
 
@@ -20,9 +20,9 @@ When this section is complete you will have integrated the EKS cluster with GitL
 >
 > Guides Through: [Installing the agent for Kubernetes](https://docs.gitlab.com/ee/user/clusters/agent/install) 
 
-{{% notice tip %}}
+{{< admonition type=tip title="tip" open=true >}}
 This specific agent configuration combined with the values and placement of the CI/CD variables starting with “KUBE_” accomplish CI Push integration for the entire heirarchy of projects under 'classgroup'. This mimics the way that GitLabs legacy certificate connection method was able to integrate and entire heirarchy of projects - so this specific configuration may be useful in your actual development processes. A cluster integrated in this way will not appear in the group list of Kubernetes Clusters in the GitLab UI.
-{{% /notice %}}
+{{% /admonition %}}
 
 IMPORTANT: This Guide assumes you have a runner available to configure the agent.
 
@@ -145,13 +145,13 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 
 > These variables references in KUBE_NAMESPACE ensure that all branches in all projects in the downbound group hiearchy remain unique and therefore isolated on Kubernetes.
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 AUTO_DEPLOY_IMAGE_VERSION and DAST_AUTO_DEPLOY_IMAGE_VERSION version pegging is necessary at this time to prevent errors with deployment. This may be able to be removed when this issue is resolved: [Error when ingressClassName is supported by API but not by the ingress controller](https://gitlab.com/gitlab-org/cluster-integration/auto-deploy-image/-/issues/206)
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 The EKS cluster is now integrated using the GitLab Kubernetes Agent is now available and could be used as-is to manage cluster integration that is purely GitOps oriented (no CI / CD pushes into the cluster). In fact, the agent is now used in the next section to pull some managed apps onto the cluster that are needed for Auto DevOps operation.
-{{% /notice %}}
+{{< /admonition >}}
 
 ## Configuring Ingress with Built-in nip.io SSL for Auto DevOps
 
@@ -161,9 +161,9 @@ The EKS cluster is now integrated using the GitLab Kubernetes Agent is now avail
 
 ### Update Cluster Management Project to Install the NGINX Ingress and Cert Manager
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 When this section is complete applications deployed to the EKS cluster using Auto DevOps will have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support with SSL urls - including GitOps Application Build projects.
-{{% /notice %}}
+{{< /admonition >}}
 
 1. In 'classgroup/cluster-management' *Start* the **Web IDE**.
 
@@ -270,13 +270,7 @@ When this section is complete applications deployed to the EKS cluster using Aut
     | ------------------------ | -------------------------------------------- | ------- | ---- |
     | KUBE_INGRESS_BASE_DOMAIN | <mark>\<the Load Balancer IP\>.nip.io</mark> | No      | No   |
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 Applications deployed to the EKS cluster using Auto DevOps will now have full dynamic [review environments](https://docs.gitlab.com/ee/ci/review_apps/) support with SSL urls.
-{{% /notice %}}
-
-{{< admonition type=tip title="This is a tip" open=true >}}
-A **tip** banner
-
-another [line](https://google.com)
 
 {{< /admonition >}}
