@@ -7,7 +7,7 @@ pre: '<i class="fa fa-film" aria-hidden="true"></i>'
 ---
 
 
-# Ultimate GitOps: Leveraging the New GitLab Agent to Deploy Secure MicroServices to AWS EKS
+# Ultimate GitOps: Deploy Secure Microservices to AWS EKS with the GitLab Agent
 
 This workshop focuses specifically on using the GitLab Kubernetes Agent to accomplish integration of a GitLab Instance (including GitLab.com SaaS) with an EKS cluster for managing cluster applications that are built and tested by GitLab. 
 
