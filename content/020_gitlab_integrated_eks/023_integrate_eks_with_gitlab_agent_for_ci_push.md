@@ -116,6 +116,10 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
    
    3. *Right click* **the instance**, *select* => **Connect**  => **Session Manager** => **Connect** (button)
    
+      {{< admonition type=tip title="Remember The Above Sequence" open=true >}}
+      kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
+      {{< /admonition >}}
+   
    4. After the command prompt appears, *Paste* the **'Recommended installation method'** command from the previous page.
       **Note:** Success is indicated by about 9 lines of logging with no errors.
 
@@ -128,9 +132,9 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
       > KUBE_CONTEXT and KUBE_NAMESPACE are used for both agent registration and agent usage in Auto DevOps - therefore we are configuring it at the top group level for which we would like the agent to be usable for Auto DevOps for all downbound groups and projects.
 
    8. Navigate away from the Cluster Management project, to 'classgroup' (There should be a clickable breadcrumb trail on teh cluster page to go directly)
-
+   
    9. *Click* **Settings > CI/CD** (Be sure you do this from the ‘classgroup’, not a project).
-
+   
       > IMPORTANT: This menu is nest under “Setings” it is NOT the direct menu choice “CI/CD”
    
    10. Next to 'Variables' *Click* **Expand**

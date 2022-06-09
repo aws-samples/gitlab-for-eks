@@ -12,6 +12,18 @@ description: "How to troubleshoot problems and tune classroom setups."
 
 ## General
 
+### Using the EKS Bastion for cluster administration with kubectl and helm
+
+1. [Click here to open the EC2 Instances Console in us-east-2](https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:instanceState=running)
+
+2. In the EC2 Instances console, *locate* the instance named **EKSBastion**
+
+3. *Right click* **the instance**, *select* => **Connect**  => **Session Manager** => **Connect** (button)
+
+   {{< admonition type=tip title="Remember The Above Sequence" open=true >}}
+   kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
+   {{< /admonition >}}
+
 ### GitLab Agent and GitOps Pull Deployments
 
 To view the GitLab Agent log in the cluster you can use this command: `kubectl logs -f -l=app=gitlab-agent -n gitlab-agent`
