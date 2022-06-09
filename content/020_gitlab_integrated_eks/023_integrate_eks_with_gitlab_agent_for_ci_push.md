@@ -104,43 +104,47 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 
    19. **IMPORTANT:** Copy the command under **Recommended installation method**. You need it when you use the one-liner installation method to install the agent in your cluster. (or you can leave this popup open to copy the command in the next section)
 
-   20. Do not close the dialog nor browser window until you have successfully run the command.
+   20. Do not close the dialog nor browser window until you have successfully run the command in the next steps.
 
 3. Install the agent by:
 
    > Guides Through: [Install the agent in the cluster](https://docs.gitlab.com/ee/user/clusters/agent/install/#install-the-agent-in-the-cluster)
 
-   1. If you are not still logged in on an AWS Console SSM Tab, use the AWS Ec2 Console to login to the EKS Bastion host using SSM as you did in the instructions above.
+   1. [Click here to open the EC2 Instances Console in us-east-2](https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:instanceState=running)
 
-   2. Paste the 'Recommended installation method' command.
-      **Note:** Success is indicated by about 9 lines of logging with no errors.
+   2. In the EC2 Instances console, *locate* the instance named **EKSBastion**
    
-   3. Select the browser tab you previous left open ('classgroup/cluster-management' > Cluster Mangement > Kubernetes), If the popup 'Connect a Kuberntes cluster' is still displaying *Click* **Close**
+   3. *Right click* **the instance**, *select* => **Connect**  => **Session Manager** => **Connect** (button)
+   
+   4. After the command prompt appears, *Paste* the **'Recommended installation method'** command from the previous page.
+      **Note:** Success is indicated by about 9 lines of logging with no errors.
 
-   4. Refresh the page.
+   5. Select the browser tab you previous left open ('classgroup/cluster-management' > Cluster Mangement > Kubernetes), If the popup 'Connect a Kuberntes cluster' is still displaying *Click* **Close**
 
-   5. Under 'Agents' your agent named <mark class="hlgreen">spot2azuseast2-agent1</mark> (or whatever your actual name is) should have 'Connected' in the 'Connection status' column. If it does not show connected yet, keep refreshing until it does.
+   6. Refresh the page.
+
+   7. Under 'Agents' your agent named <mark class="hlgreen">spot2azuseast2-agent1</mark> (or whatever your actual name is) should have 'Connected' in the 'Connection status' column. If it does not show connected yet, keep refreshing until it does.
 
       > KUBE_CONTEXT and KUBE_NAMESPACE are used for both agent registration and agent usage in Auto DevOps - therefore we are configuring it at the top group level for which we would like the agent to be usable for Auto DevOps for all downbound groups and projects.
 
-   6. Navigate away from the Cluster Management project, to 'classgroup' (There should be a clickable breadcrumb trail on teh cluster page to go directly)
+   8. Navigate away from the Cluster Management project, to 'classgroup' (There should be a clickable breadcrumb trail on teh cluster page to go directly)
 
-   7. *Click* **Settings > CI/CD** (Be sure you do this from the ‘classgroup’, not a project).
+   9. *Click* **Settings > CI/CD** (Be sure you do this from the ‘classgroup’, not a project).
 
       > IMPORTANT: This menu is nest under “Setings” it is NOT the direct menu choice “CI/CD”
-
-   8. Next to 'Variables' *Click* **Expand**
-
-   9. *Click* **Add variable** once for each table row and specify the variables settings as indicated in the table. Be sure to substitute your actual classgrouppath in KUBE_CONTEXT.
    
-      Use the variable references in KUBE_NAMESPACE exactly (literally) as documented in the table.
+   10. Next to 'Variables' *Click* **Expand**
    
-      | Key                            | Value                                                        | Protect | Mask |
-      | ------------------------------ | ------------------------------------------------------------ | ------- | ---- |
-      | KUBE_CONTEXT                   | <mark class="hlgreen">classgroup</mark>/cluster-management:spot2azuseast2-agent1 | No      | No   |
-      | KUBE_NAMESPACE                 | $CI_PROJECT_NAME-$CI_PROJECT_ID                              | No      | No   |
-      | AUTO_DEPLOY_IMAGE_VERSION      | v2.25.0                                                      | No      | No   |
-      | DAST_AUTO_DEPLOY_IMAGE_VERSION | v2.25.0                                                      | No      | No   |
+   11. *Click* **Add variable** once for each table row and specify the variables settings as indicated in the table. Be sure to substitute your actual classgrouppath in KUBE_CONTEXT.
+   
+       Use the variable references in KUBE_NAMESPACE exactly (literally) as documented in the table.
+   
+       | Key                            | Value                                                        | Protect | Mask |
+       | ------------------------------ | ------------------------------------------------------------ | ------- | ---- |
+       | KUBE_CONTEXT                   | <mark class="hlgreen">classgroup</mark>/cluster-management:spot2azuseast2-agent1 | No      | No   |
+       | KUBE_NAMESPACE                 | $CI_PROJECT_NAME-$CI_PROJECT_ID                              | No      | No   |
+       | AUTO_DEPLOY_IMAGE_VERSION      | v2.25.0                                                      | No      | No   |
+       | DAST_AUTO_DEPLOY_IMAGE_VERSION | v2.25.0                                                      | No      | No   |
 
 > These variables references in KUBE_NAMESPACE ensure that all branches in all projects in the downbound group hiearchy remain unique and therefore isolated on Kubernetes.
 
