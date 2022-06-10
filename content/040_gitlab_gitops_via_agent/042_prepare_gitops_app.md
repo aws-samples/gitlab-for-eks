@@ -13,6 +13,18 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
+
+1. Create a GitOps Application Build project from a template.
+
+2. Create and publish (in a group CI/CD variable) a token that allows the Environment Deployment project to read the container images in the Application Build project.
+
+   {{< /admonition >}}
+
+{{%expand "Click Here To Expand a Visual Overview of The GitLab Application Project Pipeline" %}}![GitOps_Part_1_App_Project_Produces_Quality_Tested_Artifacts](GitOps_Part_1_App_Project_Produces_Quality_Tested_Artifacts.png)
+
+{{% /expand%}}
+
 {{< admonition type=warning title="Warning" open=true >}}
 
 Before continuning make sure to use DNSChecker.com to check if both `the Load Balancer DNS Name` and `Load Balancer IP`**.nip.io** have propagated through global DNS and wait (or troubleshoot) if they have not.
@@ -33,21 +45,7 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 5. Near the bottom of the page *Click* **Create project** (button)
 
-6. When the import is complete, you will be placed in the default landing page of the project.
-
-7. While in the project 'yourpersonalgroup/hello-world', *Click* **Settings => General**
-
-8. Next to ‘Visibility, project features, permissions’, *Click* **Expand**
-
-9. Under Project visibility, *Select* **Public**
-
-   > The project and group are made public simply to accommodate the usage of the “Pipeline Subscriptions” in a later lab. Making your project and groups public is not required for other project linking methods.
-
-10. *Deselect* **Users can request access**
-
-11. Scroll down to locate and *Click* **Save changes**
-
-12. On the left navigation bar, *Click* **CI/CD => Pipelines**
+6. On the left navigation bar, *Click* **CI/CD => Pipelines**
 
 13. In the upper right of the page, *Click* **Run pipeline** (button)
 
@@ -81,9 +79,21 @@ This project auto-increments images with a simple semantic version (prereleases 
      >
      > Note: the next time the pipeline runs it will increment 1.0.0 to 1.0.1 automatically because it will read the current version from the latest image.
 
+{{< admonition type=tip title="Created To Be A Template" open=true >}}
+
+This source project followed several specific principles that makes it this easy to use as a template:
+
+1. Soft codes most of the paths to be self referential to the project path name.
+2. When looking in the project container registry for the last image version, it handles an error in reading the container image as an indicator this is the first run and then forces the version number to 0.0.0 before it is incremented and a new container is generated. Subsequent builds then find the latest-prod image.
+3. Avoids use of the ‘latest’ tag as it is very common and might be created by other unknown build processes that are integrated later.
+
+{{< /admonition >}}
+
 ### Create a Token To Read The Container Registry
 
-> For the next steps you will create a Deployment Token so that the CI job can commit the kubernetes manifests back to its own repository. For production, if you have licensed GitLab a group level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials.
+{{< admonition type=tip title="Group Access Tokens Are Better" open=true >}}
+For the next steps you will create a Group Deployment Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a GitLab license, a project level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials.
+{{< /admonition >}}
 
 1. While in 'yourpersonalgroup' (be sure you are in the group, not a project) in the left navigation, *Click* **Settings => Repository** (button) 
 
@@ -94,6 +104,12 @@ This project auto-increments images with a simple semantic version (prereleases 
 4. Under ‘Scopes (select at least one)’, *Select* **read_registry**
 
 5. *Click* **Create deploy token** 
+
+    {{< admonition type=warning title="Page Reloaded With Update - Don’t Close" open=true >}}
+Notice the same page reloads, but at the top of the screen now has a grey box containing the token information.
+
+**IMPORTANT** - Do not navigate to another page in this browser as this is the only time you can see the token. You will have to create a new token if you leave the page.
+    {{< /admonition >}}
 
 6. Under ‘Your new Deploy Token username’, to the right of the **FIRST** value, *Click* **[the Clipboard Icon]**
 
@@ -111,23 +127,25 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 13. Under Flags, *Deselect* **Protect variable**
 
-14. In your browser tabs, *Switch* to the **[Deploy Token browser tab]**
+14. *Click* **Add variable** (button)
 
-15. Under ‘Your new Deploy Token username’, to the right of the **SECOND** value, *Click* **[the Clipboard Icon]**
+15. In your browser tabs, *Switch* to the **[Deploy Token browser tab]**
 
-16. *Switch* to the **[CD/CD Variables browser tab]**.
+16. Under ‘Your new Deploy Token username’, to the right of the **SECOND** value, *Click* **[the Clipboard Icon]**
 
-17. *Click* **Add variable**
+17. *Switch* to the **[CD/CD Variables browser tab]**.
 
-18. For Key, *Type* **READ_REG_TOKEN**
+18. *Click* **Add variable**
 
-19. In the Value field *Paste* **[the Clipboard contents]**
+19. For Key, *Type* **READ_REG_TOKEN**
 
-20. Under Flags, *Deselect* **Protect variable**
+20. In the Value field *Paste* **[the Clipboard contents]**
 
-21. Under Flags, *Select* **Mask variable**
+21. Under Flags, *Deselect* **Protect variable**
 
-22. *Click* **Add variable**
+22. Under Flags, *Select* **Mask variable**
+
+23. *Click* **Add variable**
 
     > You should now have two variables in 'yourpersonalgroup' that contains READ_REG_USER and READ_REG_TOKEN with the values from the Deploy Token creation.
 
@@ -135,3 +153,11 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 This least privilege approach publishes registry read credentials to the entire subgroup heirarchy for all registries in the same heirarchy. This is a handy method when there are many Application Projects whose images are being used by many Environment Deployment Projects that share a common parent group.
 {{< /admonition >}}
+
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+
+1. Create a GitOps Application Build project from a template.
+
+2. Create and publish (in a group CI/CD variable) a token that allows the Environment Deployment project to read the container images in the Application Build project.
+
+   {{< /admonition >}}

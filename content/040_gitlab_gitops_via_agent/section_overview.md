@@ -6,11 +6,6 @@ draft: false
 desscription: "Section Overview"
 ---
 
-{{< admonition type=tip title="Tip" open=true >}}
-
-**Instructor-Led Note**: [The visuals in this section are also provided as progressive disclosure Visual MicroStory Slides here](../010_introduction/Animated_Visual_MicroStory_Slides_for_GitLab_Kubernetes_Agent_Workshop.pptx)
-{{< /admonition >}}
-
 ### Overview of The Need for Multiple Environment Deployment Projects Per Application Build Project That Results in Separated Projects
 
 {{%expand "Click Here To Expand Content" %}}

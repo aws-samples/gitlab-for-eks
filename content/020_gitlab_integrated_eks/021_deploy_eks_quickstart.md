@@ -8,9 +8,18 @@ description: "Provision a value-added EKS spot cluster by using the official AWS
 
 # Prep Lab 2.1: Provision a Kubernetes Cluster Using The AWS EKS Quick Start
 
-{{< admonition type=info title="Info" open=true >}}
-When this section is complete you will have used an AWS Official Infrastructure as Code offering to deploy an EKS cluster ready to integrate with GitLab.
-{{< /admonition >}}
+> **Keyboard Time**: 5 mins, **Automation Wait Time**: 60 mins
+>
+> **Scenarios:** Instructor-Led, Self-Paced
+
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
+
+1. Create an EKS Cluster that is very cost optimized for training scenarios.
+
+2. Do so very quickly by leveraging AWS official Managed Infrastructure as Code known as “AWS Quick Starts”.
+
+3. **Not a Target**: Learning the detailed ins and outs of deploying and configuring EKS.
+   {{< /admonition >}}
 
 ## Deploy Official AWS EKS QuickStart with Spot Nodes
 
@@ -20,7 +29,11 @@ When this section is complete you will have used an AWS Official Infrastructure 
 >
 > Guides Through: [AWS EKS on the AWS Cloud](https://aws-quickstart.github.io/quickstart-amazon-eks/)
 
-In order to take advantage of spot support and specifying the Kubernetes version (required by GitLab integration), we must first deploy a small advanced configuration stack that the EKS Quick Start reads when deploying.
+{{< admonition type=warning title="IMPORTANT" open=true >}}
+
+In order to take advantage of spot support and specifying the Kubernetes version (required by GitLab integration), we must first deploy a small ‘Advanced Configuration’ template from the EKS Quick Start that is then read by the main EKS Quick Start template when deploying.
+
+{{< /admonition >}}
 
 1. Login to your target AWS account.
 
@@ -34,13 +47,13 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
 4. In 'Name', *Type* **spot2azuseast2**
 
-5. [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml&stackName=spot-t2-medium-v120-paramset&param_ConfigSetName=spot-t2-medium-v120-paramset&param_KubernetesVersion=1.20&param_NodeInstanceType2=t3.medium&param_NodeInstanceType3=t3.large&param_OnDemandPercentage=0)  (and all others at their default value). You may customize the parameters before submitting the template. **IMPORTANT** Cluster add-on settings for Hashicorp vault and others are not used unless these items are installed during the next template deployment - they can be ignored.
+5. [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml&stackName=spot-t2-medium-v120-paramset&param_ConfigSetName=spot-t2-medium-v120-paramset&param_KubernetesVersion=1.21&param_NodeInstanceType2=t3.medium&param_NodeInstanceType3=t3.large&param_OnDemandPercentage=0)  (and all others at their default value). You may customize the parameters before submitting the template. **IMPORTANT** Cluster add-on settings for Hashicorp vault and others are not used unless these items are installed during the next template deployment - they can be ignored.
 
    | <span style="white-space:nowrap;">CF&emsp;GUI&emsp;Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span> | CF Parameter Name  | <span style="white-space:nowrap;">Value&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span> | Notes                                                        |
    | ------------------------------------------------------------ | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
    | Stack name                                                   | N/A                | spot-t2-medium-v120-paramset                                 |                                                              |
    | Config set name                                              | ConfigSetName      | spot-t2-medium-v120-paramset                                 |                                                              |
-   | Kubernetes version                                           | KubernetesVersion  | 1.20                                                         | GitLab integrated K8s clusters must use specific versions    |
+   | Kubernetes version                                           | KubernetesVersion  | 1.21                                                         | GitLab integrated K8s clusters must use specific versions    |
    | Instance type 2                                              | NodeInstanceType2  | t3.medium                                                    | Instance type cannot match what is used for NodeInstanceType<br /> in the EKS Quick Start deployment (next template below) as that value<br /> is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
    | Instance type 2                                              | NodeInstanceType3  | t3.large                                                     | Instance type cannot match what is used for NodeInstanceType in the EKS Quick Start deployment (next template below) as that value is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
    | On-demand percentage                                         | OnDemandPercentage | 0                                                            |                                                              |
@@ -86,3 +99,9 @@ In order to take advantage of spot support and specifying the Kubernetes version
 13. *Click* **Create stack**.
 
 14. Wait for the deployment to complete successfully.
+
+{{< admonition type=abstract title="Accomplished Outcomes" open=true >}}
+
+1. Create an EKS Cluster that is very cost optimized for training scenarios.
+2. Do so very quickly by leveraging AWS official Managed Infrastructure as Code known as “AWS Quick Starts”.
+   {{< /admonition >}}

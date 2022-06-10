@@ -10,14 +10,28 @@ description: "Important information for instructor-led sessions conducted in cla
 
 {{< toc >}}
 
+## Planning Content Coverage
+
+* Instructors must choose the content to be covered to fit the length of the event. 
+* Content sections indicate their dependencies and in general the model after section 3 is to go through the content sequentially and simply leave off additional sections. (Concepts and labs stack on each other from Section 3 on.)
+* Attempting all sections - especially if having students setup infrastructure (the EKS cluster) results in a very long event.
+* Lab timings do not account for breaks or handling issues.
+* Lab timings do not account for the instructor covering conceptual content in slides.
+
 ## Pre-doing
 
 * Do the prereading :)
+* Walk through all slides
 * Instructors should perform the entire set of labs before their first delivery:
   1. For full preparation and understanding of what students are expected to perform.
   2. To have a demo system with completed labs to demonstate any additional concepts or overview. (performing the labs creates a demo environment for you)
   3. To have a hot spare environment if something ends up being wrong with the lab environment - this copy could actually be scaled to handle the class if needed.
-* 3-5 days before **each** delivery instructors may want to validate the entire set of labs - but especially section 2:
+
+**Per Classroom Delivery**
+
+* 3-5 days before **each** delivery 
+* If you do not have a long running classroom environment, setup the classroom environment by following Section 2.
+* Instructors may want to validate the entire set of labs they choose to cover:
   1. AWS, GitLab and AWS Quick Starts all undergo continuous updates - occassionally these updates create challenges for labs.
   2. The labs have been constructed to be as version agnostic as possible - but it is not possible to forsee all possible interactions and challenges.
 

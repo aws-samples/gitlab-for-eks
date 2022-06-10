@@ -13,6 +13,12 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
+
+1. Link the projects using a scheduled pipeline.
+
+   {{< /admonition >}}
+
 {{< admonition type=tip title="Tip" open=true >}}
 
 These methods of linking the projects are loosely coupled. The benefits of this approach are described in [Loose Project Coupling](https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1#loose-project-coupling) 
@@ -26,21 +32,37 @@ These methods of linking the projects are loosely coupled. The benefits of this 
 
 3. Under Description *Type* **CheckForNewContainerVersion**
 
-4. *Click* **Save pipeline schedule**
+4. Leave all other items at their defaults.
 
-   > Normally you would take time to create a schedule on your desired frequency.
+5. Near the bottom left of the page, *Click* **Save pipeline schedule**
 
-5. On the right of CheckForNewContainerVersion *Click* **[the play button]**
+   > Normally you would take time to create one or more schedules specific to your desired frequency.
 
-6. On the left navigation, *Click* **CI/CD => Pipelines**
+6. On the right of CheckForNewContainerVersion *Click* **[the play button]**
 
-7. On the latest pipeline *Click* **[the Status badge]** or **[the pipeline \#]**
+7. On the left navigation, *Click* **CI/CD => Pipelines**
 
-8. Wait for the pipeline to complete.
+8. On the latest pipeline *Click* **[the Status badge]** or **[the pipeline \#]**
 
-9. If you did not perform any extra builds on the Application Project, the “deploy” job will have a failed status and the pipeline will have a status of “Passed”
+9. Wait for the pipeline to complete.
 
-   > The deploy status fails to create a child pipeline because there has not been a new container published since the last run (and no changes were made to the Environment Deployment Project package manifests. GitLab considers it a failure when a parent pipeline fails to create a child pipeline, but we’ve marked this job “allowed_to_fail” because it is the most efficient way to only run the manifest builds when there is actually a change we care about.
+10. If you did not perform any extra builds on the Application Project, the “deploy” job will have a failed status and the pipeline will have a status of “Passed”
+
+   {{< admonition type=warning title="Failed 'deploy' job is OK" open=true >}}
+The deploy job status is 'failed' because no child pipeline jobs are scheduled because there has not been a new container published since the last run (and no changes were made to the Environment Deployment Project package manifests). GitLab considers it a failure when a parent pipeline fails to create a child pipeline, but we’ve marked this job “allowed_to_fail” which gives the Pipeline status of "Passed" (because it is the most efficient way to only run the manifest builds when there is actually a change we care about.)
+   {{< /admonition >}}
+
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+
+1. Link the projects using a scheduled pipeline.
+
+{{< /admonition >}}
+
+{{< admonition type=warning title="Instructor Led Classroom" open=true >}}
+
+If you are in an Instructor-Led course, you usually not be given time to complete the below **[Extra Credit]** exercises. Please check with the instructor before attempting them.
+
+{{< /admonition >}}
 
 ### [Extra Credit] Pipeline Subscription Model
 

@@ -7,9 +7,20 @@ description: "Setup the most secure and capable method of integrating Kubernetes
 
 # Prep Lab 2.2: Prepare GitLab classgroup and Deploy a Runner
 
-{{< admonition type=info title="Info" open=true >}}
-When this section is complete you will have integrated the EKS cluster with GitLab using the GitLab Kubernetes Agent.
-{{< /admonition >}}
+> **Keyboard Time**: 20 mins, **Automation Wait Time**: 20 mins
+>
+> **Scenarios:** Instructor-Led, Self-Paced
+
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
+
+1. Create an group for the classroom level (even if self-paced).
+
+2. Create an inexpensive, but scalable runner fleet for the class to avoid delays due to shared runner capacity or access.
+
+3. Do so very quickly by leveraging the [GitLab HA Scaling Runner Vending Machine for AWS EC2 ASG](https://gitlab.com/guided-explorations/aws/gitlab-runner-autoscaling-aws-asg).
+
+4. **Not a Target**: Learning the detailed ins and outs of deploying GitLab Runners.
+   {{< /admonition >}}
 
 ## Configure a New GitLab classgroup
 
@@ -22,15 +33,18 @@ When this section is complete you will have integrated the EKS cluster with GitL
 > - If you are operating on gitlab.com SaaS and have a paid subscription, do this within the licensed group structure.
 > - If you are operating on gitlab.com SaaS and have a free user, do this at the root of the site where an Ultimate trial can be enabled with a credit card.
 > - Perform this step even if you are doing this self-paced for just yourself.
-> - The group must be public for the GitOps labs to work.
 > - While a runner is not needed just to deploy a GitOps mode application to a cluster, a runner is needed to build the application container in the application project.
->
+> 
 
 1. Create a group for the class (referenced from here on out as ‘classgroup’ ). 
 
    Record: 'classgroup' = ___________________________________________________________
 
    > Perform this step even if you are doing this self-paced for just yourself.
+
+{{< admonition type=warning title="IMPORTANT" open=true >}}
+Throughout the remaining exercises you will replace the text `classgroup` with this actual group name.
+{{< /admonition >}}
 
 2. If this group is a new namespace on GitLab.com SaaS (group at the root), enable the Ultimate trial by:
 
@@ -117,3 +131,10 @@ If you are operating on a GitLab instance and GitLab group where runners are alr
 {{< admonition type=info title="Info" open=true >}}
 The Runner ASG Desired Count and Maximum Count can be editted and updated to scale up the runner fleet if you find things are running slow. Should you choose to scale the runner fleet down, do so by editing the ASG Desire Count so that proper GitLab Runner deregistration processes are triggered.
 {{< /admonition >}}
+
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+
+1. Create an group for the classroom level (even if self-paced).
+2. Create an inexpensive, but scalable runner fleet for the class to avoid delays due to shared runner capacity or access.
+3. Do so very quickly by leveraging the [GitLab HA Scaling Runner Vending Machine for AWS EC2 ASG](https://gitlab.com/guided-explorations/aws/gitlab-runner-autoscaling-aws-asg).
+   {{< /admonition >}}

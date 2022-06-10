@@ -18,6 +18,7 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
     From here on in the exericses this will be referred to as 'yourpersonalgroup'
 3. **Record or remember** 'yourpersonalgroup' = _________________________________________________
 
-    > The group must be made public for GitOps labs to work
-4. While in 'yourpersonalgroup', *Click* **Settings => General**
-5. Under Visibility level, *Select* **Public**
+
+{{< admonition type=warning title="IMPORTANT" open=true >}}
+Throughout the remaining exercises you will replace the text  <mark class="hlgreen">yourpersonalgroup</mark> with this actual group name.
+{{< /admonition >}}
