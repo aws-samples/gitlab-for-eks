@@ -17,6 +17,16 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
 This configuration also works for any kind of **GitLab Runner Push CD** to the cluster using Helm and kubectl commands, not only Auto DevOps.
 {{< /admonition >}}
 
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
+This one Auto DevOps scenario proves out multiple outcomes:
+
+1. Setup a simple application to use Runner Based Push CD to deploy an application to Kubernetes through the cluster connection established by the GitLab Agent.
+
+2. Use Auto DevOps with the GitLab Agent cluster connection method.
+
+3. Leveraging the Group Level agent configuration that was done in a previous lab. ([Visual Depiction Here]({{< relref "../020_gitlab_integrated_eks/section_overview.md#visual-overview-of-gitlab-agent-group-level-cluster-integration" >}}))
+   {{% /admonition %}}
+
 ## Configure An Auto DevOps Project
 
 {{< admonition type=warning title="Warning" open=true >}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer IP>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.
@@ -57,9 +67,9 @@ This configuration also works for any kind of **GitLab Runner Push CD** to the c
 
 15. Only if a pipeline is not already running:
 
-      1. On the upper right of the page *Click* **Run pipeline**
+       1. On the upper right of the page *Click* **Run pipeline**
 
-      2. On the 'Run pipeline' page, *Click* **Run pipeline**
+       2. On the 'Run pipeline' page, *Click* **Run pipeline**
 
 16. Watch the pipeline progress by clicking the linked number starting with \# under the ‘Pipeline’ column.
 
@@ -75,6 +85,16 @@ This configuration also works for any kind of **GitLab Runner Push CD** to the c
 
 22. To the right of 'production' *Click* **Open** (button)
 
-     > It can take a while for SSL to register, you can click through the advanced button to see the site if SSL is not working yet.
+      > It can take a while for SSL to register, you can click through the advanced button to see the site if SSL is not working yet.
 
 23. If everything worked as expected, you should see an application page called Simply Simple Notes and should not have any warnings or problems with SSL certificates.
+
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+
+You have just completed :
+
+1. Setup a simple application to use Runner Based Push CD to deploy an application to Kubernetes through the cluster connection established by the GitLab Agent.
+2. Use Auto DevOps with the GitLab Agent cluster connection method.
+3. Leveraging the Group Level agent configuration method.
+
+{{% /admonition %}}
