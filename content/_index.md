@@ -1,5 +1,5 @@
 ---
-title: "Integrating Amazon EKS with the GitLab Kubernetes Agent"
+title: "Ultimate GitOps: Deploy Secure Microservices to AWS EKS with the GitLab Agent"
 weight: 50
 chapter: true
 draft: false
