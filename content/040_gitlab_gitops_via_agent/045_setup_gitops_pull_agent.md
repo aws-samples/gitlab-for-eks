@@ -23,7 +23,7 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 
 {{< admonition type=warning title="Warning" open=true >}}
 
-**Check With The Instructor**: If you are in an Instructor-Led course where multiple participants are sharing the same GitLab group and Kubernetes cluster, it is important that all changes to the agent configuration file are retained.  The instructor may elect to make these changes for each participant to avoid file saving conflicts and/or information overwriting. Using Merge Requests would be likely to generate many merge conflicts and slow the class progress signficantly.**If you are not in an instructor-led course, perform the lab as described.**
+**Check With The Instructor**: If you are in an Instructor-Led course where multiple participants are sharing the same GitLab group and Kubernetes cluster, it is important that all changes to the agent configuration file are retained.  The instructor may elect to make these changes for each participant to avoid file saving conflicts and/or information overwriting. Using Merge Requests would be likely to generate many merge conflicts and slow the class progress signficantly. **If you are not in an instructor-led course, perform the lab as described.**
 
 {{< /admonition >}}
 
@@ -81,11 +81,11 @@ For all GitOps mode projects, when the deployment shows complete in the Environm
 
 14. In the browser tabs, *Click* **[the tab with the Environments page]**
 
-15. On the ‘production’ line, to the right, *Click* **Open**/
+15. On the ‘production’ line, to the right, *Click* **Open**
 
     > You can see the production deployed application
 
-16. Keep refreshing the brower window if the site is not yet displaying.
+16. If there an error indicating there is no site yet, keep refreshing the browser window until the site displays.
 
 {{< admonition type=warning title="Warning" open=true >}}
 

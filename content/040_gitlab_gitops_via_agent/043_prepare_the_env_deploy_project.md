@@ -35,31 +35,37 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 2. On the 'Import project' page, *Click* **Repository by URL**
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1.git**
 4. In 'Project name' *Type* **World Greetings Env 1** (likely already be defaulted to this)
-5. Near the bottom of the page *Click* **Create project** (button)
-6. When the import is complete, you will be placed in the default landing page of the project.
+5. *Scroll down* to ‘Visibility Level’
+6. *Click* **Public**.
 
-    {{< admonition type=tip title="Group Access Tokens Are Better" open=true >}}
-For the next steps you will create a Personal Access Token so that the CI job can commit the kubernetes manifests back to its own repository. If you have a GitLab license, a project level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials.
-    {{< /admonition >}}
+   {{< admonition type=warning title="Must Be Public" open=true >}}
+   Environment Deployment Projects that are used by the GitLab Agent for Kubernetes must be public.
+   {{< /admonition >}}
 
-1. In the upper right of the page *Click* **[your Avatar icon]** and then *Click* **Edit profile**
+7. Near the bottom of the page *Click* **Create project** (button)
+8. When the import is complete, you will be placed in the default landing page of the project.
 
-2. On the left naviagion, *Click* **Access Tokens**
+   {{< admonition type=tip title="Group Access Tokens Are Better" open=true >}}
+   For the next steps you will create a Personal Access Token so that the CI job can commit the kubernetes manifests back to its own repository. If you have a GitLab license, a project level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials.
+   {{< /admonition >}}
 
-3. Under ‘Add a personal access token’, for Token name, *Type* **WriteRepository**
+9. In the upper right of the page *Click* **[your Avatar icon]** and then *Click* **Edit profile**
 
-4. Under ‘Select scopes’
+10. On the left naviagion, *Click* **Access Tokens**
 
-   1. *Select* **read_repository**
-   2. *Select* **write_repository**
+11. Under ‘Add a personal access token’, for Token name, *Type* **WriteRepository**
 
-5. *Click* **Create personal access token** (button)
+12. Under ‘Select scopes’
 
-    {{< admonition type=warning title="Page Reloaded With Update - Don’t Close" open=true >}}
-Notice the same page reloads, but at the top of the screen now has a grey box containing the token information.
+    1. *Select* **read_repository**
+    2. *Select* **write_repository**
 
-**IMPORTANT** - Do not navigate to another page in this browser as this is the only time you can see the token. You will have to create a new token if you leave the page.
-    {{< /admonition >}}
+13. *Click* **Create personal access token** (button)
+
+   {{< admonition type=warning title="Page Reloaded With Update - Don’t Close" open=true >}}
+   Notice the same page reloads, but at the top of the screen now has a grey box containing the token information.
+   **IMPORTANT** - Do not navigate to another page in this browser as this is the only time you can see the token. You will have to create a new token if you leave the page.
+   {{< /admonition >}}
 
 12. Under ‘Your new personal access token’, to the right of the token value, *Click* **[the Clipboard Icon]**
 

@@ -36,17 +36,29 @@ description: "Setup the most secure and capable method of integrating Kubernetes
 > - While a runner is not needed just to deploy a GitOps mode application to a cluster, a runner is needed to build the application container in the application project.
 > 
 
-1. Create a group for the class (referenced from here on out as ‘classgroup’ ). 
+1. While in an appropriate top level group, near the top right of the page, *Click* **New subgroup** (button)
 
-   Record: 'classgroup' = ___________________________________________________________
+2. Name the group with your gitlab classroom name so that it will be unique, easy to remember and easy for others to identify. 
 
-   > Perform this step even if you are doing this self-paced for just yourself.
+   >  From here on in the exericses this will be referred to as 'classgroup'
 
-{{< admonition type=warning title="IMPORTANT" open=true >}}
-Throughout the remaining exercises you will replace the text `classgroup` with this actual group name.
-{{< /admonition >}}
+3. *Click* **Public**.
 
-2. If this group is a new namespace on GitLab.com SaaS (group at the root), enable the Ultimate trial by:
+4. *Click* **Create Group**.
+
+   {{< admonition type=warning title="Must Be Public" open=true >}}
+
+   Application Build Projects that are used by the GitLab Agent for Kubernetes must be public.
+
+   {{< /admonition >}}
+
+5. Record: 'classgroup' = ___________________________________________________________
+
+   {{< admonition type=warning title="IMPORTANT" open=true >}}
+   Throughout the remaining exercises you will replace the text `classgroup` with this actual group name.
+   {{< /admonition >}}
+
+6. If this group is a new namespace on GitLab.com SaaS (group at the root), enable the Ultimate trial by:
 
    1. *Click* **Settings => Billing**
    2. *Click* **Start your free trial** (button)

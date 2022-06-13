@@ -43,37 +43,47 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 4. In 'Project name' *Type* **Hello World** (may already be defaulted to this)
 
-5. Near the bottom of the page *Click* **Create project** (button)
+5. *Scroll down* to ‘Visibility Level’
 
-6. On the left navigation bar, *Click* **CI/CD => Pipelines**
+6. *Click* **Public**.
 
-13. In the upper right of the page, *Click* **Run pipeline** (button)
+   {{< admonition type=warning title="Must Be Public" open=true >}}
 
-14. On the ‘Run pipeline page’, leave the defaults and in the lower left of the page *Click* **Run pipeline** (button)
+   Application Build Projects that are used by the GitLab Agent for Kubernetes must be public.
+
+   {{< /admonition >}}
+
+7. Near the bottom of the page *Click* **Create project** (button)
+
+8. On the left navigation bar, *Click* **CI/CD => Pipelines**
+
+9. In the upper right of the page, *Click* **Run pipeline** (button)
+
+10. On the ‘Run pipeline page’, leave the defaults and in the lower left of the page *Click* **Run pipeline** (button)
 
      > The code is designed to increment an image version from the container registry of your project. If no image is found, it starts at version 0.0.1.
 
-15. **[Automation wait: ~1 min]** Wait for the pipeline to complete successfully.
+11. **[Automation wait: ~1 min]** Wait for the pipeline to complete successfully.
 
-16. On the left navigation panel, *Click* **Packages & Registries => Container Registry**
+12. On the left navigation panel, *Click* **Packages & Registries => Container Registry**
 
-17. On the Container Registry page click the item ending in “/main”
+13. On the Container Registry page click the item ending in “/main”
 
      > You should see a version tag, a git short sha tag and a latest-prod tag that all have the same value for “Digest”
 
-18. On the left navigation bar, *Click* **CI/CD => Pipelines**
+14. On the left navigation bar, *Click* **CI/CD => Pipelines**
 
-19. In the upper right of the page, *Click* **Run pipeline** (button)
+15. In the upper right of the page, *Click* **Run pipeline** (button)
 
-20. On the ‘Run pipeline page’, Change the variable “NEXTVERSION” to **1.0.0** (overwrite ‘increment-existing-image-version’)
+16. On the ‘Run pipeline page’, Change the variable “NEXTVERSION” to **1.0.0** (overwrite ‘increment-existing-image-version’)
 
-21. *Click* **Run pipeline** (button)
+17. *Click* **Run pipeline** (button)
 
-22. **[Automation wait: ~1 min]** Wait for the pipeline to complete successfully.
+18. **[Automation wait: ~1 min]** Wait for the pipeline to complete successfully.
 
-23. On the left navigation bar, *Click* **Packages & Registries => Container Registry**
+19. On the left navigation bar, *Click* **Packages & Registries => Container Registry**
 
-24. On the Container Registry page **click the [line item ending in “/main”]**
+20. On the Container Registry page **click the [line item ending in “/main”]**
 
      > Among the tags you should see a 0.0.1 version tag and a 1.0.0 version tag.
      >

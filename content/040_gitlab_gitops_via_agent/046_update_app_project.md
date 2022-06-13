@@ -15,6 +15,18 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 In this Lab you will update the background color of the application and track the progress of the automation through both repositories and both environments.
 
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
+
+Observe an end-to-end application change:
+
+1. Update the background color of the application
+
+2. Track the progress of the automation through the Application Build project and
+
+3. Through both environments of the Environment Deployment project using the background page color.
+
+   {{< /admonition >}}
+
 1. Open 'yourpersonalgroup/hello-world’
 
 2. In the left navigation, *Click* **Repository => Files** 
@@ -33,7 +45,7 @@ In this Lab you will update the background color of the application and track th
 
 7. *Click* **Create commit...**
 
-8. *Select* **Commit to main branch** (change from “Create a new branch”)
+8. *Select* **Commit to main branch** (not selected by default)
 
 9. *Click* **Commit**
 
@@ -45,9 +57,13 @@ In this Lab you will update the background color of the application and track th
 
 13. *Click* **[the line ending in ‘/main’]**
 
-14. Search for the latest-prod tag
+14. Scan for the latest-prod tag
 
     > It should have been built moments ago. There should also be a new version tag with the same value for ‘Digest’
+
+    {{< admonition type=success title="Accomplished Outcome" open=true >}}
+You just observed the automatic creation of a new production ready container based on the normal development activity of changing the application files.
+    {{< /admonition >}}
 
 15. Open 'yourpersonalgroup/world-greetings-env-1’ project.
 
@@ -63,21 +79,19 @@ In this Lab you will update the background color of the application and track th
 
 20. Expand the Downstream pipeline - next to the deploy job, *Click* **[the small right arrow]**
 
-21. **[Automation wait: ~3 min]** Wait for the ‘update-staging-manifests’ job should complete successfully.
+21. **[Automation wait: ~3 min]** Wait for the ‘update-staging-manifests’ job to complete successfully.
 
 22. In the pipeline, *Click* **update-staging-manifests**
 
 23. Search the job log (manually or with your brower’s ‘in page search’ feature) for the text “Changes to be committed” (near the bottom)
 
-{{< admonition type=tip title="Tip" open=true >}}
-
+    {{< admonition type=success title="Observation" open=true >}}
 This job only did a commit back to the World Greetings Environment 1 project - it did not do any CD push operations. Since we are also using CI processes in this workshop it can be easy to mistakenly think this job pushed the changes, rather than the GitLab Agent in the cluster pulling them.
-
-{{< /admonition >}}
+    {{< /admonition >}}
 
 24. In the left navigation, *Click* **Repository => Files**
 
-25. *Click* **manifests**
+25. In the main page body, in the files and directories list, *Click* **manifests**
 
 26. *Click* **hello-world.staging.yaml**
 
@@ -91,29 +105,23 @@ This job only did a commit back to the World Greetings Environment 1 project - i
 
 31. *Find* `- image: `
 
-{{< admonition type=tip title="Tip" open=true >}}
-
+    {{< admonition type=tip title="Tip" open=true >}}
 The version differences between the current state of these two manifests is what explains the results you will see when viewing the active environments in the next steps.
-
-{{< /admonition >}}
+    {{< /admonition >}}
 
 32. *Click* **Deployments => Environments**
 
 33. **[Automation wait: ~3 min]** Keep refreshing until staging deployment activities complete.
 
-{{< admonition type=warning title="Warning" open=true >}}
-
+    {{< admonition type=warning title="Warning" open=true >}}
 For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests.
+    {{< /admonition >}}
 
-{{< /admonition >}}
-
-{{< admonition type=warning title="Warning" open=true >}}
-
+    {{< admonition type=warning title="Warning" open=true >}}
 **If you are in an instructor-led workshop, the instructor may need to access the cluster for you.** If you were to run into unusual deployment problems, you would need to login to the Kubernetes Cluster and run the below command. To do this, login to the EKS Bastion host the same was as was done in “Prep Lab 2.3: Use GitLab K8s Agent to Integrate The Cluster with GitLab” to install the GitLab Agent. Then run this command `kubectl logs -f -l=app=gitlab-agent -n gitlab-agent`
 
 For common errors and more troubleshooting information visit [Troubleshooting the GitLab agent for Kubernetes](https://docs.gitlab.com/ee/user/clusters/agent/troubleshooting.html)
-
-{{< /admonition >}}
+    {{< /admonition >}}
 
 34. On the ‘staging’ line, to the right, *Click* **Open**
 
@@ -125,8 +133,10 @@ For common errors and more troubleshooting information visit [Troubleshooting th
 
 38. Next to the deploy job, *Click* **[the small right arrow]**
 
-39. On the ‘update-production-manifests’ job, *Click* **[the play button in a circle]**
+39. *Locate* the **update-production-manifests** job
+> You may have to horizontally scroll right to see this final job.
 
+40. *Click* **[the play button in a circle]**
 40. **[Automation wait: ~3 min]** Keep refreshing until production deployment activities complete.
 
 {{< admonition type=warning title="Warning" open=true >}}
@@ -141,6 +151,8 @@ For all GitOps mode projects, when the deployment shows complete in the Environm
 
 43. On the ‘production’’ line, to the right, *Click* **Open**
 
+    {{< admonition type=success title="Observation" open=true >}}
+
     > You should see that the production environment is now the new color.
 
 {{< admonition type=tip title="Tip" open=true >}}
@@ -148,3 +160,13 @@ For all GitOps mode projects, when the deployment shows complete in the Environm
 While it is not necessarily easy to observe directly from GitLab, it is the GitLab Agent that is pulling the changes into the cluster. You can understand more about this flow by examining the box ‘GitLab K8s Agent Channel’ in the [GitLab K8s Agent Connections and Flows diagram]({{< relref "../070_architecture_patterns/gitlab-agent-connections" >}}).
 
 {{< /admonition >}}
+
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+
+1. Update the background color of the application
+
+2. Track the progress of the automation through the Application Build project and
+
+3. Through both environments of the Environment Deployment project using the background page color.
+
+   {{< /admonition >}}
