@@ -69,7 +69,7 @@ While this project only uses the GitLab Agent Pull CD mode for deployment, it do
 
 9. *Select* **Commit to main branch** (this is not the default)
 
-10. Under ‘Commit Message’, *Type* **[skip ci] Adding Manfest Security Scanning**
+10. Under ‘Commit Message’, *Type* **[skip ci] Adding Manifest Security Scanning**
 
 11. *Click* **Commit**
 
