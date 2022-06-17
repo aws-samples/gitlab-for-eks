@@ -28,7 +28,7 @@ The first part of this workshop creates a GitLab Integrated EKS cluster using Gi
 
 ### A Production Pattern That is Training Ready
 
-Read more at: [A Production Pattern That is Training Ready]({{< relref "./010_introduction/learning-outcomes-and-reusable-patterns.md#reusable-patterns-for-production-and-training" >}})
+Read more at: [A Production Pattern That is Training Ready]({{< relref "./010_introduction/learning_outcomes_and_reusable_patterns.md#reusable-patterns-for-production-and-training" >}})
 
 ## In This Workshop
 {{% children style="h3" %}}

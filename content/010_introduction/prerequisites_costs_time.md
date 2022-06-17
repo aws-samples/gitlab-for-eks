@@ -1,6 +1,6 @@
 ---
 title: "Prerequisites and Costs"
-weight: 03
+weight: 04
 chapter: true
 draft: false
 description: "What You Need To Get Started, Cost Estimates, Time Estimates, Name Substitutions."
@@ -9,7 +9,7 @@ description: "What You Need To Get Started, Cost Estimates, Time Estimates, Name
 
 ## Instructor-Led Notes
 
-If you are the instructor for an instructor-led version of this workshop, please read [Instructor-Led Notes]({{< relref "./instructor-led-notes.md" >}})
+If you are the instructor for an instructor-led version of this workshop, please read [Instructor-Led Notes]({{< relref "./instructor_led_notes.md" >}})
 
 ## What You Must Bring
 
@@ -27,7 +27,7 @@ If infrastructure experience of deploying clusters is desired for participants, 
 
 ## Time Estimates
 
-Time estimates live with learning outcomes in [Learning Outcomes and Time Estimates]({{< relref "../010_introduction/learning-outcomes-and-reusable-patterns.md#learning-outcomes-and-time-estimates" >}})
+Time estimates live with learning outcomes in [Learning Outcomes and Time Estimates]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#learning-outcomes-and-time-estimates" >}})
 
 ## Cost Estimates
 
@@ -63,5 +63,5 @@ Based on us-east-1
 
 ### A Production Pattern That is Training Ready
 
-Please read [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning-outcomes-and-reusable-patterns.md#reusable-patterns-for-production-and-training" >}})
+Please read [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#reusable-patterns-for-production-and-training" >}})
 

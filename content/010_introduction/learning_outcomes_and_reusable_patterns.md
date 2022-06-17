@@ -1,6 +1,6 @@
 ---
 title: "Learning Outcomes, Time and Reusable Patterns"
-weight: 02
+weight: 03
 chapter: true
 draft: false
 description: "The learning outcomes that are designed into this workshop."

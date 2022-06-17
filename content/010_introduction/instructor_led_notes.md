@@ -1,6 +1,6 @@
 ---
 title: "Instructor-Led Notes"
-weight: 04
+weight: 05
 chapter: true
 draft: false
 description: "Important information for instructor-led sessions conducted in classrooms."
@@ -40,8 +40,8 @@ description: "Important information for instructor-led sessions conducted in cla
 ### Required
 
 -  [Prerequisites, Costs and Time]({{< relref "./prerequisites_costs_time.md" >}}) please pay attention to the Instructor-Led columns and call outs.
--  [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning-outcomes-and-reusable-patterns.md#reusable-patterns-for-production-and-training" >}}) - outlines the details of how the GitLab structure in these labs enables an entire classroom to share specific resources without conflicts.
-- [Simple, Inexpensive, Secure for Training]({{< relref "../010_introduction/learning-outcomes-and-reusable-patterns.md#simple--inexpensive-eks-pattern-reusable-for-training" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
+-  [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#reusable-patterns-for-production-and-training" >}}) - outlines the details of how the GitLab structure in these labs enables an entire classroom to share specific resources without conflicts.
+- [Simple, Inexpensive, Secure for Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#simple--inexpensive-eks-pattern-reusable-for-training" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
 - [Tuning and Troubleshooting Guide]({{< relref "./tuning_and_troubleshooting.md" >}}) - discusses how to troubleshoot problems and how to tune the setup for classrooms.
 - [Reporting Problems]({{< relref "./reporting_problems_or_features.md" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
 

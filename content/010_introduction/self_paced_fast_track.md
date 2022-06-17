@@ -1,6 +1,6 @@
 ---
 title: "Self-Paced Learner Fast Track"
-weight: 01
+weight: 02
 chapter: true
 draft: false
 description: "Get Started With Zero Extra Reading."
