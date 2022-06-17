@@ -99,7 +99,7 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
     {{< admonition type=tip title="Check Contents" open=true >}}
 
-You should now have two variables in the 'yourpersonalgroup/world-greetings-env-1' project that contains PROJECT_COMMIT_TOKEN and PROJECT_COMMIT_USER.
+Among the existing variables in the 'yourpersonalgroup/world-greetings-env-1' project, you should have the two new variables PROJECT_COMMIT_TOKEN and PROJECT_COMMIT_USER.
 
 These permissions are least privilege, in part, because the CI/CD Variables are only published at the project level.
     {{< /admonition >}}
@@ -116,21 +116,17 @@ These permissions are least privilege, in part, because the CI/CD Variables are 
 
 32. In your browser tabs, *Switch* back to the **[tab where you have the Web IDE opened on the World Greetings Env 1 project]**.
 
-33. In the files list, *Click* **.gitlab-ci.yaml**
+33. In the files list, *Click* **.gitlab-ci.yml**
 
 34. Under ‘variables:’ *Find* **IMAGE_NAME_TO_MONITOR**
 
-35. In the quoted value, *Remove* **everything except ${SERVICE_NAME}/main** 
+35. In the quoted value, *Remove* **the existing value** 
 
-36. Paste your copied text at the start of the value and ensure it ends in /${SERVICE_NAME}/main
+36. Paste your copied image path
 
-37. *Remove* **hello-world/main** from the pasted string.
+    > The result should be something like **IMAGE_NAME_TO_MONITOR: "registry.gitlab.com/somegroups/classgroup/yourpersonalgroup/hello-world/main"**
 
-    > The result should be something like **IMAGE_NAME_TO_MONITOR: "registry.gitlab.com/guided-explorations/gl-k8s-agent/gitops/apps/${SERVICE_NAME}/main"** but ‘registry.gitlab.com/guided-explorations/gl-k8s-agent/gitops/apps’ will be the registry path to your specific Application Project’s registry.
-
-38. Ensure that the value **SERVICE_NAME: "hello-world"**  matches the actual path name of your Application Project (it should already match if you used the default when importing the Application Project)
-
-39. *Click* **Create commit...**
+38. *Click* **Create commit...**
 
 40. *Select* **Commit to main branch** (change from “Create a new branch”)
 
@@ -152,9 +148,10 @@ can be caused by:
   - being incorrectly named, 
   - at the wrong group level or 
   - having invalid values.
+  - having incorrect permissions in the token (should be “read_registry”, not “read_repository”)
 
 {{< /admonition  >}}
-44. **[Automation wait: ~3 min]** Watch the pipeline complete through the ‘staging’ job.
+44. **[Automation wait: ~3 min]** Watch the pipeline complete through the ‘update-staging-manifests’ job.
 
 45. The update-staging-manifests job should complete successfully.
 
@@ -170,11 +167,15 @@ can be caused by:
 
     > Be sure you refreshed the browser
 
+{{< admonition type=observe title="Only Staging Manifest Has Changed So Far" open=true >}}
+In the next steps you will observe that the production manifest has not change yet because you have not approved the deployment to production yet.
+{{< /admonition >}}
+
 51. In the files list on the left *Click* **manifests > hello-world.production.yaml**
 
 52. *Search* for **- image:**
 
-53. The image reference should match the old location you copied the Application Project from, followed by a version that most likely is not the same as your staging image.
+53. The image version tag does not match staging. (Sometimes if you’ve had trouble with labs and run previous steps multiple times it might coincidentally match)
 
 54. **In a NEW browser tab**, open 'yourpersonalgroup/world-greetings-env-1' again.
 
@@ -192,7 +193,7 @@ can be caused by:
 
 60. In the browser tabs, *Switch* back to **[the Web IDE tab]**
 
-62. *Click* **[the browser refresh button]**
+61. *Click* **[the browser refresh button]**
 
 62. In the files list on the left *Click* **manifests > hello-world.production.yaml**
 

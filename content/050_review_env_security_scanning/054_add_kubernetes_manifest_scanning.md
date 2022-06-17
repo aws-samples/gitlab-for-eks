@@ -33,15 +33,13 @@ While this project only uses the GitLab Agent Pull CD mode for deployment, it do
 
 1. Open 'yourpersonalgroup/world-greetings-env-1’
 
-2. In the left navigation, *Click* **CI/CD => Editor** 
+2. On the upper right of the Project page, *Click* **Web IDE**
 
-3. On the upper right of the Project page, *Click* **Web IDE**
-
-4. In the left side file browser, *Click* **update-manifests.gitlab-ci.yml**
+3. In the left side file browser, *Click* **update-manifests.gitlab-ci.yml**
 
    > You will be editing YAML - be careful that tabbing is properly aligned. Only removing the comment character (“#”) should result in proper tabbing.
 
-5. Under `include:` uncomment `- template: Security/SAST-IaC.latest.gitlab-ci.yml` which should make the section look like this.:
+4. Under `include:` uncomment `- template: Security/SAST-IaC.latest.gitlab-ci.yml` which should make the section look like this.:
 
    ```yaml
    include: 
@@ -49,7 +47,7 @@ While this project only uses the GitLab Agent Pull CD mode for deployment, it do
      - template: Security/SAST-IaC.latest.gitlab-ci.yml
    ```
 
-6. Under `variables:` uncomment the `variables:` heading and the two variable which should make the section look like this:
+5. Under `variables:` uncomment the `variables:` heading and the two variable which should make the section look like this:
 
    ```
    variables:
@@ -57,9 +55,9 @@ While this project only uses the GitLab Agent Pull CD mode for deployment, it do
      KUBESEC_HELM_CHARTS_PATH: $CI_PROJECT_DIR/constructed-manifests/
    ```
 
-7. In the left side file browser, Click packages/hello-world/base/deployment.yaml
+6. In the left side file browser, Click packages/hello-world/base/deployment.yaml
 
-8. At the bottom of the file edit the `securityContext:` section to look like this (be sure to keep the same indentation starting by not moving the existing keyword `securityContext` and indenting sub levels by two spaces):
+7. At the bottom of the file edit the `securityContext:` section to look like this (be sure to keep the same indentation starting by not moving the existing keyword `securityContext` and indenting sub levels by two spaces):
    ```
          securityContext:
            capabilities:
@@ -67,27 +65,27 @@ While this project only uses the GitLab Agent Pull CD mode for deployment, it do
                - SYS_ADMIN
    ```
 
-9. *Click* **Create commit...**
+8. *Click* **Create commit...**
 
-10. *Select* **Commit to main branch** (this is not the default)
+9. *Select* **Commit to main branch** (this is not the default)
 
-11. Under ‘Commit Message’, *Type* **[skip ci] Adding Manfest Security Scanning**
+10. Under ‘Commit Message’, *Type* **[skip ci] Adding Manfest Security Scanning**
 
-12. *Click* **Commit**
+11. *Click* **Commit**
 
-13. Below the Create commit… button, in the status bar, *Click* **[the pipeline #]**
+12. Below the Create commit… button, in the status bar, *Click* **[the pipeline #]**
 
-14. Expand the Downstream pipeline with the great than arrow (`>`).
+13. Expand the Downstream pipeline with the great than arrow (`>`).
 
-15. Under the new stage ‘Test‘, *Locate* the new job **kics-iac-sast** 
+14. Under the new stage ‘Test‘, *Locate* the new job **kics-iac-sast** 
 
-16. *Click* **kics-iac-sast**
+15. *Click* **kics-iac-sast**
 
-17. Near the bottom of the log, *Locate* **gl-sast-report.json : found 1 files and directories**
+16. Near the bottom of the log, *Locate* **gl-sast-report.json : found 1 files and directories**
 
-18. On the left navigation, *Click* **Security & Compliance => Vulnerability report**
+17. On the left navigation, *Click* **Security & Compliance => Vulnerability report**
 
-19. If there are not any vulnerabilities listed, you can examine the page for `Last updated` followed by an elapsed time and a clickable pipeline id reference.
+18. If there are not any vulnerabilities listed, you can examine the page for `Last updated` followed by an elapsed time and a clickable pipeline id reference.
 
 {{< admonition type=success title="Accomplished Outcomes" open=true >}}
 

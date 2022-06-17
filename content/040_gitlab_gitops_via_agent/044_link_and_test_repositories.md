@@ -21,14 +21,14 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 {{< admonition type=tip title="Tip" open=true >}}
 
-These methods of linking the projects are loosely coupled. The benefits of this approach are described in [Loose Project Coupling](https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1#loose-project-coupling) 
+These methods of linking the projects are loosely coupled. The benefits of this approach are described in [Loose Project Coupling](https://gitlab.com/groups/guided-explorations/gl-k8s-agent/gitops/-/wikis/home#loose-project-coupling) 
 {{< /admonition >}}
 
 ### Scheduled Pipeline Model
 
 1. In 'yourpersonalgroup/world-greetings-env-1’ *Click* **CI/CD => Schedules**
 
-2. On the upper left of the page, *Click* **New schedule**
+2. On the upper right of the page, *Click* **New schedule** (button)
 
 3. Under Description *Type* **CheckForNewContainerVersion**
 

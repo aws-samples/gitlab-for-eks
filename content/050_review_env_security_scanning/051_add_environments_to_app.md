@@ -58,6 +58,7 @@ In this Lab you will update the application project to have a review application
      BUILD_DISABLED: 'true'
      TEST_DISABLED: 'true'
      POSTGRES_ENABLED: 'false'
+     CODE_QUALITY_DISABLED: 'true'
      MANUAL_PROMOTE: 'true'
      STAGING_ENABLED: 'true'
      
@@ -76,6 +77,10 @@ In this Lab you will update the application project to have a review application
 
    > You should have a green banner that says “Syntax is correct”
 
+{{< admonition type=observe title="Observe" open=true >}}
+You will now purposely insert a syntax error to see the linter catch it. The GitLab CI Yaml linter only exists in this CI Editor. 
+{{< /admonition >}}
+
 7. In the same top navigation area, *Click* **Edit**
 
 8. On a **blank** line *Type* **this is an error**
@@ -84,7 +89,7 @@ In this Lab you will update the application project to have a review application
 
    > You should have a red banner that says “Syntax is incorrect”
 
-10. Make a mental note of the line numer and column noted in the grey box.
+10. Make a mental note of the line number and column noted in the grey box.
 
 11. In the same navigation area, *Click* **Edit**
 

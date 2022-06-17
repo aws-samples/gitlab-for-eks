@@ -75,7 +75,7 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 15. In the upper right of the page, *Click* **Run pipeline** (button)
 
-16. On the ‘Run pipeline page’, Change the variable “NEXTVERSION” to **1.0.0** (overwrite ‘increment-existing-image-version’)
+16. On the ‘Run pipeline page’, Change the value of the variable “NEXTVERSION” to **1.0.0** (replace the text ‘increment-existing-image-version’)
 
 17. *Click* **Run pipeline** (button)
 
