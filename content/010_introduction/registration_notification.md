@@ -10,9 +10,9 @@ description: "Get Started With Zero Extra Reading."
 
 Visit the below page to:
 
-- Register for an existing in-person course
-- Register for an existing virtual course
-- Get on a wait list for a future in-person or virtual course
-- Request an dedicated delivery for your organization (Minimum 15 seats)
+- Register for an existing in-person workshop delivery
+- Register for an existing virtual workshop delivery
+- Get on a wait list for a future in-person or virtual workshop delivery
+- Request a dedicated workshop delivery for your organization (Minimum 15 seats)
 
 [Registration and Wait List Page](https://gitlab.com)
