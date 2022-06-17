@@ -18,7 +18,7 @@ This one Auto DevOps scenario proves out multiple outcomes:
 
 1. Setup a simple application to use Runner Based Push CD to deploy an application to Kubernetes through the cluster connection established by the GitLab Agent. This includes any custom CI/CD that directly uses kubectl and helm commands.
 
-2. Use Auto DevOps with the GitLab Agent cluster connection method.
+2. Use Auto DevOps (Runner Push Deployment) with the GitLab Agent cluster connection method.
 
 3. Leveraging the Group Level agent configuration that was done in a previous lab. ([Visual Depiction Here]({{< relref "../020_gitlab_integrated_eks/section_overview.md#visual-overview-of-gitlab-agent-group-level-cluster-integration" >}}))
 {{< /admonition >}}

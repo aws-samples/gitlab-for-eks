@@ -29,35 +29,35 @@ Observe an end-to-end application change:
 
 1. Open 'yourpersonalgroup/hello-world’
 
-2. In the left navigation, *Click* **Repository => Files** 
+5. In the left navigation, *Click* **Repository => Files** 
 
-3. On the upper right of the Project page, *Click* **Web IDE**
+6. On the upper right of the Project page, *Click* **Web IDE**
 
-4. *Navigate to* the file **src/microwebserver.py**
+7. *Navigate to* the file **src/microwebserver.py**
 
-5. Around line 11, *locate* the text `<BODY style="background:lightsalmon">`
+8. Around line 11, *locate* the text `<BODY style="background:lightsalmon">`
 
-6. Change the color after the word `background:` to `lightgreen`
+9. Change the color after the word `background:` to `lightgreen`
 
    Result: `<BODY style="background:lightgreen">`
 
    > If you need a different color, other available color values [are listed here](https://www.w3.org/wiki/CSS/Properties/color/keywords)
 
-7. *Click* **Create commit...**
+10. *Click* **Create commit...**
 
-8. *Select* **Commit to main branch** (not selected by default)
+11. *Select* **Commit to main branch** (not selected by default)
 
-9. *Click* **Commit**
+12. *Click* **Commit**
 
-10. In the very bottom left, immediately after the text ‘Pipeline’ *Click* **[the pipeline number which is preceeded with a \#]**
+13. In the very bottom left, immediately after the text ‘Pipeline’ *Click* **[the pipeline number which is preceeded with a \#]**
 
-11. **[Automation wait: ~2 min]** Wait for the pipeline to complete.
+14. **[Automation wait: ~2 min]** Wait for the pipeline to complete.
 
-12. *Click* **Packages & Registries => Container Registry**
+15. *Click* **Packages & Registries => Container Registry**
 
-13. *Click* **[the line ending in ‘/main’]**
+16. *Click* **[the line ending in ‘/main’]**
 
-14. Scan for the latest-prod tag
+17. Scan for the latest-prod tag
 
     > It should have been built moments ago. There should also be a new version tag with the same value for ‘Digest’
 
@@ -65,53 +65,53 @@ Observe an end-to-end application change:
 You just observed the automatic creation of a new production ready container based on the normal development activity of changing the application files.
     {{< /admonition >}}
 
-15. Open 'yourpersonalgroup/world-greetings-env-1’ project.
+20. Open 'yourpersonalgroup/world-greetings-env-1’ project.
 
-16. *Click* **CI/CD => Schedules**
+21. *Click* **CI/CD => Schedules**
 
-17. On the right side of schedule called ‘CheckForNewContainerVersion’, *Click* **[the play button]**
+22. On the right side of schedule called ‘CheckForNewContainerVersion’, *Click* **[the play button]**
 
     > If the schedule is missing, simply Click CI/CD => Pipelines => Run Pipeline = and then => Run Pipeline
 
-18. On the left navigation, *Click* **CI/CD => Pipelines**
+24. On the left navigation, *Click* **CI/CD => Pipelines**
 
-19. Open the most recent non-skipped pipeline by clicking **[the pipeline Status badge]** or **[the pipeline #]**
+25. Open the most recent non-skipped pipeline by clicking **[the pipeline Status badge]** or **[the pipeline #]**
 
-20. Expand the Downstream pipeline - next to the deploy job, *Click* **[the small right arrow]**
+26. Expand the Downstream pipeline - next to the deploy job, *Click* **[the small right arrow]**
 
-21. **[Automation wait: ~3 min]** Wait for the ‘update-staging-manifests’ job to complete successfully.
+27. **[Automation wait: ~3 min]** Wait for the ‘update-staging-manifests’ job to complete successfully.
 
-22. In the pipeline, *Click* **update-staging-manifests**
+28. In the pipeline, *Click* **update-staging-manifests**
 
-23. Search the job log (manually or with your brower’s ‘in page search’ feature) for the text “Changes to be committed” (near the bottom)
+29. Search the job log (manually or with your brower’s ‘in page search’ feature) for the text “Changes to be committed” (near the bottom)
 
     {{< admonition type=success title="Observation" open=true >}}
 This job only did a commit back to the World Greetings Environment 1 project - it did not do any CD push operations. Since we are also using CI processes in this workshop it can be easy to mistakenly think this job pushed the changes, rather than the GitLab Agent in the cluster pulling them.
     {{< /admonition >}}
 
-24. In the left navigation, *Click* **Repository => Files**
+30. In the left navigation, *Click* **Repository => Files**
 
-25. In the main page body, in the files and directories list, *Click* **manifests**
+31. In the main page body, in the files and directories list, *Click* **manifests**
 
-26. *Click* **hello-world.staging.yaml**
+32. *Click* **hello-world.staging.yaml**
 
-27. *Find* `- image: `
+33. *Find* `- image: `
 
-28. Note the version number at the very end of the image string should match the image registry version you just saw. Keep this version in mind so you can compare to production in the next steps .
+34. Note the version number at the very end of the image string should match the image registry version you just saw. Keep this version in mind so you can compare to production in the next steps .
 
-29. *Click* **[the browers back button]**
+35. *Click* **[the browers back button]**
 
-30. *Click* **hello-world.production.yaml**
+36. *Click* **hello-world.production.yaml**
 
-31. *Find* `- image: `
+37. *Find* `- image: `
 
     {{< admonition type=tip title="Tip" open=true >}}
 The version differences between the current state of these two manifests is what explains the results you will see when viewing the active environments in the next steps.
     {{< /admonition >}}
 
-32. *Click* **Deployments => Environments**
+38. *Click* **Deployments => Environments**
 
-33. **[Automation wait: ~3 min]** Keep refreshing until staging deployment activities complete.
+39. **[Automation wait: ~3 min]** Keep refreshing until staging deployment activities complete.
 
     {{< admonition type=warning title="Warning" open=true >}}
 For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests.
@@ -137,13 +137,11 @@ For common errors and more troubleshooting information visit [Troubleshooting th
 > You may have to horizontally scroll right to see this final job.
 
 40. *Click* **[the play button in a circle]**
-40. **[Automation wait: ~3 min]** Keep refreshing until production deployment activities complete.
+41. **[Automation wait: ~3 min]** Keep refreshing until production deployment activities complete.
 
-{{< admonition type=warning title="Warning" open=true >}}
-
+    {{< admonition type=warning title="Warning" open=true >}}
 For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests.
-
-{{< /admonition >}}
+    {{< /admonition >}}
 
 41. *Click* **Deployments => Environments**
 
@@ -152,8 +150,8 @@ For all GitOps mode projects, when the deployment shows complete in the Environm
 43. On the ‘production’’ line, to the right, *Click* **Open**
 
     {{< admonition type=success title="Observation" open=true >}}
-
-    > You should see that the production environment is now the new color.
+    You should see that the production environment is now the new color.
+    {{< /admonition >}}
 
 {{< admonition type=tip title="Tip" open=true >}}
 

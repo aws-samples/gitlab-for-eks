@@ -13,62 +13,84 @@ description: "Cluster image security scanning configuration."
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{< admonition type=tip title="Tip" open=true >}}
+{{< admonition type=gitlab title="Scanning Other Images In The Cluster" open=true >}}
 
 Cluster image scanning is able to add security findings for images used in your cluster that are not a part of your development process and therefore do not get routinely scanned during CI of the application. This scanning currently focuses on the cluster’s images and not other aspects of cluster security. The other security scanning we’ve been configuring has explictly to do with development - this scanning is part of GitLab’s Protect stage - part of operational integrity that can be enabled via the GitLab Agent.
 
 {{< /admonition >}}
 
-{{< admonition type=warning title="Warning" open=true >}}
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
 
-**Check With The Instructor**: If you are in an Instructor-Led course where multiple participants are sharing the same GitLab group and Kubernetes cluster, the instructor may elect to make these changes. **If you are not in an instructor-led course, perform the lab as described.**
+1. Configure cluster image scanning using the GitLab Agent for Kubernetes.
+2. Examine cluster image scanning findings.
 
 {{< /admonition >}}
 
-1. Open 'classgroup/cluster-management’
+{{< admonition type=quote title="Done By Instructor for Instructor-Led Courses" open=true >}}
 
-2. In the left navigation, *Click* **Repository => Files** 
+1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../010_introduction/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
 
-3. On the upper right of the Project page, *Click* **Web IDE**
+2. Run the following command to tail the kubernetes agent log while deployments are happening:
 
-4. Navigate to the file .gitlab/agents/spotazuseast2-agent/config.yml
+   `kubectl logs -f -l=app=gitlab-agent -n gitlab-agent`
 
-5. Add the following to bottom of the file (only once per agent config.toml file).:
+    <mark class="hlgreen">Leave this view open as you will be instructed to consult it to see the deployment logging activity when the GItLab Agent pulls and processes the kubernetes manifest.</mark>
+
+3. Open 'classgroup/cluster-management’
+
+4. In the left navigation, *Click* **Repository => Files** 
+
+5. On the upper right of the Project page, *Click* **Web IDE**
+
+6. Navigate to the file .gitlab/agents/spotazuseast2-agent/config.yml
+
+7. Add the following to bottom of the file (only once per agent config.toml file).:
 
    ```yaml
    starboard:
-     cadence: '* * * * *' #Every 5 minutes
+     cadence: '* * * * *' #Every minute
    ```
 
-6. *Click* **Create commit...**
+8. *Click* **Create commit...**
 
-7. *Select* **Commit to main branch**
+9. *Select* **Commit to master branch**
 
-8. Under ‘Commit Message’, *Type* **[skip ci] Adding Manfest Security Scanning**
+10. Under ‘Commit Message’, *Type* **[skip ci] Adding Manfest Security Scanning**
 
-9. *Click* **Commit**
+11. *Click* **Commit**
 
-   > Using the following command on the machine with kubectl cluster access will show the scanning in progress:  `kubectl logs -f -l=app=gitlab-agent -n gitlab-agent`
+{{< /admonition >}}
 
-10. **[Automation Wait Time: ~10 mins]** Wait for the cluster to receive the new directive and perform a scan.
+12. Watch the previously opened view of the GitLab Agent log for deployment activity.
 
-11. To see scanning results, while in 'classgroup/cluster-management’
+   <mark class="hlgreen">**For Instructor-Led**: the instructor may have this view displayed for everyone</mark>
 
-12. *Click* **Infrastructure => Kubernetes clusters => spot2azuseast2-agent1 => Security** (Tab)
+13. **[Automation Wait Time: ~10 mins]** Wait for the cluster to receive the new directive and perform a scan.
 
-13. Under ‘Status’ *Click* **[to expand the drop down]** and then *Click* **All statuses**
+2. To see scanning results, while in 'classgroup/cluster-management’
 
-14. These findings are also visible in the standard security dashboards.
+3. *Click* **Infrastructure => Kubernetes clusters => spot2azuseast2-agent1 => Security** (Tab)
 
-15. Open ‘classgroup’
+4. Under ‘Status’ *Click* **[to expand the drop down]** and then *Click* **All statuses**
 
-16. On the left navigation, *Click* **Security & Compliance => Vulnerability Report**
+5. These findings are also visible in the standard security dashboards.
 
-17. In the tab bar under ‘Vulnerability report’, *Click* **Operational vulnerabilities**
+6. Open ‘classgroup’
 
-18. Under ‘Status’ *Click* **[to expand the drop down]** and then *Click* **All statuses**
+7. On the left navigation, *Click* **Security & Compliance => Vulnerability Report**
 
-    > Notice the list of vulnerabilities.
+8. In the tab bar under ‘Vulnerability report’, *Click* **Operational vulnerabilities**
+
+9. Under ‘Status’ *Click* **[to expand the drop down]** and then *Click* **All statuses**
+
+   > Notice the list of vulnerabilities.
+
+{{< admonition type=abstract title="Accomplished Outcomes" open=true >}}
+
+1. Configure cluster image scanning using the GitLab Agent for Kubernetes.
+2. Examine cluster image scanning findings.
+
+{{< /admonition >}}
 
 {{< admonition type=warning title="Warning" open=true >}}
 

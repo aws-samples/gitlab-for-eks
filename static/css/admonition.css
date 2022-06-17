@@ -244,6 +244,44 @@
   color: #9e9e9e
 }
 
+.admonition.observe {
+  background-color: rgba(0, 200, 83, 0.1);
+  border-left-color: #00c853
+}
+
+.admonition.observe .admonition-title {
+  border-bottom-color: rgba(0, 200, 83, 0.1);
+  background-color: rgba(0, 200, 83, 0.25)
+}
+
+.admonition.observe.open .admonition-title {
+  background-color: rgba(0, 200, 83, 0.1)
+}
+
+.admonition.observe i.icon {
+  color: #00c853
+}
+
+.admonition.gitlab {
+  background-color: rgba(255, 145, 0, 0.1);
+  border-left-color: #FC6D26
+}
+
+.admonition.gitlab .admonition-title {
+  border-bottom-color: rgba(255, 145, 0, 0.1);
+  background-color: rgba(255, 145, 0, 0.25)
+}
+
+.admonition.gitlab.open .admonition-title {
+  background-color: rgba(255, 145, 0, 0.1)
+}
+
+.admonition.gitlab i.icon {
+  background-image: url('/images/gitlab-logo-20.png');
+  color: transparent!important;
+  background-repeat: no-repeat
+}
+
 .admonition:last-child {
   margin-bottom: .75rem
 }
