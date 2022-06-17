@@ -15,7 +15,7 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
 
 1. While in 'classgroup', near the top right of the page, *Click* **New subgroup** (button)
 
-2. Name the group with your gitlab user name so that it will be unique, easy to remember and easy for others to identify. (For example if your gitlab user id is @supercoolcoder and your avatar URL is https://gitlab.com/supercoolcoder, name your subgroup ‘supercoolcoder’). 
+2. Name the group with the mask `firstname_lastname` so that it will be unique, easy to remember and easy for others to identify. (For example if your gitlab user id is @supercoolcoder and your avatar URL is https://gitlab.com/supercoolcoder, name your subgroup ‘supercoolcoder’). 
     From here on in the exericses this will be referred to as 'yourpersonalgroup'
 
 3. *Click* **Public**.
