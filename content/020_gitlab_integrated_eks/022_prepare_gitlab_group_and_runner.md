@@ -67,29 +67,6 @@ description: "Setup the most secure and capable method of integrating Kubernetes
    5. For Who will be using GitLab select **My company or team** for groups or **Just me** for individual learning.
    6. *Click* **Start your free trial**.
 
-## Add Participants to classgroup
-
-> **Scenarios:** Instructor-Led
-
-{{< admonition type=warning title="Warning" open=true >}}
-
-Participant account provisioning will vary depending on the type of GitLab instance being used for participants. On GitLab.com SaaS, it can be as simple as having participants register for a free account and sending you their GitLab User Name. If in a self-managed GitLab instance or a GitLab.com SaaS company namespace, participants may already have accounts associated with your organization.
-This is unnecessary if you are doing the training self-paced for yourself.
-
-{{< /admonition >}}
-
-1. While in  'classgroup', *Click* **Group information > Members**
-
-2. Near the upper right of the page, *Click* **Invite members** (button)
-
-3. For each member start typing their GitLab user name or the email it is registered under and select it.
-
-4. For ‘Select a role’ *Select* **Maintainer**
-
-5. *Click* **Invite**
-
-6. You can return to this Invite page as many times as needed to get everyone added.
-
 ## Configure an HA Scaled GitLab Runner Hosted in AWS
 
 > **Keyboard Time**: 5 mins, **Automation Wait Time**: 20 mins
@@ -143,6 +120,29 @@ If you are operating on a GitLab instance and GitLab group where runners are alr
 {{< admonition type=info title="Info" open=true >}}
 The Runner ASG Desired Count and Maximum Count can be editted and updated to scale up the runner fleet if you find things are running slow. Should you choose to scale the runner fleet down, do so by editing the ASG Desire Count so that proper GitLab Runner deregistration processes are triggered.
 {{< /admonition >}}
+
+## Add Participants to classgroup
+
+> **Scenarios:** Instructor-Led
+
+{{< admonition type=warning title="Warning" open=true >}}
+
+Participant account provisioning will vary depending on the type of GitLab instance being used for participants. On GitLab.com SaaS, it can be as simple as having participants register for a free account and sending you their GitLab User Name. If in a self-managed GitLab instance or a GitLab.com SaaS company namespace, participants may already have accounts associated with your organization.
+This is unnecessary if you are doing the training self-paced for yourself.
+
+{{< /admonition >}}
+
+1. While in  'classgroup', *Click* **Group information > Members**
+
+2. Near the upper right of the page, *Click* **Invite members** (button)
+
+3. For each member start typing their GitLab user name or the email it is registered under and select it.
+
+4. For ‘Select a role’ *Select* **Maintainer**
+
+5. *Click* **Invite**
+
+6. You can return to this Invite page as many times as needed to get everyone added.
 
 {{< admonition type=success title="Accomplished Outcomes" open=true >}}
 
