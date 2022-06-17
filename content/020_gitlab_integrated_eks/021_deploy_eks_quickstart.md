@@ -98,7 +98,9 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
 13. *Click* **Create stack**.
 
-14. Wait for the deployment to complete successfully.
+{{< admonition type=info title="Prep Lab 2.2 Can Be Done in Parallel" open=true >}}
+You can complete Prep Lab 2.2 while this CloudFormation is processing, but this CF must complete successfully before doing Prep Lab 2.3.
+{{< /admonition >}}
 
 {{< admonition type=abstract title="Accomplished Outcomes" open=true >}}
 

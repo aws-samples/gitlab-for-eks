@@ -125,7 +125,7 @@ If you are operating on a GitLab instance and GitLab group where runners are alr
 1. In 'classgroup', *Click* **CI/CD > Runners**
 2. Near the top right, *Click* **Register a group runner** (button)
 3. Next to the ‘Registration token’, *Click* **[the Clipboard Icon]**
-4. While logged into the AWS Account where your EKS cluster is deployed, [Click this link to deploy the runner](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://gl-public-templates.s3.amazonaws.com/cfn/v1.4.9-alpha14/easybutton-amazon-linux-2-docker-manual-scaling-with-schedule-spotonly.cf.yml&stackName=linux-docker-spotonly)
+4. While logged into the AWS Account where your EKS cluster is deployed, [Click this link to deploy the runner](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://gl-public-templates.s3.amazonaws.com/cfn/v1.4.9-alpha14/easybutton-amazon-linux-2-docker-manual-scaling-with-schedule-spotonly.cf.yml&stackName=linux-docker-spotonly)
 
    > If you were not logged into an AWS account you will be prompted to do so.
 5. In the upper right of the AWS CloudFormation console, be sure the region selector is set to what you want - *Select* **US East (Ohio) - us-east-2** to match the region of the EKS cluster (if you used a default cluster deployment).
