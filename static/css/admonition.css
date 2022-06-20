@@ -277,8 +277,8 @@
 }
 
 .admonition.gitlab i.icon {
-  background-image: url('/images/gitlab-logo-20.png');
   color: transparent!important;
+  background-image: url('gitlab-logo-20.png');
   background-repeat: no-repeat
 }
 

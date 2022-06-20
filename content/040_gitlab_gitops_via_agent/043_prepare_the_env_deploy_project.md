@@ -45,8 +45,8 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 7. Near the bottom of the page *Click* **Create project** (button)
 8. When the import is complete, you will be placed in the default landing page of the project.
 
-   {{< admonition type=tip title="Group Access Tokens Are Better" open=true >}}
-   For the next steps you will create a Personal Access Token so that the CI job can commit the kubernetes manifests back to its own repository. If you have a GitLab license, a project level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials.
+   {{< admonition type=tip title="Group or Project Access Tokens Are Better" open=true >}}
+   For the next steps you will create a Personal Access Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a GitLab license, a project or group level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials. To maintain a balance between least privilege and administrative overhead, one would select a Group Level Access Token if there is a high level of trust between all Application Build and Environment Deployment projects - for instance if these all comprise one application or if the team is a true DevOps team that both develops and deploys the artifacts in the group.
    {{< /admonition >}}
 
 9. In the upper right of the page *Click* **[your Avatar icon]** and then *Click* **Edit profile**

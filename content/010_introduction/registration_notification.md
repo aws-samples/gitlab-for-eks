@@ -2,11 +2,11 @@
 title: "Registration & Wait Lists"
 weight: 01
 chapter: true
-draft: false
+draft: true
 description: "Get Started With Zero Extra Reading."
 ---
 
-# Registration & Wait Lists
+# Registration & Wait Lists for Instructor Led
 
 Visit the below page to:
 

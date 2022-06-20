@@ -101,8 +101,8 @@ This source project followed several specific principles that makes it this easy
 
 ### Create a Token To Read The Container Registry
 
-{{< admonition type=tip title="Group Access Tokens Are Better" open=true >}}
-For the next steps you will create a Group Deployment Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a GitLab license, a project level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials.
+{{< admonition type=tip title="Group or Project Access Tokens Are Better" open=true >}}
+For the next steps you will create a Group Deployment Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a GitLab license, a project or group level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials. To maintain a balance between least privilege and administrative overhead, one would select a Group Level Access Token if there is a high level of trust between all Application Build and Environment Deployment projects - for instance if these all comprise one application or if the team is a true DevOps team that both develops and deploys the artifacts in the group.
 {{< /admonition >}}
 
 1. While in 'yourpersonalgroup' (be sure you are in the group, not a project) in the left navigation, *Click* **Settings => Repository** (button) 
@@ -158,11 +158,6 @@ Notice the same page reloads, but at the top of the screen now has a grey box co
 23. *Click* **Add variable**
 
     > You should now have two variables in 'yourpersonalgroup' that contains READ_REG_USER and READ_REG_TOKEN with the values from the Deploy Token creation.
-
-{{< admonition type=info title="Info" open=true >}}
-
-This least privilege approach publishes registry read credentials to the entire subgroup heirarchy for all registries in the same heirarchy. This is a handy method when there are many Application Projects whose images are being used by many Environment Deployment Projects that share a common parent group.
-{{< /admonition >}}
 
 {{< admonition type=success title="Accomplished Outcomes" open=true >}}
 
