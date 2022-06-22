@@ -138,7 +138,7 @@ If you are in a shared classgroup environment (including an asynchonous and long
 
 {{< /admonition >}}
 
-6. **In a NEW browser tab**, open the project 'yourpersonalgroup/world-greetings-env-1' again (this time we are at the PROJECT level).
+1. **In a NEW browser tab**, open the project 'yourpersonalgroup/world-greetings-env-1' again (this time we are at the PROJECT level).
 
 7. On the left navigation, *Click* **Settings => CI/CD**
 
