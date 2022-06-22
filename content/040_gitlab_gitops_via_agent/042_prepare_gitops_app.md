@@ -107,8 +107,8 @@ This source project followed several specific principles that makes it this easy
 
 ### Create a Token To Read The Container Registry
 
-{{< admonition type=tip title="Group or Project Access Tokens Are Better" open=true >}}
-For the next steps you will create a Group Deployment Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a GitLab license, a project or group level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials. To maintain a balance between least privilege and administrative overhead, one would select a Group Level Access Token if there is a high level of trust between all Application Build and Environment Deployment projects - for instance if these all comprise one application or if the team is a true DevOps team that both develops and deploys the artifacts in the group.
+{{< admonition type=tip title="Group or Project Access Tokens For High Trust Group Hierarchies" open=true >}}
+For the next steps you will create a Project Deployment Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a project or group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
 {{< /admonition >}}
 
 1. While in 'yourpersonalgroup' (be sure you are in the group, not a project) in the left navigation, *Click* **Settings => Repository** (button) 

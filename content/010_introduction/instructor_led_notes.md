@@ -78,6 +78,23 @@ If a given run of the workshop is actually for a team who needs to perform clust
 
 ## Lab Notes
 
+Lab 4.3 Security Risk When Using PATs
+
+{{< admonition type=warning title="Security Risk When Using PATs" open=true >}}
+If you are running in a free license or unlicensed GitLab Instance or gitlab.com group, you will not have the feature “Group Access Tokens” available to you. In that case you will need to create a Personal Access Token instead of a Group Access Token. Others in the same classroom will be able to see each other’s PAT. If you are using a production GitLab user account, this exposes access to all the repositories each personal id has  access to the class during the time your PAT is configured. Ways to minimize this risk include:
+
+1. If using a paid GitLab license, use Group Access Tokens - which is documented in the lab.
+
+2. Use a non-production user account (create one for the class - easy on .com, may not be easy if your organization uses GitLab SSO or LDAP with another Identity provider).
+
+3. Use a non-production GitLab Instance.
+
+4. Do not give participants GitLab access to the classgroup, but instead only to their personal group.
+
+5. Remove the PAT as soon as the class is done (still exposed during the class).
+
+{{< /admonition >}}
+
 ### Lab 4.5 Setup the GitOps Pull Agent => Check With Instructor Warning
 
 The Lab “Setup the GitOps Pull Agent” requires entries for student projects in a file in the classroom group level “Cluster Management” project. This approach is much simpler than each student gaining cluster access to install their own agent.

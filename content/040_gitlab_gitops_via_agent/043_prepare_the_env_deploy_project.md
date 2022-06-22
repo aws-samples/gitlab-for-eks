@@ -40,6 +40,14 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 {{% /expand%}}
 
+{{< admonition type=pick title=" Instructor-Led Classrooms / Self-Paced Participant Choice" open=true >}}
+
+1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
+
+2. **Self-paced:** Try option 1 first, you will be directed to option 2 if your instance does not have a specific GitLab paid license feature.
+
+{{< /admonition >}}
+
 1. While in 'yourpersonalgroup' (created in a prior lab) *Click* **New project** (button) and then *Click* **Import project**
 2. On the 'Import project' page, *Click* **Repository by URL**
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1.git**
@@ -54,64 +62,115 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 7. Near the bottom of the page *Click* **Create project** (button)
 8. When the import is complete, you will be placed in the default landing page of the project.
 
-   {{< admonition type=tip title="Group or Project Access Tokens Are Better" open=true >}}
-   For the next steps you will create a Personal Access Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a GitLab license, a project or group level ‘Access Token’ is a better way to ensure that the automation credentials do not depend on regular user credentials. To maintain a balance between least privilege and administrative overhead, one would select a Group Level Access Token if there is a high level of trust between all Application Build and Environment Deployment projects - for instance if these all comprise one application or if the team is a true DevOps team that both develops and deploys the artifacts in the group.
+   {{< admonition type=tip title="Group or Project Access Tokens For High Trust Group Hierarchies" open=true >}}
+   For the next steps you will create a Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a project or group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
    {{< /admonition >}}
 
-9. In the upper right of the page *Click* **[your Avatar icon]** and then *Click* **Edit profile**
+{{< admonition type=pick title="Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)" open=true >}}
 
-10. On the left naviagion, *Click* **Access Tokens**
+**IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Group Level Access Token Feature. The group menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Optoin 2” below.
 
-11. Under ‘Add a personal access token’, for Token name, *Type* **WriteRepository**
+1. While in 'yourpersonalgroup/world-greetings-1' (created in a prior lab), on the left navigation, *Click* **Settings => Access Tokens**
 
-12. Under ‘Select scopes’
+   > This menu option will not exist if you do not have a paid GitLab license.  You will need to use “Token Option 2” below.
 
-    1. *Select* **read_repository**
-    2. *Select* **write_repository**
+2. On the left navigation, *Click* **Access Tokens**
 
-13. *Click* **Create personal access token** (button)
+3. Under ‘Add a group access token’, for Token name, *Type* **WriteRepository**
 
-   {{< admonition type=warning title="Page Reloaded With Update - Don’t Close" open=true >}}
+4. Under ‘Select scopes’
+
+   1. *Select* **read_repository**
+   2. *Select* **write_repository**
+
+5. *Click* **Create project access token** (button)
+
+{{< admonition type=warning title="Page Reloaded With Update - Don’t Close" open=true >}}
    Notice the same page reloads, but at the top of the screen now has a grey box containing the token information.
    **IMPORTANT** - Do not navigate to another page in this browser as this is the only time you can see the token. You will have to create a new token if you leave the page.
-   {{< /admonition >}}
+{{< /admonition >}}
 
-12. Under ‘Your new personal access token’, to the right of the token value, *Click* **[the Clipboard Icon]**
+6. Record the following in a temporary document:
+    - PROJECT_COMMIT_TOKEN = **[project access token from UI]**
 
-13. **In a NEW browser tab**, open the project 'yourpersonalgroup/world-greetings-env-1' again (this time we are at the PROJECT level).
+7. On the left navigation, *Click* **Project Information => Members**
 
-14. On the left navigation, *Click* **Settings => CI/CD**
+8. In the search prompt *Type* **WriteRepository**
 
-15. To the right of ‘Variables’, *Click* **Expand**
+    > The user list should return one entry
 
-16. *Click* **Add variable**
+9. In the listing, under “WriteRepository”, copy the user name that starts with “project\_” and ends with “\_bot” - do not include the `@` sign.
 
-17. For Key, *Type* **PROJECT_COMMIT_TOKEN**
+10. In the previous temporary document, record:
 
-18. In the Value field *Paste* **[the Clipboard contents]**
+    - PROJECT_COMMIT_USER = **[the user id you just copied]**
+    {{< /admonition >}}
 
-19. Under Flags, *Deselect* **Protect variable**
+{{< admonition type=pick title="Token Option 2: Using a Personal Access Token (PAT)" open=true >}}
 
-20. Under Flags, *Select* **Mask variable**
+{{< admonition type=danger title="In Shared class groups Other Participants Have Access to This PAT" open=true >}}
 
-21. *Click* **Add variable**
+If you are in a shared classgroup environment (including an asynchonous and long lived ones where other students work at other times than yourself), this PAT will be visible to everyone who has access to classgroup. If you are using a production GitLab user id - this step will give repository read and write access to every repository your user id has access to.
 
-22. To add another variable, *Click* **Add variable**
+{{< /admonition >}}
 
-23. For Key, *Type* **PROJECT_COMMIT_USER**
+1. In the upper right of the page *Click* **[your Avatar icon]** and then *Click* **Edit profile**
 
-24. In the Value field *Type* **[your_gitlab_user_name]**
+2. On the left naviagion, *Click* **Access Tokens**
 
-25. Under Flags, *Deselect* **Protect variable**
+3. Under ‘Add a personal access token’, for Token name, *Type* **WriteRepository**
 
-26. *Click* **Add variable**
+4. Under ‘Select scopes’
 
-    {{< admonition type=tip title="Check Contents" open=true >}}
+   1. *Select* **read_repository**
+   2. *Select* **write_repository**
 
+5. *Click* **Create personal access token** (button)
+
+{{< admonition type=warning title="Page Reloaded With Update - Don’t Close" open=true >}}
+   Notice the same page reloads, but at the top of the screen now has a grey box containing the token information.
+   **IMPORTANT** - Do not navigate to another page in this browser as this is the only time you can see the token. You will have to create a new token if you leave the page.
+{{< /admonition >}}
+
+6. Record the following in a temporary document:
+    - PROJECT_COMMIT_TOKEN = **[personal access token from UI]**
+    - PROJECT_COMMIT_USER = **[your gitlab user id without the ‘@’ and without the path]**
+
+{{< /admonition >}}
+
+6. **In a NEW browser tab**, open the project 'yourpersonalgroup/world-greetings-env-1' again (this time we are at the PROJECT level).
+
+7. On the left navigation, *Click* **Settings => CI/CD**
+
+8. To the right of ‘Variables’, *Click* **Expand**
+
+9. *Click* **Add variable**
+
+10. For Key, *Type* **PROJECT_COMMIT_TOKEN**
+
+11. In the Value field *Paste* **[the temporary document value for PROJECT_COMMIT_TOKEN]**
+
+12. Under Flags, *Deselect* **Protect variable**
+
+13. Under Flags, *Select* **Mask variable**
+
+14. *Click* **Add variable**
+
+15. To add another variable, *Click* **Add variable**
+
+16. For Key, *Type* **PROJECT_COMMIT_USER**
+
+17. In the Value field *Type* **[the temporary document value for PROJECT_COMMIT_USER]**
+
+18. Under Flags, *Deselect* **Protect variable**
+
+19. *Click* **Add variable**
+
+{{< admonition type=tip title="Check Contents" open=true >}}
 Among the existing variables in the 'yourpersonalgroup/world-greetings-env-1' project, you should have the two new variables PROJECT_COMMIT_TOKEN and PROJECT_COMMIT_USER.
 
 These permissions are least privilege, in part, because the CI/CD Variables are only published at the project level.
-    {{< /admonition >}}
+{{< /admonition >}}
 
 27. In the left navigation, *Click* **Repository => Files** 
 
