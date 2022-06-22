@@ -78,7 +78,7 @@ If a given run of the workshop is actually for a team who needs to perform clust
 
 ## Lab Notes
 
-Lab 4.3 Security Risk When Using PATs
+### Lab 4.3 Security Risk When Using PATs
 
 {{< admonition type=warning title="Security Risk When Using PATs" open=true >}}
 If you are running in a free license or unlicensed GitLab Instance or gitlab.com group, you will not have the feature “Group Access Tokens” available to you. In that case you will need to create a Personal Access Token instead of a Group Access Token. Others in the same classroom will be able to see each other’s PAT. If you are using a production GitLab user account, this exposes access to all the repositories each personal id has  access to the class during the time your PAT is configured. Ways to minimize this risk include:
