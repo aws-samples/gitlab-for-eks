@@ -13,6 +13,12 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
+{{< admonition type=gitops title="GitOps Convention" open=true >}}
+
+A common GitOps convention is to seperate Application Build repositories from Environment Deployment repositories. This lab sets up the Environment Deployment repository to follow this convention.
+
+{{< /admonition >}}
+
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 
 1. Create a GitOps Application Build project from a template.

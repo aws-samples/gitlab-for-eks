@@ -13,6 +13,12 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
+{{< admonition type=gitops title="GitOps Conventions" open=true >}}
+
+1. Monitoring manifests by an agent running in a Kubernetes cluster. This lab configures the GitLab Agent to monitor the manifests in this repository.
+
+{{< /admonition >}}
+
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 
 1. Configure the Kubernetes Agent to monitor the CI constructed kubernetes manifests.

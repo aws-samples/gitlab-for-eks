@@ -13,6 +13,15 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
+{{< admonition type=gitops title="GitOps Conventions" open=true >}}
+
+1. A common GitOps convention is to seperate Application Build repositories from Environment Deployment repositories. This lab sets up the Application Build repository to follow this convention.
+2. Completely constructed manifests are stored in a repository for easy human reading, visibility and source control managed state. This project creates such manifests under two conditions: 
+   1. when the source code of this project is altered, 
+   2. when a new version of the Application Build container is detected or specified.
+
+{{< /admonition >}}
+
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 
 1. Create a GitOps Environment Deployment project from a template.

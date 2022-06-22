@@ -13,6 +13,10 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
+{{< admonition type=gitlab title="Runner Based CD Push Through GitLab Agent" open=true >}}
+When a cluster is connected via the GitLab Agent, kubectl and helm commands can be run in CI jobs. The only special thing to be specified is to use the special GitLab Agent path reference as the Kubernetes Context (stored in KUBE_CONTEXT in labs and for GitLab Auto Deploy). 
+{{< /admonition >}}
+
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 This one Auto DevOps scenario proves out multiple outcomes:
 

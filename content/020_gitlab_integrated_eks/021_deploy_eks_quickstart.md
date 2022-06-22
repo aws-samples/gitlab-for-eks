@@ -12,6 +12,20 @@ description: "Provision a value-added EKS spot cluster by using the official AWS
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
+{{< admonition type=success title="What is an AWS Quick Start?" open=true >}}
+
+“Quick Starts are automated reference deployments built by Amazon Web Services (AWS) solutions architects and AWS Partners. Quick Starts help you deploy popular technologies on AWS according to AWS best practices. You can reduce hundreds of manual procedures to just a few steps so that you can build and start using your environment within minutes.”
+
+Quote from: [AWS Quick Starts](https://aws.amazon.com/quickstart/?solutions-all.sort-by=item.additionalFields.sortDate&solutions-all.sort-order=desc&awsf.filter-content-type=*all&awsf.filter-tech-category=*all&awsf.filter-industry=*all)
+
+Since this Quick Start is for AWS technology and functions as a dependency of many other partner Quick Starts - it reflects AWS internal best practices for EKS deployment and has value over console or eksctl deployment methods. For these labs we take advantage of the single parameter inclusion of the Kubernetes Cluster Autoscaler and spot instances and especially the very valuable EKS Bastion for cluster administration.
+{{< /admonition >}}
+
+{{< admonition type=danger title="Classroom Setup and Labs Assume EKS Quick Start" open=true >}}
+
+The exercises, as written, assume that the cluster was prepared with the EKS Quick Start. If you decide to use other methods, you will need to also provision a cluster administration workstation with helm, kubectl, kube configuration and AWS authentication to perform EKS administration commands as needed. Additionally, you will need to plan for Kubernetes node scaling that matches your class size. If you prepare the cluster by another means, be sure to run through all exercises with your cluster before considering it ready for a classroom. Scale testing with a group should also be performed if using alternative cluster node autoscaling.
+{{< /admonition >}}
+
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 
 1. Create an EKS Cluster that is very cost optimized for training scenarios.
