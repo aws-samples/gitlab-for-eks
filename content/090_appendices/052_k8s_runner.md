@@ -15,11 +15,11 @@ description: "Installing a runner into the EKS cluster."
 This example deploys a new runner in order to be free of runner minute limits on GitLab.com SaaS Runners and to be free on Credit Card registration requirements for participants to use free minutes.
 You may use a GitLab.com shared runner to configuration Cluster Applications because cluster access is achieved through the installed agent, rather than a traditional Kubernetes control plane API access (like was formerly used by the GitLab Certificate connection method.)
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 Since you will have needed to have access to a runner of some type to deploy the cluster managed apps for ingress and 
 
-{{% /notice %}}
+{{< /admonition >}}
 
 **IMPORTANT:** This setup is assuming that you wish to setup Auto DevOps for the entire downbound group heirarchy 'classgroup' - this can be scoped tighter by paying attention to fully specifying group paths and by creating Group level CI/CD variables at a deeper group level.
 

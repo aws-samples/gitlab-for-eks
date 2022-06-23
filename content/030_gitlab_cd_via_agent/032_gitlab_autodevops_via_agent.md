@@ -13,18 +13,32 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
 >
 > **Scenarios:** Instructor-Led, Self-Paced
 
-{{% notice tip %}}
-This configuration also works for any kind of GitLab CD to the cluster using Helm and kubectl commands, not only Auto DevOps.
-{{% /notice %}}
+{{< admonition type=gitlab title="Runner Based CD Push Through GitLab Agent" open=true >}}
+When a cluster is connected via the GitLab Agent, kubectl and helm commands can be run in CI jobs. The only special thing to be specified is to use the special GitLab Agent path reference as the Kubernetes Context (stored in KUBE_CONTEXT in labs and for GitLab Auto Deploy). 
+{{< /admonition >}}
+
+{{< admonition type=abstract title="Target Outcomes" open=true >}}
+This one Auto DevOps scenario proves out multiple outcomes:
+
+1. Setup a simple application to use Runner Based Push CD to deploy an application to Kubernetes through the cluster connection established by the GitLab Agent. This includes any custom CI/CD that directly uses kubectl and helm commands.
+
+2. Use Auto DevOps (Runner Push Deployment) with the GitLab Agent cluster connection method.
+
+3. Leveraging the Group Level agent configuration that was done in a previous lab. ([Visual Depiction Here]({{< relref "../020_gitlab_integrated_eks/section_overview.md#visual-overview-of-gitlab-agent-group-level-cluster-integration" >}}))
+{{< /admonition >}}
+
+{{< admonition type=tip title="Tip" open=true >}}
+This configuration also works for any kind of **GitLab Runner Push CD** to the cluster using Helm and kubectl commands, not only Auto DevOps.
+{{< /admonition >}}
 
 ## Configure An Auto DevOps Project
 
-{{% notice warning %}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer DNS Name\>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.
-{{% /notice %}}
+{{< admonition type=warning title="Warning" open=true >}}Before continuning make sure to use DNSChecker.com to check if both <mark>the Load Balancer DNS Name</mark> and <mark>\<the Load Balancer IP>.nip.io</mark> have propagated through global DNS and wait (or troubleshoot) if they have not.
+{{< /admonition >}}
 
 1. While in 'yourpersonalgroup' *Click* **New project** (button) and then *Click* **Import project**
 
-2. On the 'Import project' page, *Click* **Repo by URL**
+2. On the 'Import project' page, *Click* **Repository by URL**
 
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gl-ci/simply-simple-notes.git**
 
@@ -57,9 +71,9 @@ This configuration also works for any kind of GitLab CD to the cluster using Hel
 
 15. Only if a pipeline is not already running:
 
-      1. On the upper right of the page *Click* **Run pipeline**
+       1. On the upper right of the page *Click* **Run pipeline**
 
-      2. On the 'Run pipeline' page, *Click* **Run pipeline**
+       2. On the 'Run pipeline' page, *Click* **Run pipeline**
 
 16. Watch the pipeline progress by clicking the linked number starting with \# under the ‘Pipeline’ column.
 
@@ -75,6 +89,14 @@ This configuration also works for any kind of GitLab CD to the cluster using Hel
 
 22. To the right of 'production' *Click* **Open** (button)
 
-     > It can take a while for SSL to register, you can click through the advanced button to see the site if SSL is not working yet.
+      > It can take a while for SSL to register, you can click through the advanced button to see the site if SSL is not working yet.
 
 23. If everything worked as expected, you should see an application page called Simply Simple Notes and should not have any warnings or problems with SSL certificates.
+
+{{< admonition type=success title="Accomplished Outcomes" open=true >}}
+
+1. Setup a simple application to use Runner Based Push CD to deploy an application to Kubernetes through the cluster connection established by the GitLab Agent.
+2. Use Auto DevOps with the GitLab Agent cluster connection method.
+3. Leveraging the Group Level agent configuration method.
+
+{{< /admonition >}}

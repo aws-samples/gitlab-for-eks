@@ -1,6 +1,6 @@
 ---
 title: "Tuning and Troubleshooting Guide"
-weight: 04
+weight: 06
 chapter: true
 draft: false
 description: "How to troubleshoot problems and tune classroom setups."
@@ -11,6 +11,18 @@ description: "How to troubleshoot problems and tune classroom setups."
 {{< toc >}}
 
 ## General
+
+### Using the EKS Bastion for cluster administration with kubectl and helm
+
+1. [Click here to open the EC2 Instances Console in us-east-2](https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:instanceState=running)
+
+2. In the EC2 Instances console, *locate* the instance named **EKSBastion**
+
+3. *Right click* **the instance**, *select* => **Connect**  => **Session Manager** => **Connect** (button)
+
+   {{< admonition type=tip title="Remember The Above Sequence" open=true >}}
+   kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
+   {{< /admonition >}}
 
 ### GitLab Agent and GitOps Pull Deployments
 
@@ -26,6 +38,50 @@ observability:
 
 For common errors and more troubleshooting information visit [Troubleshooting the GitLab agent for Kubernetes](https://docs.gitlab.com/ee/user/clusters/agent/troubleshooting.html)
 
+### Cluster or Agent Gets In an Uncertain State
+
+When the EKS QuickStart was used to build the cluster, you can locate the ASG for the cluster nodes and scale to zero and back to the number that was in place. This takes some time (probably 15 minutes for a 2 node cluster) so it may need to be an absolutely last resort in an active classroom environment.
+
+## Errors
+
+### User validation required
+
+![error-uservalidation](images/error-uservalidation.png)
+
+Resolution: You have missed the last steps of Prep Lab 2.2 for disabling group runners (and you or participants are using a free account).
+
+### Cluster Image Scanning
+
+Results Not Showing in Dashboard
+
+Check logs:
+
+```bash
+kubectl logs -n gitlab-agent -l app=gitlab-agent | grep starboard_vulnerability | tail
+```
+
+Error: `{"level":"error","time":"2022-04-22T15:38:01.853+0200","msg":"Failed to perform vulnerability scan on workload","mod_name":"starboard_vulnerability","error":"running scan job: creating job: jobs.batch \"scan-vulnerabilityreport-68676cd7bc\" already exists"}` 
+
+Issue:  [Ensure orphaned Starboard jobs are cleaned up](https://gitlab.com/gitlab-org/gitlab/-/issues/362016)
+Action: Clear out orphaned Cluster Scanning Jobs
+
+Clear Command:
+
+```bash
+kubectl delete jobs -n gitlab-agent -l app.kubernetes.io/managed-by=starboard
+```
+
+Error: `{"level":"error","time":"2022-06-23T10:55:04.037Z","msg":"Failed to perform vulnerability scan on workload","mod_name":"starboard_vulnerability","error":"running scan job: warning event received: Error creating: pods \"scan-vulnerabilityreport-656cc6fb45-\" is forbidden: error looking up service account gitlab-agent/gitlab-agent: serviceaccount \"gitlab-agent\" not found (FailedCreate)"}`
+
+Issue:  [Cluster image scanning does not work with non-default namespace or service account](https://gitlab.com/gitlab-org/gitlab/-/issues/361972)
+Action: Create old named service account
+
+Fix Commmand:
+
+```bash
+kubectl create serviceaccount gitlab-agent -n gitlab-agent
+```
+
 ## Classroom
 
 ### Scaling Down ASGs
@@ -38,15 +94,15 @@ If this classroom setup is long lived for any reason, the ASGs can used schedule
 
 ### GitLab CI Is Too Slow for Classroom
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 
 While it may be tempting to use shared runners, deploying your own fleet gives you 100% control over the scale and responsiveness of runners. Since automation waiting time is a big part of this workshop it is a signficant advantage to have control over this part of the resourcing.
 
-{{% /notice %}}
+{{< /admonition >}}
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 The provisioning Prep Lab contains this warning: “**IMPORTANT FOR Instructor-Led** - setup 1 runner instance per 5 students. This can be easily adjusted later and these are spot instances.”
-{{% /notice %}}
+{{< /admonition >}}
 
 If the course is being run on GitLab.com with free GitLab.com accounts for participants and/or the instructor and an Ultimate Trial enabled (only works for 30 days from initial trial enablement), the using  [GitLab HA Scaling Runner Vending Machine for AWS EC2 ASG](https://gitlab.com/guided-explorations/aws/gitlab-runner-autoscaling-aws-asg/) to deploy runnres is required.
 
@@ -60,15 +116,15 @@ If this is a post deployment step, simply update the ASG that is controlling the
 
 To scale the cluster, [open the ASG console](https://us-east-2.console.aws.amazon.com/ec2autoscaling/home?region=us-east-2#/details) (this link presumes us-east-2, but you can change the region if you deployed elsewhere). Locate the ASG associated with your EKS cluster which also has “UnmanagedASG” in it’s name. Locate the ASG associated with your runners - if you used the exercise defaults to deploy it, is shoudl be called “linux-docker-spotonly”. To change the size, follow [Set capacity limits on your Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-capacity-limits.html). 
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 Should you choose to scale the runner fleet down, do so by editing the ASG Desire Count so that proper GitLab Runner deregistration processes are triggered.
-{{% /notice %}}
+{{< /admonition >}}
 
 ### EKS Cluster Seems Slow and/or is Not Autoscaling Appropriately for Classroom
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 The provisioning Prep Lab contains this warning: “**IMPORTANT FOR Instructor-Led** - setup 1 EKS node per 5 students. This can be easily adjusted later and these are spot instances.”
-{{% /notice %}}
+{{< /admonition >}}
 
 While the Cluster Autoscaler should be active you can also take manual control of the minimum size by manipulating the Minimum size of the cluster. 
 

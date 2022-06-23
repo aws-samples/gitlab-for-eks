@@ -7,11 +7,6 @@ description: "Explanation of Section"
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
-{{% notice tip %}}
-
-**Instructor-Led Note**: [The visuals in this section are also provided as progressive disclosure Visual MicroStory Slides here](../010_introduction/Animated_Visual_MicroStory_Slides_for_GitLab_Kubernetes_Agent_Workshop.pptx)
-{{% /notice %}}
-
 ### Section 2: Shared Resources Deployment Activities
 
 Prep steps can be deployed once per group if EKS deployment and integration is not the main focus. For individuals or those practicing cluster setup and integration, these can be done by each participant as well<br />**Dependencies:** All labs depend on section 2 because it sets up the cluster and GitLab integration.<br />**Outcomes**: Deploy EKS with official AWS IaC [in a cost-efficient format for training](#simple--inexpensive-eks-pattern-reusable-for-training) (performed by instructor for instructor-led)

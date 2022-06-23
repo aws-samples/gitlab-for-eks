@@ -41,9 +41,9 @@ Repeat the same steps in **Manually Turning Off Cluster Nodes and Bastion Host**
 
 ## Configure Work Around For ssm-user in sudoers
 
-{{% notice info %}}
+{{< admonition type=info title="Info" open=true >}}
 SSM was recently changed so that the ssm-user is not automatically in the sudoers file. This work around fixes that problem.
-{{% /notice %}}
+{{< /admonition >}}
 
 > This should no longer be necessary since we do not need admin to run kubectl and helm and do not need to install docker for kubernetes agent registration.
 
@@ -57,14 +57,14 @@ SSM was recently changed so that the ssm-user is not automatically in the sudoer
 8. At the bottom right of the screen *Click* **Run** (button)
 9. Refresh the Command status until you observe Success for Overall status
 
-{{% notice tip %}}
+{{< admonition type=tip title="Tip" open=true >}}
 You have just deployed an EKS cluster ready to integrate with GitLab.
-{{% /notice %}}
+{{< /admonition >}}
 ## Configure Built-in EKS Bastion Utilities
 
-{{% notice warning %}}
+{{< admonition type=warning title="Warning" open=true >}}
 These steps should no longer be necessary. If kubectl and/or helm are not available on the path with ssm-user, this may fix the situation.
-{{% /notice %}}
+{{< /admonition >}}
 
 1. In the EC2 Instances console, *locate* the instance named **EKSBastion**
 

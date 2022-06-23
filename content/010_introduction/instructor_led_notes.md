@@ -1,6 +1,6 @@
 ---
 title: "Instructor-Led Notes"
-weight: 03
+weight: 05
 chapter: true
 draft: false
 description: "Important information for instructor-led sessions conducted in classrooms."
@@ -10,14 +10,28 @@ description: "Important information for instructor-led sessions conducted in cla
 
 {{< toc >}}
 
+## Planning Content Coverage
+
+* Instructors must choose the content to be covered to fit the length of the event. 
+* Content sections indicate their dependencies and in general the model after section 3 is to go through the content sequentially and simply leave off additional sections. (Concepts and labs stack on each other from Section 3 on.)
+* Attempting all sections - especially if having students setup infrastructure (the EKS cluster) results in a very long event.
+* Lab timings do not account for breaks or handling issues.
+* Lab timings do not account for the instructor covering conceptual content in slides.
+
 ## Pre-doing
 
 * Do the prereading :)
+* Walk through all slides
 * Instructors should perform the entire set of labs before their first delivery:
   1. For full preparation and understanding of what students are expected to perform.
   2. To have a demo system with completed labs to demonstate any additional concepts or overview. (performing the labs creates a demo environment for you)
   3. To have a hot spare environment if something ends up being wrong with the lab environment - this copy could actually be scaled to handle the class if needed.
-* 3-5 days before **each** delivery instructors may want to validate the entire set of labs - but especially section 2:
+
+**Per Classroom Delivery**
+
+* 3-5 days before **each** delivery 
+* If you do not have a long running classroom environment, setup the classroom environment by following Section 2.
+* Instructors may want to validate the entire set of labs they choose to cover:
   1. AWS, GitLab and AWS Quick Starts all undergo continuous updates - occassionally these updates create challenges for labs.
   2. The labs have been constructed to be as version agnostic as possible - but it is not possible to forsee all possible interactions and challenges.
 
@@ -26,8 +40,8 @@ description: "Important information for instructor-led sessions conducted in cla
 ### Required
 
 -  [Prerequisites, Costs and Time]({{< relref "./prerequisites_costs_time.md" >}}) please pay attention to the Instructor-Led columns and call outs.
--  [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning-outcomes-and-reusable-patterns.md#reusable-patterns-for-production-and-training" >}}) - outlines the details of how the GitLab structure in these labs enables an entire classroom to share specific resources without conflicts.
-- [Simple, Inexpensive, Secure for Training]({{< relref "../010_introduction/learning-outcomes-and-reusable-patterns.md#simple--inexpensive-eks-pattern-reusable-for-training" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
+-  [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#reusable-patterns-for-production-and-training" >}}) - outlines the details of how the GitLab structure in these labs enables an entire classroom to share specific resources without conflicts.
+- [Simple, Inexpensive, Secure for Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#simple--inexpensive-eks-pattern-reusable-for-training" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
 - [Tuning and Troubleshooting Guide]({{< relref "./tuning_and_troubleshooting.md" >}}) - discusses how to troubleshoot problems and how to tune the setup for classrooms.
 - [Reporting Problems]({{< relref "./reporting_problems_or_features.md" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
 
@@ -35,6 +49,12 @@ description: "Important information for instructor-led sessions conducted in cla
 
 - [World Greetings Env 1 README.md](https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1/-/blob/main/README.md)
 - [World Greetings Env 1 IMPLEMENTATION.md](https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1/-/blob/main/IMPLEMENTATION.md)
+
+## Leaving It Running for Student Followup / Experimentation
+
+If the AWS account is owned by someone other than GitLab or AWS, then it may make sense for the classroom resources to remain running after the class for participant exercise completion, doing bonus exercises and/or experimentation.
+
+If this is done, it makes sense to use the instructions in [EKS Stop, Start & Scheduling]({{< relref "../090_appendices/051_cluster_ops.html#eks-stop-start--scheduling" >}}) to only have the EKS nodes, Bastion host and runners available during business hours - or even limited business hours (e.g. M-F 12noon-5pm) across the timezones where participants normally reside.
 
 ## Instruction and Demonstrations
 
@@ -63,6 +83,23 @@ Instructors may be tempted to have everyone setup their own cluster in their own
 If a given run of the workshop is actually for a team who needs to perform cluster and GitLab setup - then participants can simply complete all Instructor-Led sections. It is best to isolate with an AWS account per-participant in this use case.
 
 ## Lab Notes
+
+### Lab 4.3 Security Risk When Using PATs
+
+{{< admonition type=warning title="Security Risk When Using PATs" open=true >}}
+If you are running in a free license or unlicensed GitLab Instance or gitlab.com group, you will not have the feature “Group Access Tokens” available to you. In that case you will need to create a Personal Access Token instead of a Group Access Token. Others in the same classroom will be able to see each other’s PAT. If you are using a production GitLab user account, this exposes access to all the repositories each personal id has  access to the class during the time your PAT is configured. Ways to minimize this risk include:
+
+1. If using a paid GitLab license, use Group Access Tokens - which is documented in the lab.
+
+2. Use a non-production user account (create one for the class - easy on .com, may not be easy if your organization uses GitLab SSO or LDAP with another Identity provider).
+
+3. Use a non-production GitLab Instance.
+
+4. Do not give participants GitLab access to the classgroup, but instead only to their personal group.
+
+5. Remove the PAT as soon as the class is done (still exposed during the class).
+
+{{< /admonition >}}
 
 ### Lab 4.5 Setup the GitOps Pull Agent => Check With Instructor Warning
 
