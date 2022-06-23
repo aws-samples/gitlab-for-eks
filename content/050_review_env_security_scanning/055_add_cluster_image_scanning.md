@@ -89,7 +89,7 @@ Until [361792](https://gitlab.com/gitlab-org/gitlab/-/issues/361972) is resolved
 
    <mark class="hlgreen">**For Instructor-Led**: the instructor may have this view displayed for everyone</mark>
 
-13. **[Automation Wait Time: ~10 mins]** Wait for the cluster to receive the new directive and perform a scan.
+13. **[Automation Wait Time: ~5 mins]** Wait for the cluster to receive the new directive and perform a scan.
 
 2. To see scanning results, while in 'classgroup/cluster-management’
 
