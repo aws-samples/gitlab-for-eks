@@ -50,6 +50,12 @@ description: "Important information for instructor-led sessions conducted in cla
 - [World Greetings Env 1 README.md](https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1/-/blob/main/README.md)
 - [World Greetings Env 1 IMPLEMENTATION.md](https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1/-/blob/main/IMPLEMENTATION.md)
 
+## Leaving It Running for Student Followup / Experimentation
+
+If the AWS account is owned by someone other than GitLab or AWS, then it may make sense for the classroom resources to remain running after the class for student completion and/or experimentation.
+
+If this is done, it makes sense to use the instructions in [EKS Stop, Start & Scheduling]({{< relref "../090_appendices/051_cluster_ops.html#eks-stop-start--scheduling" >}}) to only have the EKS nodes, Bastion host and runners available during business hours - or even limited business hours (e.g. M-F 12noon-5pm) across the timezones where participants normally reside.
+
 ## Instruction and Demonstrations
 
 - Some labs have expandable “Visual Overviews” - these make excellent conceptual talks about what the lab is doing.
