@@ -26,9 +26,23 @@ Cluster image scanning is able to add security findings for images used in your 
 
 {{< /admonition >}}
 
-{{< admonition type=quote title="Done By Instructor for Instructor-Led Courses" open=true >}}
+{{< admonition type=bug title="Troubleshooting: Cluster Image Scanning" open=true >}}
+
+[Troubleshooting Guide: Cluster Image Scanning]({{< relref "../010_introduction/tuning_and_troubleshooting.md#cluster-or-agent-gets-in-an-uncertain-state" >}})
+
+{{< /admonition >}}
+
+{{< admonition type=pick title="Done By Instructor for Instructor-Led Courses" open=true >}}
 
 1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../010_introduction/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
+
+{{< admonition type=warning title="Temporary Fix" open=true >}}
+
+Until [361792](https://gitlab.com/gitlab-org/gitlab/-/issues/361972) is resolved, you will need to run this command in the cluster:
+
+   `kubectl create serviceaccount gitlab-agent -n gitlab-agent`
+
+{{< /admonition >}}
 
 2. Run the following command to tail the kubernetes agent log while deployments are happening:
 
@@ -36,28 +50,38 @@ Cluster image scanning is able to add security findings for images used in your 
 
     <mark class="hlgreen">Leave this view open as you will be instructed to consult it to see the deployment logging activity when the GItLab Agent pulls and processes the kubernetes manifest.</mark>
 
-3. Open 'classgroup/cluster-management’
+4. Open 'classgroup/cluster-management’
 
-4. In the left navigation, *Click* **Repository => Files** 
+5. In the left navigation, *Click* **Repository => Files** 
 
-5. On the upper right of the Project page, *Click* **Web IDE**
+6. On the upper right of the Project page, *Click* **Web IDE**
 
-6. Navigate to the file .gitlab/agents/spotazuseast2-agent/config.yml
+7. Navigate to the file .gitlab/agents/spotazuseast2-agent/config.yml
 
-7. Add the following to bottom of the file (only once per agent config.toml file).:
+8. Look at the minutes past the hour of the current time.
+
+9. Add 5 minutes and insert the following snippet - substitute your minutes number for ‘55’ in the below:
 
    ```yaml
    starboard:
-     cadence: '* * * * *' #Every minute
+     cadence: '55 * * * *' #Every hour at 55 minutes past the hour
    ```
 
-8. *Click* **Create commit...**
+   {{< admonition type=warning title="Do not set to a low frequency like every minute" open=true >}}
 
-9. *Select* **Commit to master branch**
+   If the cluster scanning job launches multiple simultaneous instances, it is more likely to get in a bad state.
 
-10. Under ‘Commit Message’, *Type* **[skip ci] Adding Manfest Security Scanning**
+   {{< /admonition >}}
 
-11. *Click* **Commit**
+10. *Click* **Create commit...**
+
+11. *Select* **Commit to master branch**
+
+12. Under ‘Commit Message’, *Type* **[skip ci] Adding Manfest Security Scanning**
+
+13. *Click* **Commit**
+
+    > The time can be updated to retrigger the agent if there are problems getting it to run.
 
 {{< /admonition >}}
 

@@ -50,6 +50,38 @@ When the EKS QuickStart was used to build the cluster, you can locate the ASG fo
 
 Resolution: You have missed the last steps of Prep Lab 2.2 for disabling group runners (and you or participants are using a free account).
 
+### Cluster Image Scanning
+
+Results Not Showing in Dashboard
+
+Check logs:
+
+```bash
+kubectl logs -n gitlab-agent -l app=gitlab-agent | grep starboard_vulnerability | tail
+```
+
+Error: `{"level":"error","time":"2022-04-22T15:38:01.853+0200","msg":"Failed to perform vulnerability scan on workload","mod_name":"starboard_vulnerability","error":"running scan job: creating job: jobs.batch \"scan-vulnerabilityreport-68676cd7bc\" already exists"}` 
+
+Issue:  [Ensure orphaned Starboard jobs are cleaned up](https://gitlab.com/gitlab-org/gitlab/-/issues/362016)
+Action: Clear out orphaned Cluster Scanning Jobs
+
+Clear Command:
+
+```bash
+kubectl delete jobs -n gitlab-agent -l app.kubernetes.io/managed-by=starboard
+```
+
+Error: `{"level":"error","time":"2022-06-23T10:55:04.037Z","msg":"Failed to perform vulnerability scan on workload","mod_name":"starboard_vulnerability","error":"running scan job: warning event received: Error creating: pods \"scan-vulnerabilityreport-656cc6fb45-\" is forbidden: error looking up service account gitlab-agent/gitlab-agent: serviceaccount \"gitlab-agent\" not found (FailedCreate)"}`
+
+Issue:  [Cluster image scanning does not work with non-default namespace or service account](https://gitlab.com/gitlab-org/gitlab/-/issues/361972)
+Action: Create old named service account
+
+Fix Commmand:
+
+```bash
+kubectl create serviceaccount gitlab-agent -n gitlab-agent
+```
+
 ## Classroom
 
 ### Scaling Down ASGs
