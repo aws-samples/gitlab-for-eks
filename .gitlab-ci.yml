@@ -4,7 +4,7 @@ image:
   entrypoint: [""]
 
 variables:
-  REDIRECT_TO_PROD: true
+  REDIRECT_TO_PROD: "true"
 
 pages:
   script:
