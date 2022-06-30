@@ -4,13 +4,19 @@ image:
   entrypoint: [""]
 
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive
+  REDIRECT_TO_PROD: true
 
 pages:
   script:
     - |
       echo "$CI_PAGES_URL"
-      hugo --cleanDestinationDir -d public --baseURL "$CI_PAGES_URL"
+      if [[ ${REDIRECT_TO_PROD,,} != "true" ]]; then
+        hugo --cleanDestinationDir -d public --baseURL "$CI_PAGES_URL"
+      else
+        mkdir -p public
+        echo '<HTML><HEAD><meta http-equiv="Refresh" content="0; url='\''https://gitlab-for-eks.awsworkshop.io'\''" /></HEAD><TITLE>ULTIMATE GITOPS: DEPLOY SECURE MICROSERVICES TO AWS EKS WITH THE GITLAB AGENT</TITLE><BODY><BR><BR>There is currently not a development version of the site, <A HREF="https://gitlab-for-eks.awsworkshop.io">please click here for production site location.</A></BODY></HTML>' > public/index.html
+      fi
+
   artifacts:
     paths:
       - public/
