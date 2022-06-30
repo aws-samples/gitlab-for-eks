@@ -20,10 +20,10 @@ This section makes the following assumptions:
 
 For us-east-2
 
-| Item                              | Estimated Cost | Reduce or Eliminate                                  |
-| --------------------------------- | -------------- | ---------------------------------------------------- |
-| AWS Certificate Services Cedrt    | Free           |                                                      |
-| DNS Zone Record for Custom Domain | $0.50/Mo       | Cannot be disabled, only destroying elimintates cost |
+| Item                                | Estimated Cost | Reduce or Eliminate                                  |
+| ----------------------------------- | -------------- | ---------------------------------------------------- |
+| AWS Certificate Services (ACM) Cert | Free           |                                                      |
+| DNS Zone Record for Custom Domain   | $0.50/Mo       | Cannot be disabled, only destroying eliminates cost |
 
 ### AWS Route 53 Setup
 

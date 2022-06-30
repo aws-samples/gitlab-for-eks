@@ -131,37 +131,42 @@ Notice the same page reloads, but at the top of the screen now has a grey box co
 
 7. **In a NEW browser tab**, open 'yourpersonalgroup' (the group level - not the hello-world project)
 
-8. On the left navigation, *Click* **Settings => CI/CD**
+{{< admonition type=danger title="Verify Your Location" open=true >}}
 
-9. To the right of ‘Variables’, *Click* **Expand**
+It is very easy to accidentally create these at the project level. The **token** is created in the **project**, but the variables MUST be at the **GROUP** level for them to be visible to the Environment Deployment project you will create in the next lab.
+{{< /admonition >}}
 
-10. *Click* **Add variable**
+6. On the left navigation, *Click* **Settings => CI/CD**
 
-11. For Key, *Type* **READ_REG_USER**
+7. To the right of ‘Variables’, *Click* **Expand**
 
-12. In the Value field *Paste* **[the Clipboard contents]**
+8. *Click* **Add variable**
 
-13. Under Flags, *Deselect* **Protect variable**
+9. For Key, *Type* **READ_REG_USER**
 
-14. *Click* **Add variable** (button)
+10. In the Value field *Paste* **[the Clipboard contents]**
 
-15. In your browser tabs, *Switch* to the **[Deploy Token browser tab]**
+11. Under Flags, *Deselect* **Protect variable**
 
-16. Under ‘Your new Deploy Token username’, to the right of the **SECOND** value, *Click* **[the Clipboard Icon]**
+12. *Click* **Add variable** (button)
 
-17. *Switch* to the **[CD/CD Variables browser tab]**.
+13. In your browser tabs, *Switch* to the **[Deploy Token browser tab]**
 
-18. *Click* **Add variable**
+14. Under ‘Your new Deploy Token username’, to the right of the **SECOND** value, *Click* **[the Clipboard Icon]**
 
-19. For Key, *Type* **READ_REG_TOKEN**
+15. *Switch* to the **[CD/CD Variables browser tab]**.
 
-20. In the Value field *Paste* **[the Clipboard contents]**
+16. *Click* **Add variable**
 
-21. Under Flags, *Deselect* **Protect variable**
+17. For Key, *Type* **READ_REG_TOKEN**
 
-22. Under Flags, *Select* **Mask variable**
+18. In the Value field *Paste* **[the Clipboard contents]**
 
-23. *Click* **Add variable**
+19. Under Flags, *Deselect* **Protect variable**
+
+20. Under Flags, *Select* **Mask variable**
+
+21. *Click* **Add variable**
 
     > You should now have two variables in 'yourpersonalgroup' that contains READ_REG_USER and READ_REG_TOKEN with the values from the Deploy Token creation.
 
