@@ -10,7 +10,9 @@ description: "About this workshop."
 ## Workshop Authorship
 This workshop was contributed by the GitLab Alliances Solutions Architecture Team.
 
-Initial authoring was done by [Darwin Sanoy](https://gitlab.com/darwinjs), as always - anyone can contribute!
+Initial authoring by [Darwin Sanoy](https://gitlab.com/darwinjs), as always - anyone can contribute!
+
+Many thanks to all who helped test and give feedback and to Mark Kriaf at AWS for making all the AWS stuff happen!
 
 ## Making Contributions Or Reporting Problems
 
