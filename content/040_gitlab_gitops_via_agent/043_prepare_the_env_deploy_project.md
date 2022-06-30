@@ -15,7 +15,7 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 {{< admonition type=gitops title="GitOps Conventions" open=true >}}
 
-1. A common GitOps convention is to seperate Application Build repositories from Environment Deployment repositories. This lab sets up the Application Build repository to follow this convention.
+1. A common GitOps convention is to seperate Application Build repositories from Environment Deployment repositories. This lab sets up the Environment Deployment repository to follow this convention.
 2. Completely constructed manifests are stored in a repository for easy human reading, visibility and source control managed state. This project creates such manifests under two conditions: 
    1. when the source code of this project is altered, 
    2. when a new version of the Application Build container is detected or specified.
@@ -194,20 +194,24 @@ These permissions are least privilege, in part, because the CI/CD Variables are 
 
     > The result should be something like **IMAGE_NAME_TO_MONITOR: "registry.gitlab.com/somegroups/classgroup/yourpersonalgroup/hello-world/main"**
 
-38. *Click* **Create commit...**
+37. *Click* **Create commit...**
 
-40. *Select* **Commit to main branch** (change from “Create a new branch”)
+38. *Select* **Commit to main branch** (change from “Create a new branch”)
 
-41. *Click* **Commit**
+39. *Click* **Commit**
 
-42. In the very bottom left, immediately after the text ‘Pipeline’ *Click* **[the pipeline number which is preceeded with a \#]** (Or on the left navigation *Click* **CI/CD => Pipelines** and *Click* **[the status badge]** or [pipeline #] for the latest running pipeline)
+{{< admonition type=tip title="Wait for it" open=true >}}
+The pipeline id link may take up to 30 seconds to appear as the CI job has to kick off before it displays.
+{{< /admonition >}}
 
-43. Expand the Downstream pipeline with the great than arrow (`>`).
+27. In the very bottom left, immediately after the text ‘Pipeline’ *Click* **[the pipeline number which is preceeded with a \#]** (Or on the left navigation *Click* **CI/CD => Pipelines** and *Click* **[the status badge]** or [pipeline #] for the latest running pipeline)
+
+28. Expand the Downstream pipeline with the great than arrow (`>`).
     {{< admonition type=warning title="CI Errors" open=true >}}
     The error message: 
 
     level=fatal msg="authenticating creds for \"registry.gitlab.com\": Requesting bear token: invalid status code from registry 403 (Forbidden)”
-    
+
 
 can be caused by:
 
@@ -243,7 +247,7 @@ In the next steps you will observe that the production manifest has not change y
 
 52. *Search* for **- image:**
 
-53. The image version tag does not match staging. (Sometimes if you’ve had trouble with labs and run previous steps multiple times it might coincidentally match)
+53. The image version tag does not match staging. (If all labs were done as described it should say `registry.gitlab.com/_replace-with-hello-world-service-container-registry-path_:5.5.5`)
 
 54. **In a NEW browser tab**, open 'yourpersonalgroup/world-greetings-env-1' again.
 
