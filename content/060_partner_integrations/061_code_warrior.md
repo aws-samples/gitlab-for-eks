@@ -36,8 +36,6 @@ This lab assumes you have completed Labs 3.1 and 3.2 - please do those now if yo
 
    {{< /admonition >}}
 
-In this Lab you will update the application project to have a review application and perform security scanning.
-
 1. Open 'yourpersonalgroup/simply-simple-notes’
 
 2. On the left sidebar, *Click* **Security & Compliance => Configuration**.
