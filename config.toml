@@ -47,6 +47,11 @@ autoHeadingID = true
 home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
+name = "<i class='fas fa-tools'></i> Extended Labs"
+url = "https://guided-explorations.gitlab.io/workshops/k8s-workshops/"
+weight = 09
+
+[[menu.shortcuts]]
 name = "<i class='fas fa-graduation-cap'></i> Start a GitLab Trial"
 url = "https://about.gitlab.com/free-trial/"
 weight = 10
