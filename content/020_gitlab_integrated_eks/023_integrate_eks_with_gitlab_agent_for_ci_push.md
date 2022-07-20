@@ -15,7 +15,7 @@ description: "Setup the most secure and capable method of integrating Kubernetes
    1. Can resolve External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
    2. With SSL urls (via cert-manager).{{< /admonition >}}
 
-## Configure and Install GitLab Kubernetes Agent for CI Push
+## Configure and Install Gitlab Agent for Kubernetes for CI Push
 
 > **Keyboard Time**: 20 mins, **Automation Wait Time**: 20 mins
 >

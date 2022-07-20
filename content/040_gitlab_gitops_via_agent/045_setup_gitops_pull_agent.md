@@ -114,7 +114,7 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 
 {{< admonition type=warning title="Warning" open=true >}}
 
-For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests. Also note that on the very first time the agent is configured to monitor your manifests - all environments are deployed. From this point forward the manifests will be updated sequentially and will require approval for production.
+For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the Gitlab Agent for Kubernetes still has to find and deploy the changed manifests. Also note that on the very first time the agent is configured to monitor your manifests - all environments are deployed. From this point forward the manifests will be updated sequentially and will require approval for production.
 
 {{< /admonition >}}
 

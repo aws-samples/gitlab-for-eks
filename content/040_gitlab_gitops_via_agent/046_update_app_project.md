@@ -140,7 +140,7 @@ For common errors and more troubleshooting information visit [Troubleshooting th
 41. **[Automation wait: ~3 min]** Keep refreshing until production deployment activities complete.
 
     {{< admonition type=warning title="Warning" open=true >}}
-For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests.
+For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the Gitlab Agent for Kubernetes still has to find and deploy the changed manifests.
     {{< /admonition >}}
 
 41. *Click* **Deployments => Environments**

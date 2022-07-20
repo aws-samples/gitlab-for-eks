@@ -18,7 +18,7 @@ This configuration also works for any kind of **GitLab Runner Push CD** to the c
 
 ### Section 3: GitLab CD and Auto DevOps via The Gitlab Agent for Kubernetes 
 
-**Dependencies:** Section can be skipped if not relevant to participant use cases (no subseqent labs depend on this one)<br />**Outcome:** Participants understand that traditional CI/CD Push operations (including Auto DevOps) are still supported with the GitLab Kubernetes Agent Cluster integration method.
+**Dependencies:** Section can be skipped if not relevant to participant use cases (no subsequent labs depend on this one)<br />**Outcome:** Participants understand that traditional CI/CD Push operations (including Auto DevOps) are still supported with the Gitlab Agent for Kubernetes Cluster integration method.
 
 ### Visual Overview of The Deployment Process
 
