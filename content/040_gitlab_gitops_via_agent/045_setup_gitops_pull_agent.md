@@ -95,7 +95,7 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 3. **[Automation wait: ~3 min]** Keep refreshing until staging deployment activities complete.
 
    {{< admonition type=warning title="Warning" open=true >}}
-   For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the GitLab Kubernetes Agent still has to find and deploy the changed manifests
+   For all GitOps mode projects, when the deployment shows complete in the Environments page, it only means the manifests are completely setup, the Gitlab Agent for Kubernetes still has to find and deploy the changed manifests
    {{< /admonition >}}
 
 4. **[Automation wait: ~3 min]** Wait after the status shows complete…
