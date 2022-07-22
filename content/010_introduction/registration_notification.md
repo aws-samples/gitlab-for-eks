@@ -12,4 +12,4 @@ iframe: "https://page.gitlab.com/AWS-GitLab-Workshops.html"
 To be notified of newly scheduled in-person or virtual sessions of this workshop, [Signup Here](https://page.gitlab.com/AWS-GitLab-Workshops.html)
 
 
-<iframe src="https://page.gitlab.com/AWS-GitLab-Workshops.html"></iframe>
+<iframe src="https://page.gitlab.com/AWS-GitLab-Workshops.html" width="100%" height="100%"></iframe>
