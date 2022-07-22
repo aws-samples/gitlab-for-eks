@@ -150,7 +150,9 @@ For all GitOps mode projects, when the deployment shows complete in the Environm
 43. On the ‘production’’ line, to the right, *Click* **Open**
 
     {{< admonition type=success title="Observation" open=true >}}
+    
     You should see that the production environment is now the new color.
+    
     {{< /admonition >}}
 
 {{< admonition type=tip title="Tip" open=true >}}
