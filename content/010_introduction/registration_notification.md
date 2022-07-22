@@ -4,6 +4,7 @@ weight: 01
 chapter: true
 draft: false
 description: "Get Started With Zero Extra Reading."
+iframe: "https://page.gitlab.com/AWS-GitLab-Workshops.html"
 ---
 
 # Registration & Wait Lists for Instructor Led
