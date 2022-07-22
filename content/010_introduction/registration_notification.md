@@ -11,4 +11,4 @@ description: "Get Started With Zero Extra Reading."
 To be notified of newly scheduled in-person or virtual sessions of this workshop, [Signup Here](https://page.gitlab.com/AWS-GitLab-Workshops.html)
 
 
-<iframe src="https://example.com/"></iframe>
+<iframe src="https://page.gitlab.com/AWS-GitLab-Workshops.html"></iframe>
