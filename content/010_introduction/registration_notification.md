@@ -1,15 +1,15 @@
 ---
-title: "Registration & Wait Lists"
+title: "Get Notified Of New Sessions"
 weight: 01
 chapter: true
 draft: false
-description: "Get Started With Zero Extra Reading."
+description: "Be notified when new sessions of the workshop are scheduled."
 iframe: "https://page.gitlab.com/AWS-GitLab-Workshops.html"
 ---
 
-# Registration & Wait Lists for Instructor Led
+# Notification List for New Workshop Sessions
 
-To be notified of newly scheduled in-person or virtual sessions of this workshop, [Signup Here](https://page.gitlab.com/AWS-GitLab-Workshops.html)
+[Signup Here](https://page.gitlab.com/AWS-GitLab-Workshops.html)
 
 
 <iframe src="https://page.gitlab.com/AWS-GitLab-Workshops.html" width="100%" height="2000px"></iframe>
