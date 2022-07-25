@@ -9,7 +9,7 @@ iframe: "https://page.gitlab.com/AWS-GitLab-Workshops.html"
 
 ### Check For Existing Scheduled Events
 
-[Search this list for “AWS Immersion Day” for scheduled deliveries of this workshop.](https://about.gitlab.com/events/?type=conference&location=any+location+type&region=any+region+type)
+[Search this list](https://about.gitlab.com/events/?type=conference&location=any+location+type&region=any+region+type) for “AWS Immersion Day” for scheduled public deliveries of this workshop.
 
 ### Private Delivery Sessions
 
