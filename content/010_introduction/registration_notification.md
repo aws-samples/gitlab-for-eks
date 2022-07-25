@@ -7,11 +7,11 @@ description: "Check existing event schedule and register for notification of new
 iframe: "https://page.gitlab.com/AWS-GitLab-Workshops.html"
 ---
 
-## Check For Existing Scheduled Events
+### Check For Existing Scheduled Events
 
 [Search this list for “AWS Immersion Day” for scheduled deliveries of this workshop.](https://about.gitlab.com/events/?type=conference&location=any+location+type&region=any+region+type)
 
-## Private Delivery Sessions
+### Private Delivery Sessions
 
 If you would like a private delivery to 15 or more participants at your company, please send an email from your company address and someone will reach out to you. Please include:
 
@@ -21,9 +21,9 @@ If you would like a private delivery to 15 or more participants at your company,
 
 <a href="mailto:test@example.com?subject=Private Registration of Ultimate GitOps workshop&body=Company Name: _company_name_here_, Number of Participants: _number_of_participants_here_, Virtual/In-Person Preference: _preference_goes_here_ ">Click Here to Email to test@example.com</a>
 
-## Notification List for New Workshop Sessions
+### Notification List for New Workshop Sessions
 
-#### Public Open Enrollment Sessions
+Use this form to be notified for newly scheduled public open enrollment sessions.
 
 [Signup Here](https://page.gitlab.com/AWS-GitLab-Workshops.html)
 
