@@ -10,6 +10,23 @@ description: "The learning outcomes that are designed into this workshop."
 
 ## Learning Outcomes and Time Estimates
 
+### AWS Workshop Co-Sponsored Deliveries
+
+{{< admonition type=gitlab title="AWS Workshop Co-Sponsored Deliveries" open=true >}}
+
+Deliveries of this content through AWS hosted workshops with Gitlab run 3.5 to 4 hours and will cover the following materials:
+
+- Classroom automation and instructor prep will result in Prep Lab section 2 being completed.
+- Participants will start on Lab Section 4.
+- Participants will also complete Lab Section 5.
+
+{{< /admonition >}}
+Here is the rough outline which may vary slightly by delivery or as improved by the individuals involved in delivery:
+![Workshop Timing](./aws-workshop-timing.png)
+
+
+
+### Baseline Information For Constructing Other Events
 These timing estimates are just for completing exercises and do not include breaks nor handling individual assistance.
 Learning outcomes are always a trade-off with time, so this table is provided to help map what learning objectives are desireable and therefore how much time will be needed.
 
