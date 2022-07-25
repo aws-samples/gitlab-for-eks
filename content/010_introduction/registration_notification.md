@@ -11,9 +11,13 @@ iframe: "https://page.gitlab.com/AWS-GitLab-Workshops.html"
 
 [Search this list for “AWS Immersion Day” for scheduled deliveries of this workshop.](https://about.gitlab.com/events/?type=conference&location=any+location+type&region=any+region+type)
 
+## Private Delivery Sessions
+
+If you would like a private delivery to 15 or more participants at your company, please send an email from your company address with your company name and number of students and someone will reach out to you. <a href="mailto:test@example.com?subject=Private Registration of Ultimate GitOps workshop&body=Company Name: _company_name_here_, Number of Participants: _number_of_participants_here_">Click Here to Email</a>
+
 ## Notification List for New Workshop Sessions
 
-If none of the existing scheduled deliveries work for you or there aren’t any currently scheduled, you can signup to be notified of new in-person or virtual deliveries.
+#### Public Open Enrollment Sessions
 
 [Signup Here](https://page.gitlab.com/AWS-GitLab-Workshops.html)
 
