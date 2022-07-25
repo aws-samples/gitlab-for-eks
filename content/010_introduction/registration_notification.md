@@ -13,7 +13,13 @@ iframe: "https://page.gitlab.com/AWS-GitLab-Workshops.html"
 
 ## Private Delivery Sessions
 
-If you would like a private delivery to 15 or more participants at your company, please send an email from your company address with your company name and number of students and someone will reach out to you. <a href="mailto:test@example.com?subject=Private Registration of Ultimate GitOps workshop&body=Company Name: _company_name_here_, Number of Participants: _number_of_participants_here_">Click Here to Email</a>
+If you would like a private delivery to 15 or more participants at your company, please send an email from your company address and someone will reach out to you. Please include:
+
+- Your company name
+- The number of students
+- Virtual versus In-Person delivery preference
+
+<a href="mailto:test@example.com?subject=Private Registration of Ultimate GitOps workshop&body=Company Name: _company_name_here_, Number of Participants: _number_of_participants_here_, Virtual/In-Person Preference: _preference_goes_here_ ">Click Here to Email to test@example.com</a>
 
 ## Notification List for New Workshop Sessions
 
