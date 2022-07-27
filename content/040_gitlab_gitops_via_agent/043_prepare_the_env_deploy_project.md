@@ -40,14 +40,6 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 {{% /expand%}}
 
-{{< admonition type=pick title=" Instructor-Led Classrooms / Self-Paced Participant Choice" open=true >}}
-
-1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
-
-2. **Self-paced:** Try option 1 first, you will be directed to option 2 if your instance does not have a specific GitLab paid license feature.
-
-{{< /admonition >}}
-
 1. While in 'yourpersonalgroup' (created in a prior lab) *Click* **New project** (button) and then *Click* **Import project**
 2. On the 'Import project' page, *Click* **Repository by URL**
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1.git**
@@ -65,6 +57,14 @@ description: "See GitLab GitOps pull deployment and configuration management in 
    {{< admonition type=tip title="Group or Project Access Tokens For High Trust Group Hierarchies" open=true >}}
    For the next steps you will create a Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a project or group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
    {{< /admonition >}}
+
+{{< admonition type=pick title=" Instructor-Led Classrooms / Self-Paced Participant Choice" open=true >}}
+
+1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
+
+2. **Self-paced:** Try option 1 first, you will be directed to option 2 if your instance does not have a specific GitLab paid license feature.
+
+{{< /admonition >}}
 
 {{< admonition type=pick title="Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)" open=true >}}
 

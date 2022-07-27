@@ -111,7 +111,7 @@ This source project followed several specific principles that makes it this easy
 For the next steps you will create a Project Deployment Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a project or group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
 {{< /admonition >}}
 
-1. While in 'yourpersonalgroup' (be sure you are in the group, not a project) in the left navigation, *Click* **Settings => Repository** (button) 
+1. While in 'yourpersonalgroup/hello-world' in the left navigation, *Click* **Settings => Repository** (button) 
 
 2. Next to ‘Deploy tokens’ *Click* **Expand**
 
@@ -136,7 +136,7 @@ Notice the same page reloads, but at the top of the screen now has a grey box co
 It is very easy to accidentally create these at the project level. The **token** is created in the **project**, but the variables MUST be at the **GROUP** level for them to be visible to the Environment Deployment project you will create in the next lab.
 {{< /admonition >}}
 
-6. On the left navigation, *Click* **Settings => CI/CD**
+8. On the left navigation, *Click* **Settings => CI/CD**
 
 7. To the right of ‘Variables’, *Click* **Expand**
 
