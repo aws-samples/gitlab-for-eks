@@ -55,28 +55,26 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 8. When the import is complete, you will be placed in the default landing page of the project.
 
    {{< admonition type=tip title="Group or Project Access Tokens For High Trust Group Hierarchies" open=true >}}
-   For the next steps you will create a Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a project or group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
+   For the next steps you will create a Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
    {{< /admonition >}}
 
 {{< admonition type=pick title=" Instructor-Led Classrooms / Self-Paced Participant Choice" open=true >}}
 
-1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
+1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
 
 2. **Self-paced:** Try option 1 first, you will be directed to option 2 if your instance does not have a specific GitLab paid license feature.
 
 {{< /admonition >}}
 
-{{< admonition type=pick title="Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)" open=true >}}
+{{< admonition type=pick title="Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)" open=true >}}
 
-**IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Group Level Access Token Feature. The group menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Optoin 2” below.
+**IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Group Level Access Token Feature. The group menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Option 2” below.
 
 1. While in 'yourpersonalgroup/world-greetings-1' (created in a prior lab), on the left navigation, *Click* **Settings => Access Tokens**
 
    > This menu option will not exist if you do not have a paid GitLab license.  You will need to use “Token Option 2” below.
 
-2. On the left navigation, *Click* **Access Tokens**
-
-3. Under ‘Add a group access token’, for Token name, *Type* **WriteRepository**
+3. Under ‘Add a project access token’, for Token name, *Type* **WriteRepository**
 
 4. Under ‘Select scopes’
 
