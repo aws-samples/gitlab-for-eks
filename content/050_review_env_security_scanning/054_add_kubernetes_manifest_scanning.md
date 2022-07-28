@@ -1,5 +1,5 @@
 ---
-title: "Lab 5.4: Add Kubernetes Manifest Security Scanning (Optional)"
+title: "Lab 5.4: Add Kubernetes Manifest Security Scanning"
 weight: 54
 chapter: true
 draft: false
@@ -7,7 +7,7 @@ description: "Security scanning in the application project."
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
-# Lab 5.4: Add Kubernetes Manifest Security Scanning (Optional)
+# Lab 5.4: Add Kubernetes Manifest Security Scanning
 
 > **Keyboard Time**: 15 mins, **Automation Wait Time**: 8 mins
 >

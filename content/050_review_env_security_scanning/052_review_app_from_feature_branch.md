@@ -1,5 +1,5 @@
 ---
-title: "Lab 5.2: Merge Request and Review App (Optional)"
+title: "Lab 5.2: Merge Request and Review App"
 weight: 52
 chapter: true
 draft: false
@@ -7,7 +7,7 @@ description: "Security scanning in the application project."
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
-# Lab 5.2: Merge Request and Review App (Optional)
+# Lab 5.2: Merge Request and Review App
 
 > **Keyboard Time**: 10 mins, **Automation Wait Time**: 5 mins
 >

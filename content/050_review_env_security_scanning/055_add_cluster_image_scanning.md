@@ -1,5 +1,5 @@
 ---
-title: "Lab 5.5: Add Cluster Image Security Scanning (Optional)"
+title: "Lab 5.5: Add Cluster Image Security Scanning"
 weight: 55
 chapter: true
 draft: false
@@ -7,7 +7,7 @@ description: "Cluster image security scanning configuration."
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
-# Lab 5.5: Add Cluster Image Security Scanning (Optional)
+# Lab 5.5: Add Cluster Image Security Scanning
 
 > **Keyboard Time**: 5 mins, **Automation Wait Time**: 10 mins
 >

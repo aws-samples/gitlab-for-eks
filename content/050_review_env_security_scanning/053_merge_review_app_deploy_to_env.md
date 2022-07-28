@@ -1,5 +1,5 @@
 ---
-title: "Lab 5.3: Merge MR and Deploy to Environment (Optional)"
+title: "Lab 5.3: Merge MR and Deploy to Environment"
 weight: 53
 chapter: true
 draft: false
@@ -7,7 +7,7 @@ description: "Security scanning in the application project."
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
-# Lab 5.3: Merge MR to Publish Container and Deploy to Environment (Optional)
+# Lab 5.3: Merge MR to Publish Container and Deploy to Environment
 
 > **Keyboard Time**: 10 mins, **Automation Wait Time**: 10 mins
 >

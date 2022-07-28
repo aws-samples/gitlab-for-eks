@@ -1,5 +1,5 @@
 ---
-title: "Lab 5.1: Add Environments and Security Scanning to the Application Project (Optional)"
+title: "Lab 5.1: Add Environments and Security Scanning to the Application Project"
 weight: 51
 chapter: true
 draft: false
