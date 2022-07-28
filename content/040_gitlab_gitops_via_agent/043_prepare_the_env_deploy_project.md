@@ -68,7 +68,7 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 {{< admonition type=pick title="Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)" open=true >}}
 
-**IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Group Level Access Token Feature. The group menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Option 2” below.
+**IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Project Level Access Token Feature. The project menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Option 2” below.
 
 1. While in 'yourpersonalgroup/world-greetings-1' (created in a prior lab), on the left navigation, *Click* **Settings => Access Tokens**
 
