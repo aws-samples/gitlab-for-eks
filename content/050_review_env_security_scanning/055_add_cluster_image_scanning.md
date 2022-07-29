@@ -7,7 +7,7 @@ description: "Cluster image security scanning configuration."
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
-# Lab 5.5: Add Cluster Image Security Scanning
+# Lab 5.5: Add Operational Container Security Scanning
 
 > **Keyboard Time**: 5 mins, **Automation Wait Time**: 10 mins
 >
@@ -15,20 +15,20 @@ description: "Cluster image security scanning configuration."
 
 {{< admonition type=gitlab title="Scanning Other Images In The Cluster" open=true >}}
 
-Cluster image scanning is able to add security findings for images used in your cluster that are not a part of your development process and therefore do not get routinely scanned during CI of the application. This scanning currently focuses on the cluster’s images and not other aspects of cluster security. The other security scanning we’ve been configuring has explictly to do with development - this scanning is part of GitLab’s Protect stage - part of operational integrity that can be enabled via the GitLab Agent.
+Operational Container Scanning is able to add security findings for images used in your cluster that are not a part of your development process and therefore do not get routinely scanned during CI of the application. This scanning currently focuses on the cluster’s images and not other aspects of cluster security. The other security scanning we’ve been configuring has explictly to do with development - this scanning is part of GitLab’s Protect stage - part of operational integrity that can be enabled via the GitLab Agent.
 
 {{< /admonition >}}
 
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 
-1. Configure cluster image scanning using the GitLab Agent for Kubernetes.
-2. Examine cluster image scanning findings.
+1. Configure Operational Container Scanning using the GitLab Agent for Kubernetes.
+2. Examine Operational Container Scanning findings.
 
 {{< /admonition >}}
 
-{{< admonition type=bug title="Troubleshooting: Cluster Image Scanning" open=true >}}
+{{< admonition type=bug title="Troubleshooting: Operational Container Scanning" open=true >}}
 
-[Troubleshooting Guide: Cluster Image Scanning]({{< relref "../010_introduction/tuning_and_troubleshooting.md#cluster-or-agent-gets-in-an-uncertain-state" >}})
+[Troubleshooting Guide: Operational Container Scanning]({{< relref "../010_introduction/tuning_and_troubleshooting.md#cluster-or-agent-gets-in-an-uncertain-state" >}})
 
 {{< /admonition >}}
 
@@ -111,8 +111,8 @@ Until [361792](https://gitlab.com/gitlab-org/gitlab/-/issues/361972) is resolved
 
 {{< admonition type=abstract title="Accomplished Outcomes" open=true >}}
 
-1. Configure cluster image scanning using the GitLab Agent for Kubernetes.
-2. Examine cluster image scanning findings.
+1. Configure Operational Container Scanning using the GitLab Agent for Kubernetes.
+2. Examine Operational Container Scanning findings.
 
 {{< /admonition >}}
 

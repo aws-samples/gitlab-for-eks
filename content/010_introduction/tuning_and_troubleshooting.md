@@ -50,7 +50,9 @@ When the EKS QuickStart was used to build the cluster, you can locate the ASG fo
 
 Resolution: You have missed the last steps of Prep Lab 2.2 for disabling group runners (and you or participants are using a free account).
 
-### Cluster Image Scanning
+### Operational Container Scanning
+
+Gitlab [Operational Container Scanning docs](https://docs.gitlab.com/ee/user/clusters/agent/vulnerabilities.html#enable-operational-container-scanning).
 
 Results Not Showing in Dashboard
 
