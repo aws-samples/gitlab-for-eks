@@ -45,11 +45,11 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 
 3. In a web browser *Navigate to* **classgroup/cluster-management**
 
-2. Near the upper right of the page, *Click* **Web IDE** (button)
+4. Near the upper right of the page, *Click* **Web IDE** (button)
 
-3. Navigate to the file .gitlab/agents/spotazuseast2-agent/config.yml
+5. Navigate to the file .gitlab/agents/spotazuseast2-agent/config.yml
 
-4. Add the following to the file only once:
+6. Add the following to the file only once:
 
    ```yaml
    gitops:
@@ -57,10 +57,26 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
    
    ```
 
-5. Under “gitops:manifest_projects:” add as below - replacing `_classgroup_` and `_yourpersonalgroup_` with the actual names for your project. Ensure indenting and “gitops:manifest_projects” should only appear once in the entire file.
+7. Under “gitops:manifest_projects:” add as below - replacing `_classgroup_` and `_yourpersonalgroup_` with the actual names for your project. Ensure indenting and “gitops:manifest_projects” should only appear once in the entire file.
+
+   <mark class="hlgreen">**For Instructors**: add one of these sections per participant. Ensure indentation is perserved.</mark>
+
+   ````yaml
    
-   <mark class="hlgreen">**For Instructors**: add one of these sections per participant.</mark>
-   
+     - id: _classgroup_/_yourpersonalgroup_/world-greetings-env-1
+       default_namespace: default
+       paths:
+       - glob: '/manifests/**/*.yaml'
+       reconcile_timeout: 3600s # 1 hour by default
+       dry_run_strategy: none # 'none' by default
+       prune: true # enabled by default
+       prune_timeout: 360s # 1 hour by default
+       prune_propagation_policy: foreground # 'foreground' by default
+       inventory_policy: must_match # 'must_match' by default
+   ````
+
+8. Final result should be something like this (including indentation - with repeating “id” sections for each participant if in a classroom):
+
    ````yaml
    gitops:
      manifest_projects:
@@ -75,12 +91,12 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
        prune_propagation_policy: foreground # 'foreground' by default
        inventory_policy: must_match # 'must_match' by default
    ````
-   
-6. *Click* **Create commit...**
 
-7. *Select* **Commit to master branch** (change from “Create a new branch”)
+9. *Click* **Create commit...**
 
-8. *Click* **Commit**
+10. *Select* **Commit to master branch** (change from “Create a new branch”)
+
+11. *Click* **Commit**
 
 {{< /admonition >}}
 
