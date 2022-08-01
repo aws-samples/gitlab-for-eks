@@ -98,25 +98,16 @@ If you are in an Instructor-Led course, you usually not be given time to complet
 
 > This method can also be used to roll back an environment.
 
-1. Open 'yourpersonalgroup/hello-world’
-
+1. Open 'yourpersonalgroup/world-greetings-env-1’
 2. On the left navigation, *Click* **CI/CD => Pipelines**
-
 3. In the upper right of the page, *Click* **Run pipeline** (button)
-
 4. Under Variables, *Type* **NEXTVERSIONTOUSE** over ‘Input variable key’
-
 5. On the same line, *Type* **0.0.1** over ‘Input variable value’
-
-6. In  “NEXTVERSION” to **1.0.0**
 7. In the lower left of the page *Click* **Run pipeline** (button)
 8. Wait for the pipeline to complete successfully.
-9. **In a NEW browser tab**, open 'yourpersonalgroup/world-greetings-env-1' in the Web IDE.
-
-10. In the files list on the left *Click* **manifests > hello-world.staging.yaml**
-
-11. *Search* for **- image:**
-
+8. **In a NEW browser tab**, open 'yourpersonalgroup/world-greetings-env-1' in the Web IDE.
+9. In the files list on the left *Click* **manifests > hello-world.staging.yaml**
+10. *Search* for **- image:**
 12. The image reference should point to the version “0.0.1”
 13. In the left navigation *Click* **CI/CD => Pipelines**
 14. Find the last non-skipped pipeline and *Click* it’s **[Status badge]** or **[Pipeline \#]** to open the pipeline.

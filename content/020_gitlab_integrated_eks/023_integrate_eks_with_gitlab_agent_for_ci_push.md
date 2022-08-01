@@ -15,7 +15,7 @@ description: "Setup the most secure and capable method of integrating Kubernetes
    1. Can resolve External, Dynamic DNS names (via the dynamic DNS service nip.io combined with the Ingress).
    2. With SSL urls (via cert-manager).{{< /admonition >}}
 
-## Configure and Install GitLab Kubernetes Agent for CI Push
+## Configure and Install Gitlab Agent for Kubernetes for CI Push
 
 > **Keyboard Time**: 20 mins, **Automation Wait Time**: 20 mins
 >
@@ -120,7 +120,7 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
    3. *Right click* **the instance**, *select* => **Connect**  => **Session Manager** => **Connect** (button)
    
       {{< admonition type=tip title="Remember The Above Sequence" open=true >}}
-      kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
+kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
       {{< /admonition >}}
    
    4. After the command prompt appears, *Paste* the **'Recommended installation method'** command from the previous page.

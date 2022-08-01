@@ -40,14 +40,6 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
 {{% /expand%}}
 
-{{< admonition type=pick title=" Instructor-Led Classrooms / Self-Paced Participant Choice" open=true >}}
-
-1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
-
-2. **Self-paced:** Try option 1 first, you will be directed to option 2 if your instance does not have a specific GitLab paid license feature.
-
-{{< /admonition >}}
-
 1. While in 'yourpersonalgroup' (created in a prior lab) *Click* **New project** (button) and then *Click* **Import project**
 2. On the 'Import project' page, *Click* **Repository by URL**
 3. On the next page, for 'Git repository URL' *Paste* **https://gitlab.com/guided-explorations/gl-k8s-agent/gitops/envs/world-greetings-env-1.git**
@@ -63,20 +55,28 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 8. When the import is complete, you will be placed in the default landing page of the project.
 
    {{< admonition type=tip title="Group or Project Access Tokens For High Trust Group Hierarchies" open=true >}}
-   For the next steps you will create a Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a project or group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
+   For the next steps you will create a Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
    {{< /admonition >}}
 
-{{< admonition type=pick title="Token Option 1: Using a Group Access Token (Paid Licenses Only Feature)" open=true >}}
+{{< admonition type=pick title=" Instructor-Led Classrooms / Self-Paced Participant Choice" open=true >}}
 
-**IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Group Level Access Token Feature. The group menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Optoin 2” below.
+1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
+
+2. **Self-paced:** Try option 1 first, you will be directed to option 2 if your instance does not have a specific GitLab paid license feature.
+
+{{< /admonition >}}
+
+{{< admonition type=pick title="Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)" open=true >}}
+
+**IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Project Level Access Token Feature. The project menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Option 2” below.
 
 1. While in 'yourpersonalgroup/world-greetings-1' (created in a prior lab), on the left navigation, *Click* **Settings => Access Tokens**
 
    > This menu option will not exist if you do not have a paid GitLab license.  You will need to use “Token Option 2” below.
 
-2. On the left navigation, *Click* **Access Tokens**
+2. Under ‘Add a project access token’, for Token name, *Type* **WriteRepository**
 
-3. Under ‘Add a group access token’, for Token name, *Type* **WriteRepository**
+3. Under ‘Select a role’, *Select* **Maintainer**
 
 4. Under ‘Select scopes’
 
@@ -219,10 +219,27 @@ can be caused by:
 - the variables READ_REG_USER and READ_REG_TOKEN
   - being incorrectly named, 
   - at the wrong group level or 
-  - having invalid values.
+  - having invalid values
+  - READ_REG_USER starting with `@` (this should be left off)
   - having incorrect permissions in the token (should be “read_registry”, not “read_repository”)
 
 {{< /admonition  >}}
+
+27. {{< admonition type=warning title="CI Errors" open=true >}}
+    The error message: 
+
+    remote: GitLab: You are not allowed to push code to protected branches on this project.
+    ! [remote rejected] main -> main (pre-receive hook declined)
+
+    error: failed to push some refs to <project path>
+
+
+can be caused by:
+
+- You did not select ‘Maintainer’ for the token role when setting up the repository write token above.
+
+{{< /admonition  >}}
+
 44. **[Automation wait: ~3 min]** Watch the pipeline complete through the ‘update-staging-manifests’ job.
 
 45. The update-staging-manifests job should complete successfully.

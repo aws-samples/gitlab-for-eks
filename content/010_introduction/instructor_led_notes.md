@@ -10,6 +10,11 @@ description: "Important information for instructor-led sessions conducted in cla
 
 {{< toc >}}
 
+## Delivery Guide for AWS Workshop Co-Sponsored Deliveries
+
+* The default slide deck provided to GitLab Instructors contains the exact delivery guide on what content is covered, which exercises to cover when, and what demos should be done. The content coverage for participants is Lab section 4 and Lab section 5.
+* All instructor preparation resources for GitLab + AWS co-sponsored workshops are here: [Ultimate GitOps Workshop: Instructor Preparation Checklists, Slides, Class Delivery Guide and Video Talk Track](https://gitlab.highspot.com/viewer/62e3cb6ffe01256217b26539)
+
 ## Planning Content Coverage
 
 * Instructors must choose the content to be covered to fit the length of the event. 

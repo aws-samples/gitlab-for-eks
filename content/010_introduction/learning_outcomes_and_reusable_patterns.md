@@ -10,6 +10,23 @@ description: "The learning outcomes that are designed into this workshop."
 
 ## Learning Outcomes and Time Estimates
 
+### AWS Workshop Co-Sponsored Deliveries
+
+{{< admonition type=gitlab title="AWS Workshop Co-Sponsored Deliveries" open=true >}}
+
+Deliveries of this content through AWS hosted workshops with Gitlab run 3.5 to 4 hours and will cover the following materials:
+
+- Classroom automation and instructor prep will result in Prep Lab section 2 being completed.
+- Participants will start on Lab Section 4.
+- Participants will also complete Lab Section 5.
+
+{{< /admonition >}}
+Here is the rough outline which may vary slightly by delivery or as improved by the individuals involved in delivery:
+![Workshop Timing](./aws-workshop-timing.png)
+
+
+
+### Baseline Information For Constructing Other Events
 These timing estimates are just for completing exercises and do not include breaks nor handling individual assistance.
 Learning outcomes are always a trade-off with time, so this table is provided to help map what learning objectives are desireable and therefore how much time will be needed.
 
@@ -20,10 +37,10 @@ Learning outcomes are always a trade-off with time, so this table is provided to
 | Prep Lab 2.1: Provision a Kubernetes Cluster Using The AWS EKS Quick Start | 5 mins        | 60 mins               |              | Yes                                          |
 | Prep Lab 2.2: Prepare GitLab classgroup and Deploy a Runner (In Parallel with 2.1 Wait Time) | 20 mins       | 20 mins (In Parallel) |              | Yes                                          |
 | Prep Lab 2.3: Deploy a Runner and Use GitLab K8s Agent to Integrate The Cluster with GitLab<br />**Outcomes**: GitLab EKS Cluster Integration Using GitLab Agent Connection Method (performed by instructor for instructor-led) | 20 mins       | 2 mins                |              | Yes as a Demo                                |
-| **Section 3: GitLab CD and Auto DevOps via The GitLab Kubernetes Agent** (Optional)<br />**Dependencies:** Section can be skipped if not relevant to participant use cases (no subseqent labs depend on this one)<br />**Outcome:** Participants understand that traditional CI/CD Push operations (including Auto DevOps) are still supported with the GitLab Kubernetes Agent Cluster integration method. | **20 mins**   | **15 mins**           | **35 mins**  |                                              |
+| **Section 3: GitLab CD and Auto DevOps via The Gitlab Agent for Kubernetes** (Optional)<br />**Dependencies:** Section can be skipped if not relevant to participant use cases (no subseqent labs depend on this one)<br />**Outcome:** Participants understand that traditional CI/CD Push operations (including Auto DevOps) are still supported with the Gitlab Agent for Kubernetes Cluster integration method. | **20 mins**   | **15 mins**           | **35 mins**  |                                              |
 | Lab 3.1: Create a Personal Group                             | 5 mins        | N/A                   |              |                                              |
 | Lab 3.2: GitLab Auto DevOps via the K8s Agents<br /><br />**Outcome:** Participants see that a GitLab Runner can talk to the Kubernetes Agent through the connection it reached out and made to the GitLab instance. This is called tunneling because it reuses the connection the agent established to the cluster to push instructions. | 15 mins       | 15 mins               |              |                                              |
-| **Section 4. GitLab GitOps via The GitLab Kubernetes Agent** <br />**Dependencies:** Does not depend on Section 3, but Section 5 does depend on this section. | **80 mins**   | **20 mins**           | **100 mins** |                                              |
+| **Section 4. GitLab GitOps via The Gitlab Agent for Kubernetes** <br />**Dependencies:** Does not depend on Section 3, but Section 5 does depend on this section. | **80 mins**   | **20 mins**           | **100 mins** |                                              |
 | Lab 4.1: Create a Personal Group                             | 1 mins        | N/A                   |              |                                              |
 | Lab 4.2: Prepare the Application Project<br /><br />**Outcome:** Participants create an Application Creation project that demonstrates a GitOps best practice of cleanly seperating Container Build from Environment Deployment. This also cleanly seperates the need for GitLab runners for Build, while the GitLab Agent alone can perform deployment. | 20 mins       | 2 mins                |              |                                              |
 | Lab 4.3: Prepare the Environment Deployment Project<br /><br />**Outcome:** Participants create an Environment Deployment project that demonstrates a GitOps best practice of cleanly seperating Container Build from Environment Deployment. The GitOps agent is completely responsible for pulling the application onto the clusters. | 25 mins       | 5 mins                |              |                                              |
@@ -78,12 +95,12 @@ An Application Build Project image is only tagged as “latest” if the pipelin
 
 ## Reusable Patterns for Training
 
-These exercises configure the GitLab Kubernetes Agent to function similarly to the depreciated certificate connection method in that configuring at a group level enabled the entire subgroup heirarchy of that group to be able to access the cluster and not have name uniqueness conflicts. This is highly desirable in a classroom context and may be desirable for production if the previous group level GitLab certificate cluster connections were leveraged by your organization.
+These exercises configure the Gitlab Agent for Kubernetes to function similarly to the depreciated certificate connection method in that configuring at a group level enabled the entire subgroup heirarchy of that group to be able to access the cluster and not have name uniqueness conflicts. This is highly desirable in a classroom context and may be desirable for production if the previous group level GitLab certificate cluster connections were leveraged by your organization.
 
 To accomplish this:
 
 1. A single Kubernetes Cluster is deployed and…
-2. Integrated using a single GitLab Kubernetes Agent…
+2. Integrated using a single Gitlab Agent for Kubernetes…
 3. That has a management scope of a top level group and all its subgroups and…
 4. That services both **CI/CD Push** AND **GitOps** scenarios…
 5. Which have **working Review Environments** for participants to observe results of changes…
@@ -102,7 +119,7 @@ In a real world scenario there can be many GitLab Agents in many GitLab groups a
 ## Simple & Inexpensive EKS Pattern Reusable for Training
 
 {{< admonition type=warning title="Warning" open=true >}}
-A key difference between the legacy GitLab Kubernetes Certificate cluster connection and the GitLab Kubernetes agent configuration is that you cannot multi-attach a single cluster agent to multiple locations in the group heirachy.
+A key difference between the legacy GitLab Kubernetes Certificate cluster connection and the Gitlab Agent for Kubernetes configuration is that you cannot multi-attach a single cluster agent to multiple locations in the group heirachy.
 {{< /admonition >}}
 
 ### Rapid Deployment & Simplicity

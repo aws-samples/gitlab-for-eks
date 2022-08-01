@@ -6,28 +6,32 @@ draft: false
 description: "Stopping all EKS Cluster nodes manually or by scheduling stop and start."
 ---
 
-## EKS Stop, Start & Scheduling
+## EKS and Runner ASG Stop, Start & Scheduling
 
 > **Scenarios:** Instructor-Led, Self-Paced
 
-**Important**: If you scale the bastion ASG to 0, you will need to rerun the configuration above to have kubectl, helm and docker available while logged in via SSM (ssm-user).
+{{< admonition type=warning title="Kubernetes Runner" open=true >}}
+
+This workshop advises against having a Kubernetes Runner in your cluster as the runner for the class. One reason for this is that scaling the cluster to zero and then bringing it back up breaks the Runner Manager pod.
+
+{{< /admonition >}}
 
 **Important**: The hourly cost of the EKS control plane ($0.10/hr or $73/month in us-east-1) still applies when all instances are scaled to zero.
 
-### Manually Turning Off Cluster Nodes and Bastion Host
+### Manually Turning Off Cluster Nodes ASG, Bastion Host ASG and Runner ASG
 
 1. In the [EC2 AutoScaling Console for us-east-2](https://us-east-2.console.aws.amazon.com/ec2autoscaling/home?region=us-east-2#/details) click the Auto Scaling group that starts with **spot2azuseast2** and also contains **NodeGroupStack**.
 2. From the 'Details' tab (default location), under 'Group details' pane, _Click_ **Edit** (button)
 3. For 'Desired capacity' _Type_ **0**
 4. For 'Minimum capacity' _Type_ **0**
 5. _Click_ **Update**
-6. Since the Bastion host is also in an ASG (for self-healing), simply repeat the above steps for the Auto Scaling group that starts with **spot2azuseast2** and also contains **BastionStack**.
+6. Since the Bastion host is also in an ASG (for self-healing), simply repeat the above steps for the Auto Scaling group that starts with **spot2azuseast2** and also contains **BastionStack**. If you configured a Runner using the vending machine automation, there should also be a ASG for the Runner that can be disabled.
 
-### Manually Turning On Cluster Nodes and Bastion Host
+### Manually Turning On Cluster Node ASG, Bastion Host ASG and Runner ASG
 
 Repeat the same steps in **Manually Turning Off Cluster Nodes and Bastion Host** but for the NodeGroupStack, for 'Desired capacity' and 'Minimum capacity' specify **2** and for these values for the BastionStack specify **1**.
 
-### Scheduling Cluster and Bastion Host Availability
+### Scheduling Availability for EKS Cluster ASG, Bastion Host ASG and Runner ASG
 
 1. Edit the NodeGroupStack ASG and select the **Automatic scaling** tab.
 2. Under the 'Scheduled actions' pane _Click_ **Create scheduled action** and specify a schedule for daily shutdown.

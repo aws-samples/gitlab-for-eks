@@ -1,5 +1,5 @@
 ---
-title: "5. GitLab Review Environments and Security Scanning for GitOps (optional)"
+title: "5. GitLab Review Environments and Security Scanning for GitOps"
 weight: 50
 chapter: true
 draft: false
