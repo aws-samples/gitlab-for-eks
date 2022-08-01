@@ -120,7 +120,7 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
    3. *Right click* **the instance**, *select* => **Connect**  => **Session Manager** => **Connect** (button)
    
       {{< admonition type=tip title="Remember The Above Sequence" open=true >}}
-      kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
+kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
       {{< /admonition >}}
    
    4. After the command prompt appears, *Paste* the **'Recommended installation method'** command from the previous page.

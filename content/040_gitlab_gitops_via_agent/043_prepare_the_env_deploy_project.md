@@ -74,7 +74,9 @@ description: "See GitLab GitOps pull deployment and configuration management in 
 
    > This menu option will not exist if you do not have a paid GitLab license.  You will need to use “Token Option 2” below.
 
-3. Under ‘Add a project access token’, for Token name, *Type* **WriteRepository**
+2. Under ‘Add a project access token’, for Token name, *Type* **WriteRepository**
+
+3. Under ‘Select a role’, *Select* **Maintainer**
 
 4. Under ‘Select scopes’
 
@@ -217,10 +219,27 @@ can be caused by:
 - the variables READ_REG_USER and READ_REG_TOKEN
   - being incorrectly named, 
   - at the wrong group level or 
-  - having invalid values.
+  - having invalid values
+  - READ_REG_USER starting with `@` (this should be left off)
   - having incorrect permissions in the token (should be “read_registry”, not “read_repository”)
 
 {{< /admonition  >}}
+
+27. {{< admonition type=warning title="CI Errors" open=true >}}
+    The error message: 
+
+    remote: GitLab: You are not allowed to push code to protected branches on this project.
+    ! [remote rejected] main -> main (pre-receive hook declined)
+
+    error: failed to push some refs to <project path>
+
+
+can be caused by:
+
+- You did not select ‘Maintainer’ for the token role when setting up the repository write token above.
+
+{{< /admonition  >}}
+
 44. **[Automation wait: ~3 min]** Watch the pipeline complete through the ‘update-staging-manifests’ job.
 
 45. The update-staging-manifests job should complete successfully.
