@@ -26,8 +26,7 @@ Skip this lab if you already have a personal group created by a previous lab.
 
     {{< admonition type=warning title="Must Be Public" open=true >}}
 
-    Projects that are used by the GitLab Agent for Kubernetes must be public.
-
+Projects that are used by the GitLab Agent must be public when the agent registration is done in a project other than the one the deployment happens from and when the image being sourced is not using a stored docker login secret.
     {{< /admonition >}}
 
 4. *Click* **Create Group**.

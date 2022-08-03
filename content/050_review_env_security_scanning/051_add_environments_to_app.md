@@ -60,7 +60,9 @@ In this Lab you will update the application project to have a review application
      POSTGRES_ENABLED: 'false'
      CODE_QUALITY_DISABLED: 'true'
      MANUAL_PROMOTE: 'true'
-     STAGING_ENABLED: 'true'
+     STAGING_ENABLED: '' #empty disables staging
+     DAST_DISABLED: 'true'
+     BROWSER_PERFORMANCE_DISABLED: 'true'  
      
      NEXTVERSION: 'read-from-registry'
       ...
