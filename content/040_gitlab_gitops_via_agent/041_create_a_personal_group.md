@@ -20,18 +20,22 @@ Skip this lab if you already have a personal group created by a previous lab.
 1. While in 'classgroup', near the top right of the page, *Click* **New subgroup** (button)
 
 2. Name the group with your gitlab user name so that it will be unique, easy to remember and easy for others to identify. (For example if your gitlab user id is @supercoolcoder and your avatar URL is https://gitlab.com/supercoolcoder, name your subgroup ‘supercoolcoder’). 
-    From here on in the exericses this will be referred to as 'yourpersonalgroup'
+    From here on in the exericses this will be referred to as 'yourpersonalgroup’
 
-3. *Check* **Public**.
+3. *Click* **Create Group**.
+
+4. On the left hand navigation *Click* **Settings**
+
+5. Next to “General”, *Click* **Expand**
+
+6. For “Visibility Level”, *Check* **Public**.
 
     {{< admonition type=warning title="Must Be Public" open=true >}}
 
 Projects that are used by the GitLab Agent must be public when the agent registration is done in a project other than the one the deployment happens from and when the image being sourced is not using a stored docker login secret.
     {{< /admonition >}}
 
-4. *Click* **Create Group**.
-
-5. **Record or remember** 'yourpersonalgroup' = _________________________________________________
+4. **Record or remember** 'yourpersonalgroup' = _________________________________________________
 
 {{< admonition type=warning title="IMPORTANT" open=true >}}
 Throughout the remaining exercises you will replace the text  <mark class="hlgreen">yourpersonalgroup</mark> with this actual group name.
