@@ -18,17 +18,20 @@ description: "See Auto DevOps in action. The same configuration enables GitLab C
 2. Name the group with the mask `firstname_lastname` so that it will be unique, easy to remember and easy for others to identify. (For example if your gitlab user id is @supercoolcoder and your avatar URL is https://gitlab.com/supercoolcoder, name your subgroup ‘supercoolcoder’). 
     From here on in the exericses this will be referred to as 'yourpersonalgroup'
 
-3. *Click* **Public**.
+3. *Click* **Create Group**.
 
-4. *Click* **Create Group**.
+4. On the left hand navigation *Click* **Settings**
+
+5. Next to “General”, *Click* **Expand**
+
+6. For “Visibility Level”, *Check* **Public**.
 
     {{< admonition type=warning title="Must Be Public" open=true >}}
 
-    Application Build Projects that are used by the GitLab Agent for Kubernetes must be public.
-
+Projects that are used by the GitLab Agent must be public when the agent registration is done in a project other than the one the deployment happens from and when the image being sourced is not using a stored docker login secret.
     {{< /admonition >}}
 
-5. **Record or remember** 'yourpersonalgroup' = _________________________________________________
+7. **Record or remember** 'yourpersonalgroup' = _________________________________________________
 
 {{< admonition type=warning title="IMPORTANT" open=true >}}
 Throughout the remaining exercises you will replace the text  <mark class="hlgreen">yourpersonalgroup</mark> with this actual group name.
