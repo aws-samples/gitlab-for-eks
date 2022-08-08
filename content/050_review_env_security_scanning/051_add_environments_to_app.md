@@ -60,7 +60,9 @@ In this Lab you will update the application project to have a review application
      POSTGRES_ENABLED: 'false'
      CODE_QUALITY_DISABLED: 'true'
      MANUAL_PROMOTE: 'true'
-     STAGING_ENABLED: 'true'
+     STAGING_ENABLED: '' #empty disables staging
+     DAST_DISABLED: 'true'
+     BROWSER_PERFORMANCE_DISABLED: 'true'  
      
      NEXTVERSION: 'read-from-registry'
       ...
@@ -73,7 +75,9 @@ In this Lab you will update the application project to have a review application
        GIT_STRATEGY: fetch
    ```
 
-6. Above the editing area, *Click* the word **Lint**
+6. Above the editing area, *Click* the word **Validate**
+
+7. Near the bottom center of the page, *Click* **Validate pipeline** (button)
 
    > You should have a green banner that says “Syntax is correct”
 
@@ -81,23 +85,31 @@ In this Lab you will update the application project to have a review application
 You will now purposely insert a syntax error to see the linter catch it. The GitLab CI Yaml linter only exists in this CI Editor. 
 {{< /admonition >}}
 
-7. In the same top navigation area, *Click* **Edit**
+8. In the same top navigation area, *Click* **Edit**
 
-8. On a **blank** line *Type* **this is an error**
+9. On a **blank** line *Type* **this is an error**
 
-9. Above the editing area, *Click* the word **Lint**
+10. Above the editing area, *Click* the word **Validate**
 
-   > You should have a red banner that says “Syntax is incorrect”
+11. Near the bottom center of the page, *Click* **Validate pipeline** (button)
 
-10. Make a mental note of the line number and column noted in the grey box.
+    > You should have a red banner that says “Syntax is incorrect”
 
-11. In the same navigation area, *Click* **Edit**
+12. Make a mental note of the line number and column noted in the grey box.
 
-12. Find the line number and *Delete* **this is an error**
+13. In the same navigation area, *Click* **Edit**
 
-13. Go to the Lint tab to ensure you have clean syntax and then change back to the Edit tab.
+14. Find the line number and *Delete* **this is an error**
 
-14. *Click* **Commit changes**
+15. Above the editing area, *Click* the word **Validate**
+
+16. Near the bottom center of the page, *Click* **Validate pipeline** (button)
+
+    > You should have a green banner that says “Syntax is correct”
+
+17. In the same navigation area, *Click* **Edit**
+
+18. *Click* **Commit changes**
 
 
 {{< admonition type=observe title="Observe" open=true >}}

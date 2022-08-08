@@ -53,11 +53,9 @@ This project auto-increments images with a simple semantic version (prereleases 
 
 6. *Click* **Public**.
 
-   {{< admonition type=warning title="Must Be Public" open=true >}}
-
-   Application Build Projects that are used by the GitLab Agent for Kubernetes must be public.
-
-   {{< /admonition >}}
+    {{< admonition type=warning title="Must Be Public" open=true >}}
+Projects that are used by the GitLab Agent must be public when the agent registration is done in a project other than the one the deployment happens from and when the image being sourced is not using a stored docker login secret.
+    {{< /admonition >}}
 
 7. Near the bottom of the page *Click* **Create project** (button)
 
