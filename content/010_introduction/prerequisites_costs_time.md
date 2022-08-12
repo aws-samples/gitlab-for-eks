@@ -7,6 +7,10 @@ description: "What You Need To Get Started, Cost Estimates, Time Estimates, Name
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
+## Target Audience
+
+Please read [Who Will Enjoy This Workshop?]({{< relref "./who.md" >}})
+
 ## Instructor-Led Notes
 
 If you are the instructor for an instructor-led version of this workshop, please read [Instructor-Led Notes]({{< relref "./instructor_led_notes.md" >}})

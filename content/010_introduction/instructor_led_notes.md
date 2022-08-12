@@ -10,6 +10,10 @@ description: "Important information for instructor-led sessions conducted in cla
 
 {{< toc >}}
 
+## Target Audience Alignment
+
+Unless you are using this workshop as part of a specific remix, your event marketing should ensure your audience is aligned with [Who Will Enjoy This Workshop?]({{< relref "./who.md" >}})
+
 ## Delivery Guide for AWS Workshop Co-Sponsored Deliveries
 
 * The default slide deck provided to GitLab Instructors contains the exact delivery guide on what content is covered, which exercises to cover when, and what demos should be done. The content coverage for participants is Lab section 4 and Lab section 5.

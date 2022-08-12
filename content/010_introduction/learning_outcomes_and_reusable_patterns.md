@@ -53,7 +53,7 @@ Learning outcomes are always a trade-off with time, so this table is provided to
 | Lab 5.3: Merge MR and Deploy to Environment (Optional)<br />**Outcome:** Observe full workflow of changes with Dynamic Environments and MRs to push all the way to production environment with GitOps workflows. | 10 Mins       | 10 Mins               |              |                                              |
 | Lab 5.3 Part B: GitOps CD Pull Changes to Production (Optional)<br />**Outcome:** Observe full workflow of changes with Dynamic Environments and MRs to push all the way to production environment with GitOps workflows. | 10 Mins       | 5 Mins                |              |                                              |
 | Lab 5.4: Add Kubernetes Manifest Security Scanning (Optional)<br />**Outcome:** Learn to setup GItLab Security Scanning of Kubernetes Manifests with GitOps workflows. | 15 Mins       | 10 Mins               |              |                                              |
-| Lab 5.5: Add Cluster Image Security Scanning (Optional)<br />**Outcome:** Learn to setup GItLab Security Scanning of Kubernetes Clister Images (that are used in your cluster, but not developed in your CI)  with GitOps workflows. | 5 Mins        | 10 Miins              |              |                                              |
+| Lab 5.5: Add Cluster Image Security Scanning (Optional)<br />**Outcome:** Learn to setup GItLab Security Scanning of Kubernetes Clister Images (that are used in your cluster, but not developed in your CI)  with GitOps workflows. | 5 Mins        | 10 Mins               |              |                                              |
 
 ## Reusable Patterns For Production and Training
 

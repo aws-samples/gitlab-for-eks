@@ -1,6 +1,6 @@
 ---
 title: "Learn More About GitLab Together With AWS"
-weight: 01
+weight: 02
 chapter: true
 draft: false
 description: "Learn more about how GitLab and AWS are better together."
