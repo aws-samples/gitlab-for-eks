@@ -62,7 +62,7 @@ Projects that are used by the GitLab Agent must be public when the agent registr
 
 1. **Instructor-Led Classroom:** Please ask the instructor whether to use **Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)** or **Token Option 2: Using a Personal Access Token (PAT)** 
 
-2. **Self-paced:** Try option 1 first, you will be directed to option 2 if your instance does not have a specific GitLab paid license feature.
+2. **Self-paced:** Try **Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)** first. If your instance does not have a specific GitLab paid license feature you will be directed to **Token Option 2: Using a Personal Access Token (PAT)**.
 
 {{< /admonition >}}
 
@@ -208,10 +208,10 @@ The pipeline id link may take up to 30 seconds to appear as the CI job has to ki
 
 28. Expand the Downstream pipeline with the great than arrow (`>`).
     {{< admonition type=warning title="Some Possible CI Errors" open=true >}}
-Possible error messages (not an exhaustive list): 
+    Possible error messages (not an exhaustive list): 
 
     level=fatal msg="authenticating creds for \"registry.gitlab.com\": Requesting bear token: invalid status code from registry 403 (Forbidden)”
-.
+    .
 
     level=fatal msg="error logging into \"registry.gitlab.com\": invalid username/password"
 
