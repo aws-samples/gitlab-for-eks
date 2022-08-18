@@ -207,11 +207,13 @@ The pipeline id link may take up to 30 seconds to appear as the CI job has to ki
 27. In the very bottom left, immediately after the text ‘Pipeline’ *Click* **[the pipeline number which is preceeded with a \#]** (Or on the left navigation *Click* **CI/CD => Pipelines** and *Click* **[the status badge]** or [pipeline #] for the latest running pipeline)
 
 28. Expand the Downstream pipeline with the great than arrow (`>`).
-    {{< admonition type=warning title="CI Errors" open=true >}}
-    The error message: 
+    {{< admonition type=warning title="Some Possible CI Errors" open=true >}}
+Possible error messages (not an exhaustive list): 
 
     level=fatal msg="authenticating creds for \"registry.gitlab.com\": Requesting bear token: invalid status code from registry 403 (Forbidden)”
+.
 
+    level=fatal msg="error logging into \"registry.gitlab.com\": invalid username/password"
 
 can be caused by:
 
