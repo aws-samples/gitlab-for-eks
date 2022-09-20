@@ -1,5 +1,5 @@
 ---
-title: "1. Prerequisites & Prep"
+title: "1. Prereqs, Prep & Support"
 weight: 05
 chapter: true
 draft: false
