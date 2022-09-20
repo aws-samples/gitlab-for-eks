@@ -9,4 +9,8 @@ description: "How the GitLab K8s Agent communicates with GitLab and Runners."
 
 ## GitLab Agent Connections and Flows
 
+### Architectural Depiction 1
 ![gitlab_k8s_agent_comms](gitlab_k8s_agent_comms.svg)
+
+### Architectural Depiction 2
+![gitlab_k8s_agent_comms](gitlab_k8s_agent_comms2.svg)

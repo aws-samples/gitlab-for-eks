@@ -120,7 +120,7 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
    3. *Right click* **the instance**, *select* => **Connect**  => **Session Manager** => **Connect** (button)
    
       {{< admonition type=tip title="Remember The Above Sequence" open=true >}}
-kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
+   kubectl and helm are now available on your path and the bastion instance already has administrative permissions to the cluster. Remember the above sequence for gaining access to CLI based cluster admin.
       {{< /admonition >}}
    
    4. After the command prompt appears, *Paste* the **'Recommended installation method'** command from the previous page.
@@ -180,17 +180,11 @@ Production application setups would generally not use this specific Ingress inst
 
 2. In the Web IDE file navigation, *Click* **.gitlab-ci.yml**
 
-3. Under the job ‘**detect-helm2-releases**’, *Locate* the line starting with **image:**
+3. Under the job ‘**.base**’, *Locate* the line starting with **image:**
 
-4. At the end of the line change the portion after the colon (“:”) to **v1.6.0**
+4. At the end of the line ensure the portion after the colon (“:”) is set to **v1.6.0** or higher. Do not change it if it is higher.
 
    > Final result: image: "registry.gitlab.com/gitlab-org/cluster-integration/cluster-applications:v1.6.0”
-
-5. Under the job ‘**apply**’, *Locate* the line starting with **image:**
-
-6. At the end of the line change the portion after the colon (“:”) to **v1.6.0**
-
-   > Final result: image: "registry.gitlab.com/gitlab-org/cluster-integration/cluster-applications:v1.6.0"
 
 7. In the Web IDE file navigation, *Click* **helmfile.yaml**
 
