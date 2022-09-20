@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="951px" preserveAspectRatio="none" style="width:1057px;height:951px;background:#FFFFFF;" version="1.1" viewBox="0 0 1057 951" width="1057px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="58.8906" id="_title" style="stroke:none;stroke-width:1.0;" width="259" x="392" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="203" x="420" y="22.9951">GitLab Kubernetes Agent</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="244" x="402" y="39.292">Runner CD Push Configuration</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="225" x="411.5" y="55.5889">&amp; GitOps Pull Configuration</text><!--MD5=[d8d954e58520dad1350856783a5f043e]
+cluster network1--><g id="cluster_network1"><rect fill="none" height="645.5" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="352" x="7" y="117.8956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="124.5" y="134.7472">Any Network</text><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="165" x="100.5" y="149.6593">[Private, Internet, etc]</text></g><!--MD5=[15deac2ecc685cca15fe1bf8dbb54108]
+cluster runnerenv--><g id="cluster_runnerenv"><rect fill="none" height="546.5" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="288" x="39" y="184.8956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="154" x="106" y="201.7472">Any Environment</text><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="260" x="53" y="216.6593">[GitLab.com SaaS,Private,Cloud,etc]</text></g><!--MD5=[ae4390f90c674fc96110cd3ce6cc6545]
+cluster glrunner--><g id="cluster_glrunner"><rect fill="#FCA326" height="447.5" rx="2.5" ry="2.5" style="stroke:none;stroke-width:1.0;" width="216" x="79" y="251.8956"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="129" x="122.5" y="268.7472">GitLab Runner</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="147" x="113.5" y="283.6593">[SaaS, Self-Managed]</text></g><!--MD5=[793c9c3fbe917553f78da7644c55e0b1]
+cluster network2--><g id="cluster_network2"><rect fill="none" height="636.5" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="340" x="383" y="126.8956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="494.5" y="143.7472">Any Network</text><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="165" x="470.5" y="158.6593">[Private, Internet, etc]</text></g><!--MD5=[323bba5fc263e89323df2feb3de1dfdc]
+cluster glinstenv--><g id="cluster_glinstenv"><rect fill="none" height="537.5" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="276" x="415" y="193.8956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="154" x="476" y="210.7472">Any Environment</text><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="260" x="423" y="225.6593">[GitLab.com SaaS,Private,Cloud,etc]</text></g><!--MD5=[eeea6b2935cd0039844ebd05f48c90a5]
+cluster glinstance--><g id="cluster_glinstance"><rect fill="#FCA326" height="438.5" rx="2.5" ry="2.5" style="stroke:none;stroke-width:1.0;" width="198" x="447" y="260.8956"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="455" y="277.7472">Any GitLab Instance</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="147" x="472.5" y="292.6593">[SaaS, Self-Managed]</text></g><!--MD5=[974b5e0871550e666da9b3532d6d8427]
+cluster network3--><g id="cluster_network3"><rect fill="none" height="258" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="304" x="747" y="489.3956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="840.5" y="506.2472">Any Network</text><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="165" x="816.5" y="521.1593">[Private, Internet, etc]</text></g><!--MD5=[7bdb2d1bb35c39c2a5484b6827b2f3f3]
+cluster k8senv--><g id="cluster_k8senv"><rect fill="none" height="175" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="256" x="771" y="548.3956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="154" x="822" y="565.2472">Any Environment</text><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="136" x="831" y="580.1593">[Private,Cloud,etc]</text></g><!--MD5=[f29f8483d65c553971148e4e15086c51]
+cluster kasnet--><g id="cluster_kasnet"><rect fill="none" height="92" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="208" x="795" y="607.3956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="144" x="827" y="624.2472">Any K8s Cluster</text></g><!--MD5=[0559076a404cef4117044621f53fc5f1]
+entity glrunnertradconn--><g id="elem_glrunnertradconn"><rect fill="#FC6D26" height="57.25" rx="2.5" ry="2.5" style="stroke:none;stroke-width:0.5;" width="162" x="117" y="302.8956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="136" x="127" y="327.7472">Job Acquisition</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="104" x="146" y="346.3722">Connection</text></g><!--MD5=[5a331c8ef5ee7bf6eea137bdc8c5fb60]
+entity glrunneragtconn--><g id="elem_glrunneragtconn"><rect fill="#FC6D26" height="38.625" rx="2.5" ry="2.5" style="stroke:none;stroke-width:0.5;" width="184" x="95" y="644.3956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="164" x="105" y="669.2472">Agent Connection</text></g><!--MD5=[b00a260df46a39e7d8f23b2bbeaa77f0]
+entity kas--><g id="elem_kas"><rect fill="#FC6D26" height="38.625" rx="2.5" ry="2.5" style="stroke:none;stroke-width:0.5;" width="55" x="526.5" y="644.3956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="35" x="536.5" y="669.2472">KAS</text></g><!--MD5=[b4ab2d4845177d4b82de06410d2875d8]
+entity glrails--><g id="elem_glrails"><rect fill="#FC6D26" height="38.625" rx="2.5" ry="2.5" style="stroke:none;stroke-width:0.5;" width="128" x="463" y="311.8956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="108" x="473" y="336.7472">GitLab Rails</text></g><!--MD5=[cf0b7c2fc8d16349a5509c8f9e7b41d9]
+entity k8sagent--><g id="elem_k8sagent"><rect fill="#FC6D26" height="38.625" rx="2.5" ry="2.5" style="stroke:none;stroke-width:0.5;" width="176" x="811" y="644.3956"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="156" x="821" y="669.2472">GL Agent for K8s</text></g><!--MD5=[11ff2ea793bd75af96815953118f4d1f]
+entity floating_legend_alias--><g id="elem_floating_legend_alias"><rect fill="none" height="138.0781" rx="2.5" ry="2.5" style="stroke:none;stroke-width:0.5;" width="225" x="739.5" y="262.3956"/><rect fill="none" height="16.2969" style="stroke:none;stroke-width:0.5;" width="205" x="749.5" y="274.3956"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="749.5" y="287.3907">Legend</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="806.5" y="287.3907"> </text><rect fill="#FCA326" height="16.2969" style="stroke:none;stroke-width:0.5;" width="205" x="749.5" y="290.6925"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="761.5" y="303.6876"> </text><text fill="#66622E" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="769.5" y="303.6876">A GitLab System</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="893.5" y="303.6876"> </text><rect fill="#FC6D26" height="16.2969" style="stroke:none;stroke-width:0.5;" width="205" x="749.5" y="306.9894"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="761.5" y="319.9845"> </text><text fill="#66622E" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="769.5" y="319.9845">A GitLab Subsystem</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="918.5" y="319.9845"> </text><rect fill="none" height="16.2969" style="stroke:none;stroke-width:0.5;" width="205" x="749.5" y="323.2863"/><text fill="#808080" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="753.5" y="336.2814">▯</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="761.5" y="336.2814"> </text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="769.5" y="336.2814">Network or Environment</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="950.5" y="336.2814"> </text><text fill="#FF0000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="753.5" y="352.5782">─</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="761.5" y="352.5782"> </text><text fill="#FF0000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="769.5" y="352.5782">Network Connection</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="921.5" y="352.5782"> </text><text fill="#FFA500" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="753.5" y="368.8751">─</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="761.5" y="368.8751"> </text><text fill="#FFA500" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="769.5" y="368.8751">Authentication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="881.5" y="368.8751"> </text><text fill="#008000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="753.5" y="385.172">─</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="761.5" y="385.172"> </text><text fill="#008000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="769.5" y="385.172">App Control Flow</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="897.5" y="385.172"> </text><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="274.3956" y2="274.3956"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="290.6925" y2="290.6925"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="306.9894" y2="306.9894"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="323.2863" y2="323.2863"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="339.5831" y2="339.5831"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="355.88" y2="355.88"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="372.1769" y2="372.1769"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="954.5" y1="388.4738" y2="388.4738"/><line style="stroke:none;stroke-width:0.5;" x1="749.5" x2="749.5" y1="274.3956" y2="388.4738"/><line style="stroke:none;stroke-width:0.5;" x1="954.5" x2="954.5" y1="274.3956" y2="388.4738"/></g><!--MD5=[8830d44e28eafb4b8f76adbcd995223d]
+link glrunnertradconn to glrunneragtconn--><g id="link_glrunnertradconn_glrunneragtconn"><path d="M197.081,360.0056 C195,422.5336 189.948,574.3116 187.893,636.0786 " fill="none" id="glrunnertradconn-to-glrunneragtconn" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="187.623,644.1776,190.8885,636.2823,184.8918,636.0819,187.623,644.1776" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="63" x="222" y="442.5343">A. Issues</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="111" x="196" y="456.503">[K8s Command w/</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="100" x="203.5" y="470.4718">KUBE_CONTEXT]</text></g><!--MD5=[b2788c5ee4404bbd7e8135bf7de4c7bb]
+link glrunnertradconn to glrails--><g id="link_glrunnertradconn_glrails"><path d="M279.141,307.2636 C293.15,303.9936 307.658,301.1596 321.5,299.3956 C365.147,293.8326 376.968,292.9966 420.5,299.3956 C435.166,301.5516 450.615,305.2926 465.058,309.4746 " fill="none" id="glrunnertradconn-to-glrails" style="stroke:#FF0000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#FF0000" points="472.967,311.8356,466.1595,306.6724,464.4431,312.4217,472.967,311.8356" style="stroke:#FF0000;stroke-width:1.0;"/><text fill="#FF0000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="73" x="334.5" y="276.5343">i. Initiates</text><text fill="#FF0000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="77" x="332.5" y="290.503">[SSL to 443]</text></g><!--MD5=[b2788c5ee4404bbd7e8135bf7de4c7bb]
+link glrunnertradconn to glrails--><g id="link_glrunnertradconn_glrails"><path d="M279.167,354.3446 C295.692,358.1106 313.053,361.4236 329.5,363.3956 C366.126,367.7876 375.953,368.4066 412.5,363.3956 C428.346,361.2226 445.091,357.4336 460.738,353.2046 " fill="none" id="glrunnertradconn-to-glrails-1" style="stroke:#FFA500;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#FFA500" points="468.809,350.9606,460.2976,350.2147,461.9059,355.9952,468.809,350.9606" style="stroke:#FFA500;stroke-width:1.0;"/><text fill="#FFA500" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="81" x="330.5" y="346.5343">iii. Initiates</text><text fill="#FFA500" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="331.5" y="360.503">[Token Auth]</text></g><!--MD5=[d1ef3b6704e328573934a373a58d0c2d]
+reverse link glrunnertradconn to glrails--><g id="link_glrunnertradconn_glrails"><path d="M287.4,331.3956 C342.867,331.3956 412.838,331.3956 462.82,331.3956 " fill="none" id="glrunnertradconn-backto-glrails" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="279.326,331.3956,287.326,334.3956,287.326,328.3956,279.326,331.3956" style="stroke:#008000;stroke-width:1.0;"/><text fill="#008000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="74" x="334" y="311.5343">iii. Control</text><text fill="#008000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="97" x="322.5" y="325.503">[Poll &amp; Pull Jobs]</text></g><!--MD5=[a50f9b55acc94b193f6629201f9e8f24]
+link glrunneragtconn to kas--><g id="link_glrunneragtconn_kas"><path d="M235.342,683.4568 C289.36,702.7007 379.278,726.9111 455.75,709.8956 C477.789,704.9919 500.731,694.5942 518.898,684.9231 " fill="none" id="glrunneragtconn-to-kas" style="stroke:#FF0000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#FF0000" points="526.375,680.8409,517.9158,682.042,520.7914,687.308,526.375,680.8409" style="stroke:#FF0000;stroke-width:1.0;"/><text fill="#FF0000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="78" x="363.75" y="679.0343">B. Initiates</text><text fill="#FF0000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="357.75" y="693.003">[WSS (SSL) to</text><text fill="#FF0000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="104" x="350.75" y="706.9718">Subdomain 'kas']</text></g><!--MD5=[a50f9b55acc94b193f6629201f9e8f24]
+link glrunneragtconn to kas--><g id="link_glrunneragtconn_kas"><path d="M258.816,644.3476 C315.201,631.7176 395.556,619.7146 465.25,631.8956 C483.414,635.0706 502.765,641.6406 518.747,648.0076 " fill="none" id="glrunneragtconn-to-kas-1" style="stroke:#FFA500;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#FFA500" points="526.302,651.1006,520.0351,645.2932,517.7618,650.8458,526.302,651.1006" style="stroke:#FFA500;stroke-width:1.0;"/><text fill="#FFA500" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="85" x="360.25" y="609.0343">C. Conducts</text><text fill="#FFA500" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="363.25" y="623.003">[Token Auth]</text></g><!--MD5=[a50f9b55acc94b193f6629201f9e8f24]
+link glrunneragtconn to kas--><g id="link_glrunneragtconn_kas"><path d="M279.136,663.8956 C356.689,663.8956 463.474,663.8956 518.316,663.8956 " fill="none" id="glrunneragtconn-to-kas-2" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="526.34,663.8956,518.34,660.8956,518.34,666.8956,526.34,663.8956" style="stroke:#008000;stroke-width:1.0;"/><text fill="#008000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="72" x="366.75" y="644.0343">D. Control</text><text fill="#008000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="123" x="341.25" y="658.003">[Push CD K8s CMDs]</text></g><!--MD5=[c4a36a89cb8d78d63c39fc8c62463c04]
+reverse link kas to k8sagent--><g id="link_kas_k8sagent"><path d="M589.864,663.8956 C641.661,663.8956 739.046,663.8956 810.723,663.8956 " fill="none" id="kas-backto-k8sagent" style="stroke:#FF0000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#FF0000" points="581.65,663.8956,589.65,666.8956,589.65,660.8956,581.65,663.8956" style="stroke:#FF0000;stroke-width:1.0;"/><text fill="#FF0000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="77" x="657.75" y="630.0343">1. Initiates</text><text fill="#FF0000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="143" x="622.75" y="644.003">[WSS (SSL) Subdomain</text><text fill="#FF0000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="31" x="680.75" y="657.9718">'kas']</text></g><!--MD5=[c4a36a89cb8d78d63c39fc8c62463c04]
+reverse link kas to k8sagent--><g id="link_kas_k8sagent"><path d="M575.043,689.7157 C589.142,704.8775 609.129,722.6391 631.25,730.8956 C644.783,735.9465 747.174,734.1372 761.25,730.8956 C800.771,721.7941 842.089,699.7604 869.038,683.4318 " fill="none" id="kas-backto-k8sagent-1" style="stroke:#FFA500;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#FFA500" points="569.372,683.4122,572.4927,691.3659,576.953,687.3528,569.372,683.4122" style="stroke:#FFA500;stroke-width:1.0;"/><text fill="#FFA500" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="84" x="654.25" y="714.0343">2. Conducts</text><text fill="#FFA500" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="79" x="656.75" y="728.003">[Token Auth]</text></g><!--MD5=[330fe6dda9e5ccb369edcd769e7e9c51]
+link kas to k8sagent--><g id="link_kas_k8sagent"><path d="M581.776,678.5156 C596.123,685.2533 614.165,692.497 631.25,695.8956 C695.91,708.7581 770.454,697.786 824.441,685.3098 " fill="none" id="kas-to-k8sagent" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="832.254,683.4607,823.7781,682.3843,825.1602,688.2229,832.254,683.4607" style="stroke:#008000;stroke-width:1.0;"/><text fill="#008000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="661.25" y="679.0343">3. Control</text><text fill="#008000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="128" x="632.25" y="693.003">[Poll &amp; Pull Manifests]</text></g><!--MD5=[330fe6dda9e5ccb369edcd769e7e9c51]
+link kas to k8sagent--><g id="link_kas_k8sagent"><path d="M575.721,644.1896 C588.212,634.2066 604.763,623.1176 621.75,617.8956 C653.399,608.1666 738.129,612.2226 770.75,617.8956 C797.132,622.4836 825.259,632.0086 848.43,641.2076 " fill="none" id="kas-to-k8sagent-1" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="856.089,644.3076,849.7989,638.5254,847.5478,644.0871,856.089,644.3076" style="stroke:#008000;stroke-width:1.0;"/><text fill="#008000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="661.25" y="595.0343">E. Control</text><text fill="#008000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="123" x="634.75" y="609.003">[Push CD K8s CMDs]</text></g><!--MD5=[dbbb3895442072f163535c53f78cda28]
+link glrails to kas--><!--MD5=[e6e6ade4d62cd805d7028f76cc225515]
+link runnerenv to glinstenv--><!--MD5=[a4da37ca29f84379159c09b5bbb91e41]
+link glinstenv to k8sagent--><rect fill="none" height="174.6094" style="stroke:none;stroke-width:1.0;" width="985" x="29" y="768.3956"/><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="576" x="233.5" y="777.6779">Each Network Environment must provided suitable network routing, DNS and firewall configuration to allow</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="477" x="283" y="789.3185">the connection initiation and return conversations indicated in the network connections.</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="520" y="800.9591"> </text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="634" x="89.5" y="812.5997">All GitLab Components (Instance, Runners and Kubernetes Agents) may all be in the same network environment - the</text><text fill="#888888" font-family="sans-serif" font-size="10" font-weight="bold" lengthAdjust="spacing" textLength="116" x="726.5" y="812.5997">most complex case</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="108" x="845.5" y="812.5997">is depicted because</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="754" x="144.5" y="824.2404">it would be the default if using GitLab.com SaaS with self-hosted runners to manage Kubernetes clusters in a variety of other environments.</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="520" y="835.881"> </text><text fill="#888888" font-family="sans-serif" font-size="10" font-weight="bold" lengthAdjust="spacing" textLength="78" x="29" y="847.5216">IMPORTANT:</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="904" x="110" y="847.5216">Arrows indicate connection initiation direction - in the case of network connections the design allows embedding of Runners and GitLab Agents in secure environments.</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="520" y="859.1622"> </text><text fill="#888888" font-family="sans-serif" font-size="10" font-weight="bold" lengthAdjust="spacing" textLength="497" x="135" y="870.8029">Scenario 1: For a standard Push CD Runner configuration (for K8s and non-K8s)</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="270" x="638" y="870.8029">- only sequenced series "i. through iii." is required.</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="520" y="882.4435"> </text><text fill="#888888" font-family="sans-serif" font-size="10" font-weight="bold" lengthAdjust="spacing" textLength="286" x="160.5" y="894.0841">Scenario 2: For a GitOps Pull CD configuration</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="433" x="449.5" y="894.0841">- only the GitLab Agent integration is required - sequenced series "1. through 3."</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="520" y="905.7247"> </text><text fill="#888888" font-family="sans-serif" font-size="10" font-weight="bold" lengthAdjust="spacing" textLength="325" x="38.5" y="917.3654">Scenario 3: For a Kubernetes Push CD configuration</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="638" x="366.5" y="917.3654">the prior two sequenced series are required along with the configuration depicted as sequenced series 'B. Through D."</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="3" x="520" y="929.006"> </text><text fill="#888888" font-family="sans-serif" font-size="10" font-weight="bold" lengthAdjust="spacing" textLength="257" x="265.5" y="940.6466">The complete Push CD K8s Command flow</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="252" x="525.5" y="940.6466">is depicted as sequenced series "A. through E."</text><!--MD5=[f235b74f02a5e9b9c971f2e2294ae6e4]
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+'GitLab Colors
+' Light Orange: #FCA326, Medium Orange: #FC6D26, Dark Orange: #E24329
+
+'Layout Rendering Priorities
+' 1. With dynamic rendering tools (e.g. VS Code plugin) do NOT trust the first rendering 
+'    as it is shifty when adding stuff - even comments. Wait for a bit or close and reopen preview panel.
+' 2. Create all components, containers and boundaries first - in order top to bottom or left to right
+' 3. Use Rel (directionless) where possible.
+' 3. Use Rel_<direction> to force shape layouts.
+'    3.a. Order inner objects first when it creates the desired result.
+'    3.b. Try NOT to apply order to both inner elements and elements that enclose them.
+'    3.c. Make all orderings at the same nesting level whenever possible.
+' 4. Add "Lay_<direction>" to force any layouts that Rel_<direction> does not resolve.
+' 5. Do not create an "All enclosing" boundary as the processing of relationships stops making sense.
+' 6. Legend statements must come after at least one usage of each of the elements you want the legend 
+'    to contain.
+
+Title "GitLab Kubernetes Agent\n Runner CD Push Configuration\n & GitOps Pull Configuration"
+
+AddRelTag(network, $textColor="red", $lineColor="red", $lineStyle = DashedLine(),$legendText="Network Connection")
+AddRelTag(auth, $textColor="orange", $lineColor="orange", $lineStyle = DashedLine(),$legendText="Authentication")
+AddRelTag(control, $textColor="green", $lineColor="green",$legendText="App Control Flow")
+UpdateElementStyle(boundary, $bgColor="transparent",$fontColor="black", $borderColor="gray",$legendText="Network or Environment")
+UpdateElementStyle(component,$bgColor="#FC6D26", $borderColor="transparent",$legendText="A GitLab Subsystem")
+UpdateElementStyle(container,$bgColor="#FCA326", $borderColor="transparent",$legendText="A GitLab System")
+AddBoundaryTag(invisible, $bgColor="transparent",$borderColor="transparent")
+
+Boundary(network1, "Any Network", "Private, Internet, etc")  {
+  Boundary(runnerenv, "Any Environment", "GitLab.com SaaS,Private,Cloud,etc") {
+      Container(glrunner, "GitLab Runner", "SaaS, Self-Managed") {
+      Component(glrunnertradconn, "Job Acquisition Connection")
+      Component(glrunneragtconn, "Agent Connection")
+    }
+  }
+}
+
+
+Boundary(network2, "Any Network", "Private, Internet, etc")  {
+  Boundary(glinstenv, "Any Environment", "GitLab.com SaaS,Private,Cloud,etc", $tags="network") {
+    Container(glinstance, "Any GitLab Instance", "SaaS, Self-Managed") {
+      Component(kas, "KAS")
+      Component(glrails, "GitLab Rails",)
+    }
+  }
+}
+
+Boundary(network3, "Any Network", "Private, Internet, etc")  {
+  Boundary(k8senv, "Any Environment", "Private,Cloud,etc") {
+    Boundary(kasnet, "Any K8s Cluster") {
+      Component(k8sagent, "GL Agent for K8s")
+    }
+  }
+}
+
+  Rel(glrunnertradconn,glrunneragtconn, "A. Issues", "K8s Command w/ KUBE_CONTEXT")
+
+  'Runner Polling Connection to Job Queue
+  Rel_R(glrunnertradconn, glrails, "i. Initiates", "SSL to 443", $tags="network")
+  Rel_R(glrunnertradconn, glrails, "iii. Initiates", "Token Auth", $tags="auth")
+  Rel_L(glrails, glrunnertradconn, "iii. Control","Poll & Pull Jobs", $tags="control")
+
+  'Runner Connection to KAS
+  Rel_R(glrunneragtconn, kas, "B. Initiates", "WSS (SSL) to Subdomain 'kas'", $tags="network")
+  Rel_R(glrunneragtconn, kas, "C. Conducts", "Token Auth", $tags="auth")
+  Rel_R(glrunneragtconn, kas, "D. Control","Push CD K8s CMDs", $tags="control")
+
+  'K8s Agent to KAS
+  Rel_L(k8sagent, kas, "1. Initiates", "WSS (SSL) Subdomain 'kas'", $tags="network")
+  Rel_L(k8sagent, kas, "2. Conducts", "Token Auth", $tags="auth")
+  Rel_R(kas, k8sagent, "3. Control","Poll & Pull Manifests", $tags="control")
+  Rel_R(kas, k8sagent, "E. Control","Push CD K8s CMDs", $tags="control")
+
+  'Layouts prioritized in order - put outer most first
+  Lay_D(glrails,kas)
+  Lay_R(runnerenv,glinstenv)
+  Lay_R(glinstenv,k8sagent)
+
+SHOW_FLOATING_LEGEND()
+
+footer
+Each Network Environment must provided suitable network routing, DNS and firewall configuration to allow
+the connection initiation and return conversations indicated in the network connections.
+
+All GitLab Components (Instance, Runners and Kubernetes Agents) may all be in the same network environment - the **most complex case** is depicted because 
+it would be the default if using GitLab.com SaaS with self-hosted runners to manage Kubernetes clusters in a variety of other environments.
+
+<b>IMPORTANT:</b> Arrows indicate connection initiation direction - in the case of network connections the design allows embedding of Runners and GitLab Agents in secure environments.
+
+<b>Scenario 1: For a standard Push CD Runner configuration (for K8s and non-K8s) </b> - only sequenced series "i. through iii." is required.
+
+<b>Scenario 2: For a GitOps Pull CD configuration</b> - only the GitLab Agent integration is required - sequenced series "1. through 3."
+
+<b>Scenario 3: For a Kubernetes Push CD configuration</b> the prior two sequenced series are required along with the configuration depicted as sequenced series 'B. Through D."
+
+<b>The complete Push CD K8s Command flow</b> is depicted as sequenced series "A. through E."
+end footer
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    BorderStyle dashed
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<boundary>>StereotypeFontColor transparent
+skinparam rectangle<<boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
+
+
+
+skinparam rectangle<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<system_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
+
+
+
+skinparam rectangle<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<container_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<container_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<container_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+skinparam rectangle<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<enterprise_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<enterprise_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<enterprise_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<enterprise_boundary>>StereotypeFontColor transparent
+
+
+
+skinparam rectangle<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<system_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<system_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<system_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<system_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+skinparam rectangle<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam database<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam queue<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam actor<<container_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam person<<container_boundary>> {
+    FontColor #444444
+    BackgroundColor transparent
+    BorderColor #444444
+}
+skinparam package<<container_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<container_boundary>>StereotypeFontColor transparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam database<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam queue<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam actor<<component>> {
+    StereotypeFontColor #85BBF0
+    FontColor #85BBF0
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam person<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+
+skinparam rectangle<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam database<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam queue<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam actor<<external_component>> {
+    StereotypeFontColor #CCCCCC
+    FontColor #CCCCCC
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam person<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title "GitLab Kubernetes Agent\n Runner CD Push Configuration\n & GitOps Pull Configuration"
+
+skinparam arrow<<network>> {
+    Color red;text:red;line.dashed
+}
+
+skinparam arrow<<auth>> {
+    Color orange;text:orange;line.dashed
+}
+
+skinparam arrow<<control>> {
+    Color green;text:green
+}
+
+skinparam rectangle<<boundary>> {
+    FontColor black
+    BackgroundColor transparent
+    BorderColor gray
+}
+skinparam database<<boundary>> {
+    FontColor black
+    BackgroundColor transparent
+    BorderColor gray
+}
+skinparam queue<<boundary>> {
+    FontColor black
+    BackgroundColor transparent
+    BorderColor gray
+}
+skinparam actor<<boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor gray
+}
+skinparam person<<boundary>> {
+    FontColor black
+    BackgroundColor transparent
+    BorderColor gray
+}
+skinparam package<<boundary>>StereotypeFontColor transparent
+skinparam rectangle<<boundary>>StereotypeFontColor transparent
+
+
+skinparam rectangle<<component>> {
+    BackgroundColor #FC6D26
+    BorderColor transparent
+}
+skinparam database<<component>> {
+    BackgroundColor #FC6D26
+    BorderColor transparent
+}
+skinparam queue<<component>> {
+    BackgroundColor #FC6D26
+    BorderColor transparent
+}
+skinparam actor<<component>> {
+    StereotypeFontColor #FC6D26
+    FontColor #FC6D26
+    BackgroundColor #FC6D26
+    BorderColor transparent
+}
+skinparam person<<component>> {
+    BackgroundColor #FC6D26
+    BorderColor transparent
+}
+
+
+skinparam rectangle<<container>> {
+    BackgroundColor #FCA326
+    BorderColor transparent
+}
+skinparam database<<container>> {
+    BackgroundColor #FCA326
+    BorderColor transparent
+}
+skinparam queue<<container>> {
+    BackgroundColor #FCA326
+    BorderColor transparent
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #FCA326
+    FontColor #FCA326
+    BackgroundColor #FCA326
+    BorderColor transparent
+}
+skinparam person<<container>> {
+    BackgroundColor #FCA326
+    BorderColor transparent
+}
+
+
+skinparam rectangle<<invisible_boundary>> {
+    BackgroundColor transparent
+    BorderColor transparent
+}
+skinparam database<<invisible_boundary>> {
+    BackgroundColor transparent
+    BorderColor transparent
+}
+skinparam queue<<invisible_boundary>> {
+    BackgroundColor transparent
+    BorderColor transparent
+}
+skinparam actor<<invisible_boundary>> {
+    FontColor transparent
+    BackgroundColor transparent
+    BorderColor transparent
+}
+skinparam person<<invisible_boundary>> {
+    BackgroundColor transparent
+    BorderColor transparent
+}
+skinparam package<<invisible_boundary>>StereotypeFontColor transparent
+skinparam rectangle<<invisible_boundary>>StereotypeFontColor transparent
+
+
+
+rectangle "==Any Network\n<size:12>[Private, Internet, etc]</size>" <<boundary>> as network1   {
+  rectangle "==Any Environment\n<size:12>[GitLab.com SaaS,Private,Cloud,etc]</size>" <<boundary>> as runnerenv  {
+      rectangle "==GitLab Runner\n//<size:12>[SaaS, Self-Managed]</size>//" <<container>> as glrunner  {
+      rectangle "==Job Acquisition Connection" <<component>> as glrunnertradconn 
+      rectangle "==Agent Connection" <<component>> as glrunneragtconn 
+    }
+  }
+}
+
+
+rectangle "==Any Network\n<size:12>[Private, Internet, etc]</size>" <<boundary>> as network2   {
+  rectangle "==Any Environment\n<size:12>[GitLab.com SaaS,Private,Cloud,etc]</size>" <<network_boundary>><<boundary>> as glinstenv  {
+    rectangle "==Any GitLab Instance\n//<size:12>[SaaS, Self-Managed]</size>//" <<container>> as glinstance  {
+      rectangle "==KAS" <<component>> as kas 
+      rectangle "==GitLab Rails" <<component>> as glrails 
+    }
+  }
+}
+
+rectangle "==Any Network\n<size:12>[Private, Internet, etc]</size>" <<boundary>> as network3   {
+  rectangle "==Any Environment\n<size:12>[Private,Cloud,etc]</size>" <<boundary>> as k8senv  {
+    rectangle "==Any K8s Cluster" <<boundary>> as kasnet  {
+      rectangle "==GL Agent for K8s" <<component>> as k8sagent 
+    }
+  }
+}
+
+  glrunnertradconn - ->> glrunneragtconn : **A. Issues**\n//<size:12>[K8s Command w/ KUBE_CONTEXT]</size>//
+
+  glrunnertradconn -RIGHT->> glrails <<network>> : **i. Initiates**\n//<size:12>[SSL to 443]</size>//
+  glrunnertradconn -RIGHT->> glrails <<auth>> : **iii. Initiates**\n//<size:12>[Token Auth]</size>//
+  glrails -LEFT->> glrunnertradconn <<control>> : **iii. Control**\n//<size:12>[Poll & Pull Jobs]</size>//
+
+  glrunneragtconn -RIGHT->> kas <<network>> : **B. Initiates**\n//<size:12>[WSS (SSL) to Subdomain 'kas']</size>//
+  glrunneragtconn -RIGHT->> kas <<auth>> : **C. Conducts**\n//<size:12>[Token Auth]</size>//
+  glrunneragtconn -RIGHT->> kas <<control>> : **D. Control**\n//<size:12>[Push CD K8s CMDs]</size>//
+
+  k8sagent -LEFT->> kas <<network>> : **1. Initiates**\n//<size:12>[WSS (SSL) Subdomain 'kas']</size>//
+  k8sagent -LEFT->> kas <<auth>> : **2. Conducts**\n//<size:12>[Token Auth]</size>//
+  kas -RIGHT->> k8sagent <<control>> : **3. Control**\n//<size:12>[Poll & Pull Manifests]</size>//
+  kas -RIGHT->> k8sagent <<control>> : **E. Control**\n//<size:12>[Push CD K8s CMDs]</size>//
+
+  glrails -[hidden]D- kas
+  runnerenv -[hidden]R- glinstenv
+  glinstenv -[hidden]R- k8sagent
+
+hide stereotype
+rectangle floating_legend_alias<<legendArea>> [
+<#00000000,#00000000>|<color:#000000>**Legend**</color> |
+|<#FCA326><color:transparent> <U+25AF></color> <color:#66622E> A GitLab System </color> |
+|<#FC6D26><color:transparent> <U+25AF></color> <color:#66622E> A GitLab Subsystem </color> |
+|<#transparent><color:gray> <U+25AF></color> <color:black> Network or Environment </color> |
+|<color:red> <U+2500></color> <color:red> Network Connection </color> |
+|<color:orange> <U+2500></color> <color:orange> Authentication </color> |
+|<color:green> <U+2500></color> <color:green> App Control Flow </color> |
+]
+
+footer
+Each Network Environment must provided suitable network routing, DNS and firewall configuration to allow
+the connection initiation and return conversations indicated in the network connections.
+
+All GitLab Components (Instance, Runners and Kubernetes Agents) may all be in the same network environment - the **most complex case** is depicted because 
+it would be the default if using GitLab.com SaaS with self-hosted runners to manage Kubernetes clusters in a variety of other environments.
+
+<b>IMPORTANT:</b> Arrows indicate connection initiation direction - in the case of network connections the design allows embedding of Runners and GitLab Agents in secure environments.
+
+<b>Scenario 1: For a standard Push CD Runner configuration (for K8s and non-K8s) </b> - only sequenced series "i. through iii." is required.
+
+<b>Scenario 2: For a GitOps Pull CD configuration</b> - only the GitLab Agent integration is required - sequenced series "1. through 3."
+
+<b>Scenario 3: For a Kubernetes Push CD configuration</b> the prior two sequenced series are required along with the configuration depicted as sequenced series 'B. Through D."
+
+<b>The complete Push CD K8s Command flow</b> is depicted as sequenced series "A. through E."
+end footer
+@enduml
+
+PlantUML version 1.2022.8beta8(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
