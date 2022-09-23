@@ -60,15 +60,16 @@ The deploy job status is 'failed' because no child pipeline jobs are scheduled b
 
 {{< admonition type=warning title="Instructor Led Classroom" open=true >}}
 
-If you are in an Instructor-Led course, you usually not be given time to complete the below **[Extra Credit]** exercises. Please check with the instructor before attempting them.
+If you are in an Instructor-Led course, do not do **[Extra Credit]** exercises after this point.
 
 {{< /admonition >}}
 
 ### [Extra Credit] Pipeline Subscription Model
 
-{{< admonition type=warning title="Warning" open=true >}}
+{{< admonition type=warning title="Instructor Led Classroom" open=true >}}
 
-**If you are in an instructor-led workshop, please ask the instructor before performing this lab** as it could affect workshop timing or the stability of additional assigned labs. All your upbound groups and the hello-world must be public for pipeline subscriptions to work.
+If you are in an Instructor-Led course, do not do **[Extra Credit]** exercises including this one.
+
 {{< /admonition >}}
 
 > Pipeline subscriptions allow an Environment Deployment Project to trigger nearly immediately after the Application Project completes a build.

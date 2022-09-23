@@ -120,4 +120,4 @@ Until [361792](https://gitlab.com/gitlab-org/gitlab/-/issues/361972) is resolved
 
 To speed up the class results we set the cluster scanner to every minute. If this is a long lived cluster it would be prudent to update the starboard:cadence above to once a day or less.
 
-{{< /admonition >}}to
+{{< /admonition >}}
