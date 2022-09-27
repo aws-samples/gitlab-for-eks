@@ -28,13 +28,13 @@ Operational Container Scanning is able to add security findings for images used 
 
 {{< admonition type=bug title="Troubleshooting: Operational Container Scanning" open=true >}}
 
-[Troubleshooting Guide: Operational Container Scanning]({{< relref "../010_introduction/tuning_and_troubleshooting.md#cluster-or-agent-gets-in-an-uncertain-state" >}})
+[Troubleshooting Guide: Operational Container Scanning]({{< relref "../090_appendices/tuning_and_troubleshooting.md#cluster-or-agent-gets-in-an-uncertain-state" >}})
 
 {{< /admonition >}}
 
 {{< admonition type=pick title="Done By Instructor for Instructor-Led Courses" open=true >}}
 
-1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../010_introduction/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
+1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../090_appendices/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
 
 {{< admonition type=warning title="Temporary Fix" open=true >}}
 
@@ -120,4 +120,4 @@ Until [361792](https://gitlab.com/gitlab-org/gitlab/-/issues/361972) is resolved
 
 To speed up the class results we set the cluster scanner to every minute. If this is a long lived cluster it would be prudent to update the starboard:cadence above to once a day or less.
 
-{{< /admonition >}}to
+{{< /admonition >}}

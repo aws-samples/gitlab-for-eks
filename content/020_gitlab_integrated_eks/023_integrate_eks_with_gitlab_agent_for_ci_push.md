@@ -76,9 +76,14 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
       >  Dispite the `id:` yaml parameter name this is the text group path, not the group id.
 
       ```
+      #id: = Full group path without instance url 
+      # and without leading or trailing slashes.
+      # for https://gitlab.com/this/is/an/example, id would be:
+      # - id: this/is/an/example 
+      
       ci_access:
         groups:
-        - id: _replace_with_path_to_classgroup_
+        - id: _replace/with/path/to/classgroup_
         
       observability:
         logging:
@@ -186,21 +191,21 @@ Production application setups would generally not use this specific Ingress inst
 
    > Final result: image: "registry.gitlab.com/gitlab-org/cluster-integration/cluster-applications:v1.6.0”
 
-7. In the Web IDE file navigation, *Click* **helmfile.yaml**
+5. In the Web IDE file navigation, *Click* **helmfile.yaml**
 
    > In the following commands ONLY delete the hash character (<mark class="hlpink">#</mark>) character to preserve the needed yaml indentations
 
-8. To enable the ingress controller *Uncomment* the line <mark class="hlgreen">- path: applications/ingress/helmfile.yaml</mark>
+6. To enable the ingress controller *Uncomment* the line <mark class="hlgreen">- path: applications/ingress/helmfile.yaml</mark>
 
-9. To enable cert manager with nip.io SSL *Uncomment* the line <mark class="hlgreen">- path: applications/cert-manager/helmfile.yaml</mark>
+7. To enable cert manager with nip.io SSL *Uncomment* the line <mark class="hlgreen">- path: applications/cert-manager/helmfile.yaml</mark>
 
-10. To configure cert-manager, Edit <mark class="hlgreen">applications/cert-manager/helmfile.yaml</mark> (file is in the subdirectory path ‘applications/cert-manager’)
+8. To configure cert-manager, Edit <mark class="hlgreen">applications/cert-manager/helmfile.yaml</mark> (file is in the subdirectory path ‘applications/cert-manager’)
 
-11. **IMPORTANT**: At the bottom of the file find <mark class="hlgreen">email: example@example.com</mark> and change <mark class="hlgreen">example@example.com</mark> to a valid email address.
+9. **IMPORTANT**: At the bottom of the file find <mark class="hlgreen">email: example@example.com</mark> and change <mark class="hlgreen">example@example.com</mark> to a valid email address.
 
-12. To configure ingress, Edit <mark class="hlgreen">applications/ingress/values.yaml</mark>
+10. To configure ingress, Edit <mark class="hlgreen">applications/ingress/values.yaml</mark>
 
-13. At the bottom add the following (ENSURE that the indenting of <mark class="hlgreen">config:</mark> aligns with <mark class="hlgreen">podAnnotations:</mark> above it)
+11. At the bottom add the following (ENSURE that the indenting of <mark class="hlgreen">config:</mark> aligns with <mark class="hlgreen">podAnnotations:</mark> above it)
 
     ```yaml
       config:
@@ -221,13 +226,32 @@ Production application setups would generally not use this specific Ingress inst
         use-forwarded-headers: "true" 
     ```
 
-14. *Click* **Create commit...**
+12. *Click* **Create commit...**
 
-15. **IMPORTANT**: *Select* **Commit to master branch** (non-default selection)
+13. **IMPORTANT**: *Select* **Commit to master branch** (non-default selection)
 
-16. *Click* **Commit**
+14. *Click* **Commit**
 
-17. Wait for the deployment to complete successfully by watching the pipeline that was just created by your commit.
+15. In the very bottom left of the page, immediately after the text ‘Pipeline’ **RIGHT** *Click* **[the pipeline number which is preceeded with a \#]** and *Select* **Open in new tab**, *Click* **[the new tab]** (Pipelines can also be viewed by existing the IDE and from the project view in the left navigation *Click* **CI/CD => Pipelines** and *Click* **[the status badge]** or [pipeline #] for the latest running pipeline)
+
+16. Wait for the job “diff” to complete successfully by watching the pipeline that was just created by your commit.
+
+    {{< admonition type=warning title="Some Possible CI Errors" open=true >}}
+
+    In the CI log of the cluster-management project’s “diff” job:
+
+
+    ```
+    error: no context exists with the name: "gitlab-learn-labs/gitops/classgroup-abc:spot2azuseast2-agent1"
+    ```
+
+    Can be caused by:
+
+    The agent path is not correct in the classgroup level variable **KUBE_CONTEXT** (or the variable was not set), notice in this case it leaves out the name of the project “cluster-management”, the correct path would be gitlab-learn-labs/gitops/classgroup-abc**/cluster-management**:spot2azuseast2-agent1
+
+    {{< /admonition >}}
+
+17. When the job “diff” has completed successfully, from the pipeline view, on the job “Sync”, *Click* **[the play icon]**
 
     **Note:** You can also use the bastion host to run `kubectl get pods --all-namespaces` and look for some pods starting with <mark>certmanager</mark> and some starting with <mark>ingress</mark> in the namespace <mark>gitlab-managed-apps</mark>.
 

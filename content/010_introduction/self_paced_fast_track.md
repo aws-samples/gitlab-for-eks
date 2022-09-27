@@ -15,4 +15,10 @@ You do need at least an AWS account and a GitLab account on a GitLab instance so
 
 While doing the labs any **instructor-led notes** are for **you** because you are your own instructor ;)
 
-The Introduction section does have information on **troubleshooting** and on **reporting problems** should you need to come back for that information.
+If you have a single monitor setup, you may benefit from printing the labs to avoid extreme context switching. Printable versions for labs are here: [Printable Labs]({{< relref "../010_introduction/printablepdfs.md" >}})
+
+The following information may be of interest before you get started:
+
+- [Learning Outcomes and Estimated Completion Time]({{< relref "../090_appendices/learning_outcomes.md" >}})
+- [Troubleshooting]({{< relref "../090_appendices/tuning_and_troubleshooting.md" >}})
+- [Reporting Problems or Features]({{< relref "../090_appendices/reporting_problems_or_features.md" >}})

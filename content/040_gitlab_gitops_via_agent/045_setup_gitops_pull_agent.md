@@ -29,13 +29,15 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 
 {{< admonition type=warning title="Warning" open=true >}}
 
-**Check With The Instructor**: If you are in an Instructor-Led course where multiple participants are sharing the same GitLab group and Kubernetes cluster, it is important that all changes to the agent configuration file are retained.  The instructor may elect to make these changes for each participant to avoid file saving conflicts and/or information overwriting. Using Merge Requests would be likely to generate many merge conflicts and slow the class progress signficantly. **If you are not in an instructor-led course, perform the lab as described.**
+**For instructor-led classes, this portion will be done by the instructor.**
+
+**If you are not in an instructor-led course, perform the lab as described.**
 
 {{< /admonition >}}
 
 {{< admonition type=quote title="Done By Instructor for Instructor-Led Courses" open=true >}}
 
-1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../010_introduction/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
+1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../090_appendices/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
 
 2. Run the following command to tail the kubernetes agent log while deployments are happening:
 

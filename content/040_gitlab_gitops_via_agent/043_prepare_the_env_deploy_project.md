@@ -80,8 +80,8 @@ Projects that are used by the GitLab Agent must be public when the agent registr
 
 4. Under ‘Select scopes’
 
-   1. *Select* **read_repository**
-   2. *Select* **write_repository**
+   1. *Select* **read_repository** (**DO NOT SELECT** read_registry)
+   2. *Select* **write_repository**(**DO NOT SELECT** write_registry)
 
 5. *Click* **Create project access token** (button)
 
@@ -90,7 +90,7 @@ Projects that are used by the GitLab Agent must be public when the agent registr
    **IMPORTANT** - Do not navigate to another page in this browser as this is the only time you can see the token. You will have to create a new token if you leave the page.
 {{< /admonition >}}
 
-6. Record the following in a temporary document:
+6. Use copy and paste to record the following in a temporary document (do not hand type tokens):
     - PROJECT_COMMIT_TOKEN = **[project access token from UI]**
 
 7. On the left navigation, *Click* **Project Information => Members**
@@ -146,9 +146,9 @@ If you are in a shared classgroup environment (including an asynchonous and long
 
 9. *Click* **Add variable**
 
-10. For Key, *Type* **PROJECT_COMMIT_TOKEN**
+10. For Key, *Copy and Paste* **PROJECT_COMMIT_TOKEN**
 
-11. In the Value field *Paste* **[the temporary document value for PROJECT_COMMIT_TOKEN]**
+11. In the Value field *Copy and Paste* **[the temporary document value for PROJECT_COMMIT_TOKEN]**
 
 12. Under Flags, *Deselect* **Protect variable**
 
@@ -158,9 +158,9 @@ If you are in a shared classgroup environment (including an asynchonous and long
 
 15. To add another variable, *Click* **Add variable**
 
-16. For Key, *Type* **PROJECT_COMMIT_USER**
+16. For Key, *Copy and Paste* **PROJECT_COMMIT_USER**
 
-17. In the Value field *Type* **[the temporary document value for PROJECT_COMMIT_USER]**
+17. In the Value field *Copy and Paste* **[the temporary document value for PROJECT_COMMIT_USER]**
 
 18. Under Flags, *Deselect* **Protect variable**
 
@@ -172,17 +172,17 @@ Among the existing variables in the 'yourpersonalgroup/world-greetings-env-1' pr
 These permissions are least privilege, in part, because the CI/CD Variables are only published at the project level.
 {{< /admonition >}}
 
-27. In the left navigation, *Click* **Repository => Files** 
+27. In a new browser tab, open your ‘yourpersonalgroup/hello-world’ Project. (**IMPORTANT: not the same project you are in now**)
 
-28. On the upper right of the Project page, *Click* **Web IDE**
+28. On the left navigation panel, *Click* **Packages & Registries => Container Registry**
 
-29. In a new browser tab, open your ‘yourpersonalgroup/hello-world’ Project. (not the same project you are in now)
+29. Next to the line item ending in “/main”, *Click* **[the Clipboard icon]**
 
-30. On the left navigation panel, *Click* **Packages & Registries => Container Registry**
+30. **IMPORTANT:** Switch back to ‘yourpersonalgroup/world-greetings-env-1’ Project
 
-31. Next to the line item ending in “/main”, *Click* **[the Clipboard icon]**
+31. In the left navigation, *Click* **Repository => Files** 
 
-32. In your browser tabs, *Switch* back to the **[tab where you have the Web IDE opened on the World Greetings Env 1 project]**.
+32. On the upper right of the Project page, *Click* **Web IDE**
 
 33. In the files list, *Click* **.gitlab-ci.yml**
 
@@ -204,15 +204,17 @@ These permissions are least privilege, in part, because the CI/CD Variables are 
 The pipeline id link may take up to 30 seconds to appear as the CI job has to kick off before it displays.
 {{< /admonition >}}
 
-27. In the very bottom left, immediately after the text ‘Pipeline’ *Click* **[the pipeline number which is preceeded with a \#]** (Or on the left navigation *Click* **CI/CD => Pipelines** and *Click* **[the status badge]** or [pipeline #] for the latest running pipeline)
+40. In the very bottom left, immediately after the text ‘Pipeline’ *Click* **[the pipeline number which is preceeded with a \#]** (Or on the left navigation *Click* **CI/CD => Pipelines** and *Click* **[the status badge]** or [pipeline #] for the latest running pipeline)
 
-28. Expand the Downstream pipeline with the great than arrow (`>`).
+41. Expand the Downstream pipeline with the great than arrow (`>`).
     {{< admonition type=warning title="Some Possible CI Errors" open=true >}}
-    Possible error messages (not an exhaustive list): 
+    
+
+Possible error messages (not an exhaustive list): 
 
     level=fatal msg="authenticating creds for \"registry.gitlab.com\": Requesting bear token: invalid status code from registry 403 (Forbidden)”
     .
-
+    
     level=fatal msg="error logging into \"registry.gitlab.com\": invalid username/password"
 
 can be caused by:
@@ -221,13 +223,10 @@ can be caused by:
 - the variables READ_REG_USER and READ_REG_TOKEN
   - being incorrectly named, 
   - at the wrong group level or 
-  - having invalid values
+  - having invalid values or accidental swapping of the values (e.g. User Id in READ_REG_TOKEN)
   - READ_REG_USER starting with `@` (this should be left off)
   - having incorrect permissions in the token (should be “read_registry”, not “read_repository”)
 
-{{< /admonition  >}}
-
-27. {{< admonition type=warning title="CI Errors" open=true >}}
     The error message: 
 
     remote: GitLab: You are not allowed to push code to protected branches on this project.
@@ -242,9 +241,9 @@ can be caused by:
 
 {{< /admonition  >}}
 
-44. **[Automation wait: ~3 min]** Watch the pipeline complete through the ‘update-staging-manifests’ job.
+42. **[Automation wait: ~3 min]** Watch the pipeline complete through the ‘update-staging-manifests’ job.
 
-45. The update-staging-manifests job should complete successfully.
+43. The update-staging-manifests job should complete successfully.
 
 46. To get back to the Web IDE, *Click* **[the browser back button]**
 
@@ -277,6 +276,8 @@ In the next steps you will observe that the production manifest has not change y
 56. Find the last non-skipped pipeline and *Click* it’s **[Status badge]** or **[Pipeline \#]** to open the pipeline.
 
 57. Expand the Downstream pipeline with the great than arrow (`>`).
+
+    > NOTE: Depending on your screen width, you may need to use the horizontal scroll bar under the pipeline to find the update-production-manifests job.
 
 58. Next to the update-production-manifests job, *Click* **[the play button]**
 

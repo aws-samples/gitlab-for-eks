@@ -115,7 +115,7 @@ For the next steps you will create a Project Deployment Token so that the Enviro
 
 3. Under ‘New deploy token’, for Name, *Type* **ReadContainerRegistry**
 
-4. Under ‘Scopes (select at least one)’, *Select* **read_registry**
+4. Under ‘Scopes (select at least one)’, *Select* **read_registry** (**DO NOT SELECT** read_repository)
 
 5. *Click* **Create deploy token** 
 
@@ -125,7 +125,9 @@ Notice the same page reloads, but at the top of the screen now has a grey box co
 **IMPORTANT** - Do not navigate to another page in this browser as this is the only time you can see the token. You will have to create a new token if you leave the page.
     {{< /admonition >}}
 
-6. Under ‘Your new Deploy Token username’, to the right of the **FIRST** value, *Click* **[the Clipboard Icon]**
+6. Use copy and paste to record the following in a temporary document (do not hand type tokens):
+   - READ_REG_USER = **[user id from token generation UI]**
+   - READ_REG_TOKEN = **[token from token generation UI]**
 
 7. **In a NEW browser tab**, open 'yourpersonalgroup' (the group level - not the hello-world project)
 
@@ -140,25 +142,19 @@ It is very easy to accidentally create these at the project level. The **token**
 
 8. *Click* **Add variable**
 
-9. For Key, *Type* **READ_REG_USER**
+9. For Key, *Type* **READ_REG_USER** (it is usually best to copy this name from this exercise rather than type it)
 
-10. In the Value field *Paste* **[the Clipboard contents]**
+10. Copy the Value for READ_REG_USER from your temporary document, *Paste* **[the Clipboard contents]**
 
 11. Under Flags, *Deselect* **Protect variable**
 
 12. *Click* **Add variable** (button)
 
-13. In your browser tabs, *Switch* to the **[Deploy Token browser tab]**
+15. *Click* **Add variable** (button on page - this is not a duplicate instruction)
 
-14. Under ‘Your new Deploy Token username’, to the right of the **SECOND** value, *Click* **[the Clipboard Icon]**
+17. For Key, *Type* **READ_REG_TOKEN** (it is usually best to copy this name from this exercise rather than type it)
 
-15. *Switch* to the **[CD/CD Variables browser tab]**.
-
-16. *Click* **Add variable**
-
-17. For Key, *Type* **READ_REG_TOKEN**
-
-18. In the Value field *Paste* **[the Clipboard contents]**
+18. Copy the Value for READ_REG_TOKEN from your temporary document, *Paste* **[the Clipboard contents]**
 
 19. Under Flags, *Deselect* **Protect variable**
 

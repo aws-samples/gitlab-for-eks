@@ -8,7 +8,7 @@ description: "What sections are performed during In-Person workshops hosted at A
 
 # In-Person AWS Workshops Syllabus and Audience
 
-GitLab and AWS will be hosting this workshop live at some AWS locations. This information pertains to those specific deliveries.
+GitLab and AWS will be hosting this workshop live at some AWS locations. This information pertains to those specific deliveries. If you are an instructor for one of these deliveries, be sure to read [Instructor-Led Notes]({{< relref "../090_appendices/instructor_led_notes.md" >}}).
 
 ### Audience
 
