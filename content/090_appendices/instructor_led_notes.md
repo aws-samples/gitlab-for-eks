@@ -12,7 +12,7 @@ description: "Important information for instructor-led sessions conducted in cla
 
 ## Target Audience Alignment
 
-Unless you are using this workshop as part of a specific remix, your event marketing should ensure your audience is aligned with [Who Will Enjoy This Workshop?]({{< relref "./who.md" >}})
+Unless you are using this workshop as part of a specific remix, your event marketing should ensure your audience is aligned with [Who Will Enjoy This Workshop?]({{< relref "../010_introduction/who.md" >}})
 
 ## Delivery Guide for AWS Workshop Co-Sponsored Deliveries
 
@@ -48,11 +48,11 @@ Unless you are using this workshop as part of a specific remix, your event marke
 
 ### Required
 
--  [Prerequisites, Costs and Time]({{< relref "./prerequisites_costs_time.md" >}}) please pay attention to the Instructor-Led columns and call outs.
--  [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#reusable-patterns-for-production-and-training" >}}) - outlines the details of how the GitLab structure in these labs enables an entire classroom to share specific resources without conflicts.
-- [Simple, Inexpensive, Secure for Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#simple--inexpensive-eks-pattern-reusable-for-training" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
-- [Tuning and Troubleshooting Guide]({{< relref "./tuning_and_troubleshooting.md" >}}) - discusses how to troubleshoot problems and how to tune the setup for classrooms.
-- [Reporting Problems]({{< relref "./reporting_problems_or_features.md" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
+-  [Prerequisites, Costs and Time]({{< relref "../010_introduction/prerequisites_costs_time.md" >}}) please pay attention to the Instructor-Led columns and call outs.
+-  [Reusable Patterns for Production and Training]({{< relref "../010_introduction/reusable_patterns.md#reusable-patterns-for-production-and-training" >}}) - outlines the details of how the GitLab structure in these labs enables an entire classroom to share specific resources without conflicts.
+- [Simple, Inexpensive, Secure for Training]({{< relref "../090_appendices/learning_outcomes.md#simple--inexpensive-eks-pattern-reusable-for-training" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
+- [Tuning and Troubleshooting Guide]({{< relref "../090_appendices/tuning_and_troubleshooting.md" >}}) - discusses how to troubleshoot problems and how to tune the setup for classrooms.
+- [Reporting Problems]({{< relref "../090_appendices/reporting_problems_or_features.md" >}}) - discusses how using the EKS Quick Start and other configuration details keep costs very low for classroom and other learning scenarios.
 
 ### Suggested
 
@@ -63,7 +63,7 @@ Unless you are using this workshop as part of a specific remix, your event marke
 
 If the AWS account is owned by someone other than GitLab or AWS, then it may make sense for the classroom resources to remain running after the class for participant exercise completion, doing bonus exercises and/or experimentation.
 
-If this is done, it makes sense to use the instructions in [EKS Stop, Start & Scheduling]({{< relref "../090_appendices/051_cluster_ops.html#eks-stop-start--scheduling" >}}) to only have the EKS nodes, Bastion host and runners available during business hours - or even limited business hours (e.g. M-F 12noon-5pm) across the timezones where participants normally reside.
+If this is done, it makes sense to use the instructions in [EKS Stop, Start & Scheduling]({{< relref "../090_appendices/097_cluster_ops.html#eks-stop-start--scheduling" >}}) to only have the EKS nodes, Bastion host and runners available during business hours - or even limited business hours (e.g. M-F 12noon-5pm) across the timezones where participants normally reside.
 
 ## Instruction and Demonstrations
 
@@ -71,11 +71,11 @@ If this is done, it makes sense to use the instructions in [EKS Stop, Start & Sc
 
 ## Tuning and Troubleshooting Guide
 
-The [Tuning and Troubleshooting Guide]({{< relref "./tuning_and_troubleshooting.md" >}}) has a special section for “Classrooms” which includes helpful tips for scaling compute resources for the classroom.
+The [Tuning and Troubleshooting Guide]({{< relref "../090_appendices/tuning_and_troubleshooting.md" >}}) has a special section for “Classrooms” which includes helpful tips for scaling compute resources for the classroom.
 
 ## Reporting Problems
 
-[How to Report Problems]({{< relref "./reporting_problems_or_features.md" >}}) after [Troubleshooting]({{< relref "./tuning_and_troubleshooting.md" >}})
+[How to Report Problems]({{< relref "../090_appendices/reporting_problems_or_features.md" >}}) after [Troubleshooting]({{< relref "../090_appendices/tuning_and_troubleshooting.md" >}})
 
 ## Instructor Led or Self-Paced
 

@@ -37,7 +37,7 @@ description: "See GitLab GitOps CD pull deployment and configuration management 
 
 {{< admonition type=quote title="Done By Instructor for Instructor-Led Courses" open=true >}}
 
-1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../010_introduction/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
+1. Logon the cluster administration machine => [Instructions for SSM Session Manager for EKS]({{< relref "../090_appendices/tuning_and_troubleshooting.md#using-the-eks-bastion-for-cluster-administration-with-kubectl-and-helm" >}})
 
 2. Run the following command to tail the kubernetes agent log while deployments are happening:
 

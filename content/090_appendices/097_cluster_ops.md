@@ -1,6 +1,6 @@
 ---
 title: "EKS Stop, Start & Scheduling"
-weight: 91
+weight: 97
 chapter: true
 draft: false
 description: "Stopping all EKS Cluster nodes manually or by scheduling stop and start."

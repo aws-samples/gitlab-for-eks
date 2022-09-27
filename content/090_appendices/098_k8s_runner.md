@@ -1,6 +1,6 @@
 ---
 title: "Install a Kubernetes Runner"
-weight: 92
+weight: 98
 chapter: true
 draft: false
 description: "Installing a runner into the EKS cluster."

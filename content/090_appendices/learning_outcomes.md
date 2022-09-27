@@ -8,7 +8,9 @@ description: "The learning outcomes that are designed into this workshop."
 
 {{< toc >}}
 
-## Full Learning Outcomes and Time Estimates
+## Who is This Page for?
+
+Thie page is primarily for self-paced learners and instructors for custom instructor led sessions. If you are attending a workshop co-hosted by AWS and GitLab, to understand what course sections will be covered, please see [In-Person AWS Workshops Syllabus and Audience]({{< relref "../010_introduction/in_person_aws_workshops_syllabus.md" >}})
 
 ### Baseline Information For Constructing Other Events
 These timing estimates are just for completing exercises and do not include breaks nor handling individual assistance.

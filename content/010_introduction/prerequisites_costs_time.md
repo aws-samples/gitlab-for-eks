@@ -7,13 +7,17 @@ description: "What You Need To Get Started, Cost Estimates, Time Estimates, Name
 #pre: '<i class="fa fa-film" aria-hidden="true"></i> '
 ---
 
+## Who is This Page for?
+
+Thie page is primarily for self-paced learners and instructors for custom instructor led sessions. If you are attending a workshop co-hosted by AWS and GitLab, to understand what course sections will be covered, please see [In-Person AWS Workshops Syllabus and Audience]({{< relref "./in_person_aws_workshops_syllabus.md" >}})
+
 ## Target Audience
 
 Please read [Who Will Enjoy This Workshop?]({{< relref "./who.md" >}})
 
 ## Instructor-Led Notes
 
-If you are the instructor for an instructor-led version of this workshop, please read [Instructor-Led Notes]({{< relref "./instructor_led_notes.md" >}})
+If you are the instructor for an instructor-led version of this workshop, please read [Instructor-Led Notes]({{< relref "../090_appendices/instructor_led_notes.md" >}})
 
 ## What You Must Bring
 
@@ -31,7 +35,7 @@ If infrastructure experience of deploying clusters is desired for participants, 
 
 ## Time Estimates
 
-Time estimates live with learning outcomes in [Learning Outcomes and Time Estimates]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#learning-outcomes-and-time-estimates" >}})
+Time estimates live with learning outcomes in [Learning Outcomes and Time Estimates]({{< relref "../090_appendices/learning_outcomes.md" >}})
 
 ## Cost Estimates
 
@@ -67,5 +71,5 @@ Based on us-east-1
 
 ### A Production Pattern That is Training Ready
 
-Please read [Reusable Patterns for Production and Training]({{< relref "../010_introduction/learning_outcomes_and_reusable_patterns.md#reusable-patterns-for-production-and-training" >}})
+Please read [Reusable Patterns for Production and Training]({{< relref "../010_introduction/reusable_patterns.md#reusable-patterns-for-production-and-training" >}})
 

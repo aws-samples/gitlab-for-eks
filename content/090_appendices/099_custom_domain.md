@@ -1,6 +1,6 @@
 ---
 title: "Reconfigure for Custom Domain"
-weight: 93
+weight: 99
 chapter: true
 draft: false
 description: "Use a custom domain with Auto DevOps and your cluster."
