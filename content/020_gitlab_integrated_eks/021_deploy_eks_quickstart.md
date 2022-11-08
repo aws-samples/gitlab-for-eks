@@ -35,6 +35,14 @@ The exercises, as written, assume that the cluster was prepared with the EKS Qui
 3. **Not a Target**: Learning the detailed ins and outs of deploying and configuring EKS.
    {{< /admonition >}}
 
+{{< admonition type=warning title="IMPORTANT: Time Saving Automation" open=true >}}
+
+A new CloudFormation template can simplify your setup to one template run rather than three to automate both the EKS Cluster and Runner Fleet creation. You must skip ahead and do the steps in Prep Lab 2.2 for creating 'classgroup' and retrieving the Runner Registration Token from that group. Then running this template results in completion of Prep Lab 2.1 and 2.2. Prep Lab 2.3 will still need to be done. [UltimateGitOpsEKSInfrastructure.cf.yml (Click for QuickLaunch in AWS)](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.us-west-2.amazonaws.com/gl-public-templates/UltimateGitOpsEKSInfrastructure.cf.yml)
+
+**This is the preferred way to deploy AWS Event Engine accounts when cohosted by AWS. AWS Event Engine deployments can only be done in us-east-1.**
+
+{{< /admonition >}}
+
 ## Deploy Official AWS EKS QuickStart with Spot Nodes
 
 > **Keyboard Time**: 5 mins, **Automation Wait Time**: 60 mins
@@ -51,17 +59,7 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
 1. Login to your target AWS account.
 
-2. In the EC2 Console for us-east-2, on the left navigation under 'Network & Security', *Click* **Key Pairs**
-
-   {{< admonition type=warning title="Warning" open=true >}}
-   While this exercise only ever uses SSM to access the Bastion host, the CloudFormation form always requires a Key Pair. You will not end up using this key pair, but it must be available for the stack to succeed.
-   {{< /admonition >}}
-
-3. In the upper right of the page, *Click* **Create key pair**
-
-4. In 'Name', *Type* **spot2az**
-
-5. The following links will set the parameters in the table for you. You may customize the parameters before submitting the template. **IMPORTANT** Cluster add-on settings for Hashicorp vault and others are not used unless these items are installed during the next template deployment - they can be ignored.
+2. The following links will set the parameters in the table for you. You may customize the parameters before submitting the template. **IMPORTANT** Cluster add-on settings for Hashicorp vault and others are not used unless these items are installed during the next template deployment - they can be ignored.
 
    - To Deploy to us-east-2 (in case us-east-1 is near account quota limits): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml&stackName=spot-t2-medium-v120-paramset&param_ConfigSetName=spot-t2-medium-v120-paramset&param_KubernetesVersion=1.21&param_NodeInstanceType2=t3.medium&param_NodeInstanceType3=t3.large&param_OnDemandPercentage=0)
    - To Deploy to us-east-1 (required for AWS “Event Engine” provisioned accounts): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml&stackName=spot-t2-medium-v120-paramset&param_ConfigSetName=spot-t2-medium-v120-paramset&param_KubernetesVersion=1.21&param_NodeInstanceType2=t3.medium&param_NodeInstanceType3=t3.large&param_OnDemandPercentage=0)  
@@ -72,7 +70,7 @@ In order to take advantage of spot support and specifying the Kubernetes version
    | Config set name                                              | ConfigSetName      | spot-t2-medium-v120-paramset                                 |                                                              |
    | Kubernetes version                                           | KubernetesVersion  | 1.21                                                         | GitLab integrated K8s clusters must use specific versions    |
    | Instance type 2                                              | NodeInstanceType2  | t3.medium                                                    | Instance type cannot match what is used for NodeInstanceType<br /> in the EKS Quick Start deployment (next template below) as that value<br /> is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
-   | Instance type 2                                              | NodeInstanceType3  | t3.large                                                     | Instance type cannot match what is used for NodeInstanceType in the EKS Quick Start deployment (next template below) as that value is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
+   | Instance type 3                                              | NodeInstanceType3  | t3.large                                                     | Instance type cannot match what is used for NodeInstanceType in the EKS Quick Start deployment (next template below) as that value is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
    | On-demand percentage                                         | OnDemandPercentage | 0                                                            |                                                              |
 
    **Important**: EKS Advanced Configuration 'Config sets' can be used to configure multiple deployments of the EKS Quick Start.
@@ -91,15 +89,14 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
 9. The following links will set the parameters in the table for you. You may customize the parameters before submitting the template.
 
-   - To Deploy to us-east-2 (in case us-east-1 is near account quota limits): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2azuseast2&param_AvailabilityZones=us-east-2b,us-east-2c&param_RemoteAccessCIDR=198.51.100.0/24&param_KeyPairName=spot2az&param_ConfigSetName=spot-t2-medium-v120-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast2&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)
-   - To Deploy to us-east-1 (required for AWS “Event Engine” provisioned accounts): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2azuseast1&param_AvailabilityZones=us-east-1b,us-east-1c&param_RemoteAccessCIDR=198.51.100.0/24&param_KeyPairName=spot2az&param_ConfigSetName=spot-t2-medium-v120-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast1&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)
+   - To Deploy to us-east-2 (in case us-east-1 is near account quota limits): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2azuseast2&param_AvailabilityZones=us-east-2b,us-east-2c&param_RemoteAccessCIDR=198.51.100.0/24&param_ConfigSetName=spot-t2-medium-v120-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast2&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)
+   - To Deploy to us-east-1 (required for AWS “Event Engine” provisioned accounts): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2azuseast1&param_AvailabilityZones=us-east-1b,us-east-1c&param_RemoteAccessCIDR=198.51.100.0/24&param_ConfigSetName=spot-t2-medium-v120-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast1&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)
 
    | CF GUI Name                  | CF Parameter Name  | Value                           |                                                              |
    | ---------------------------- | ------------------ | ------------------------------- | ------------------------------------------------------------ |
    | Stack name                   | N/A                | spot2azuseast2                  |                                                              |
    | Availability Zones           | AvailabilityZones  | us-east-2b,us-east-2c (example) |                                                              |
-   | Allowed external access CIDR | RemoteAccessCIDR   | 198.51.100.0/24                 | TEST-NET-2 IP address - only SSM is used for bastion         |
-   | SSH key name                 | KeyPairName        | spot2az                         |                                                              |
+   | Allowed external access CIDR | RemoteAccessCIDR   | 198.51.100.0/24                 | TEST-NET-2 IP address to fulfill required parameter - only SSM is actually used for bastion |
    | Config set name              | ConfigSetName      | spot-t2-medium-v120-paramset    | Must match Config set name in above 'Advanced Configuration Template' |
    | Instance type                | NodeInstanceType   | t2.medium                       |                                                              |
    | Number of Availability Zones | NumberOfAZs        | 2                               |                                                              |
@@ -109,7 +106,7 @@ In order to take advantage of spot support and specifying the Kubernetes version
    | Node group type              | NodeGroupType      | Unmanaged                       |                                                              |
    | Node instance family         | NodeInstanceFamily | Standard                        | Auto DevOps will not work on ARM clusters                    |
    | Cluster Autoscaler           | ClusterAutoScaler  | Enabled                         |                                                              |
-
+   
 10. Verify the above values - **including any name substitutions you have elected to make.** 
 
 11. At 'the bottom of the page' *Check* **I acknowledge that AWS CloudFormation might create IAM resources with custom names.**
