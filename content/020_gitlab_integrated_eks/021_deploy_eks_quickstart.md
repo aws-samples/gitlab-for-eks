@@ -99,22 +99,19 @@ In order to take advantage of spot support and specifying the Kubernetes version
    | ---------------------------------------------------------- | ------------------------- | ------------------------------- | ------------------------------------------------------------ |
    | Stack name                                                 | N/A                       | spot2az                         |                                                              |
    | Availability Zones                                         | AvailabilityZones         | us-east-2b,us-east-2c (example) |                                                              |
-   | Allowed external access CIDR                               | RemoteAccessCIDR          | 198.51.100.0/24                 | TEST-NET-2 IP address - only SSM is used for bastion         |
    | Allowed external access CIDR                               | RemoteAccessCIDR          | disabled-onlyssmaccess          |                                                              |
-   | SSH key name                                               | KeyPairName               | spot2az                         |                                                              |
    | Config set name                                            | ConfigSetName             | spot-t2-medium-v120-paramset    | Must match Config set name in above 'Advanced Configuration Template' |
-   | Instance type                                              | NodeInstanceType          | t2.medium                       |                                                              |
    | Number of Availability Zones                               | NumberOfAZs               | 2                               |                                                              |
-   | EKS cluster name                                           | EKSClusterName            | spot2azuseast2                  |                                                              |
+   | Amazon EC2 configuration: On-demand percentage             | OnDemandBastionPercentage |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
+   | EKS cluster name                                           | EKSClusterName            | spot2az                         |                                                              |
+   | Kubernetes Version                                         | KubernetesVersion         |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
+   | Instance type                                              | NodeInstanceType          | t2.medium                       |                                                              |
    | Number of nodes                                            | NumberOfNodes             | 2                               |                                                              |
    | Maximum number of nodes                                    | MaxNumberOfNodes          | 3                               | **IMPORTANT Instructor-Led:** Adjust for class size, about 1 node per 5 students. |
    | Node group type                                            | NodeGroupType             | Unmanaged                       |                                                              |
+   | Default EKS node group configuration: On-demand percentage | OnDemandPercentage        |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
    | Node instance family                                       | NodeInstanceFamily        | Standard                        | Auto DevOps will not work on ARM clusters                    |
    | Cluster Autoscaler                                         | ClusterAutoScaler         | Enabled                         |                                                              |
-   | Kubernetes Version                                         | KubernetesVersion         |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
-   | Amazon EC2 configuration: On-demand percentage             | OnDemandBastionPercentage |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
-   | Default EKS node group configuration: On-demand percentage | OnDemandPercentage        |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
-   |                                                            |                           |                                 |                                                              |
 
 10. Verify the above values - **including any name substitutions you have elected to make.** 
 
