@@ -51,17 +51,7 @@ In order to take advantage of spot support and specifying the Kubernetes version
 
 1. Login to your target AWS account.
 
-2. In the EC2 Console for us-east-2, on the left navigation under 'Network & Security', *Click* **Key Pairs**
-
-   {{< admonition type=warning title="Warning" open=true >}}
-   While this exercise only ever uses SSM to access the Bastion host, the CloudFormation form always requires a Key Pair. You will not end up using this key pair, but it must be available for the stack to succeed.
-   {{< /admonition >}}
-
-3. In the upper right of the page, *Click* **Create key pair**
-
-4. In 'Name', *Type* **spot2az**
-
-5. The following links will set the parameters in the table for you. You may customize the parameters before submitting the template. **IMPORTANT** Cluster add-on settings for Hashicorp vault and others are not used unless these items are installed during the next template deployment - they can be ignored.
+2. The following links will set the parameters in the table for you. You may customize the parameters before submitting the template. **IMPORTANT** Cluster add-on settings for Hashicorp vault and others are not used unless these items are installed during the next template deployment - they can be ignored.
 
    - To Deploy to us-east-2 (in case us-east-1 is near account quota limits): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml&stackName=spot-t2-medium-paramset&param_OnDemandBastionPercentage=0&param_ConfigSetName=spot-t2-medium-paramset&param_KubernetesVersion=1.21&param_NodeInstanceType2=t3.medium&param_NodeInstanceType3=t3.large&param_OnDemandPercentage=0)
    - To Deploy to us-east-1 (required for AWS “Event Engine” provisioned accounts): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml&stackName=spot-t2-medium-paramset&param_OnDemandBastionPercentage=0&param_ConfigSetName=spot-t2-medium-paramset&param_KubernetesVersion=1.21&param_NodeInstanceType2=t3.medium&param_NodeInstanceType3=t3.large&param_OnDemandPercentage=0)  
