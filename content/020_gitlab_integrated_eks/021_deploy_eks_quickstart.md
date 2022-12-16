@@ -95,23 +95,27 @@ In order to take advantage of spot support and specifying the Kubernetes version
    - To Deploy to us-east-2 (in case us-east-1 is near account quota limits): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2az&param_AvailabilityZones=us-east-2b,us-east-2c&param_RemoteAccessCIDR=disabled-onlyssmaccess&param_ConfigSetName=spot-t2-medium-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast2&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)
    - To Deploy to us-east-1 (required for AWS “Event Engine” provisioned accounts): [Click this link to deploy the Advanced Configuration Template with the below parameters preconfigured](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml&stackName=spot2az&param_AvailabilityZones=us-east-1b,us-east-1c&param_RemoteAccessCIDR=disabled-onlyssmaccess&param_ConfigSetName=spot-t2-medium-paramset&param_NodeInstanceType=t2.medium&param_EKSClusterName=spot2azuseast1&param_NumberOfAZs=2&param_NumberOfNodes=2&param_MaxNumberOfNodes=3&param_NodeGroupType=Unmanaged&param_NodeInstanceFamily=Standard&param_ClusterAutoScaler=Enabled)
 
-   | CF GUI Name                  | CF Parameter Name  | Value                           |                                                              |
-   | ---------------------------- | ------------------ | ------------------------------- | ------------------------------------------------------------ |
-   | Stack name                   | N/A                | spot2az                         |                                                              |
-   | Availability Zones           | AvailabilityZones  | us-east-2b,us-east-2c (example) |                                                              |
-   | Allowed external access CIDR | RemoteAccessCIDR   | 198.51.100.0/24                 | TEST-NET-2 IP address - only SSM is used for bastion         |
-   | Allowed external access CIDR | RemoteAccessCIDR   | disabled-onlyssmaccess          |                                                              |
-   | SSH key name                 | KeyPairName        | spot2az                         |                                                              |
-   | Config set name              | ConfigSetName      | spot-t2-medium-v120-paramset    | Must match Config set name in above 'Advanced Configuration Template' |
-   | Instance type                | NodeInstanceType   | t2.medium                       |                                                              |
-   | Number of Availability Zones | NumberOfAZs        | 2                               |                                                              |
-   | EKS cluster name             | EKSClusterName     | spot2azuseast2                  |                                                              |
-   | Number of nodes              | NumberOfNodes      | 2                               |                                                              |
-   | Maximum number of nodes      | MaxNumberOfNodes   | 3                               | **IMPORTANT Instructor-Led:** Adjust for class size, about 1 node per 5 students. |
-   | Node group type              | NodeGroupType      | Unmanaged                       |                                                              |
-   | Node instance family         | NodeInstanceFamily | Standard                        | Auto DevOps will not work on ARM clusters                    |
-   | Cluster Autoscaler           | ClusterAutoScaler  | Enabled                         |                                                              |
-   
+   | CF GUI Name                                                | CF Parameter Name         | Value                           |                                                              |
+   | ---------------------------------------------------------- | ------------------------- | ------------------------------- | ------------------------------------------------------------ |
+   | Stack name                                                 | N/A                       | spot2az                         |                                                              |
+   | Availability Zones                                         | AvailabilityZones         | us-east-2b,us-east-2c (example) |                                                              |
+   | Allowed external access CIDR                               | RemoteAccessCIDR          | 198.51.100.0/24                 | TEST-NET-2 IP address - only SSM is used for bastion         |
+   | Allowed external access CIDR                               | RemoteAccessCIDR          | disabled-onlyssmaccess          |                                                              |
+   | SSH key name                                               | KeyPairName               | spot2az                         |                                                              |
+   | Config set name                                            | ConfigSetName             | spot-t2-medium-v120-paramset    | Must match Config set name in above 'Advanced Configuration Template' |
+   | Instance type                                              | NodeInstanceType          | t2.medium                       |                                                              |
+   | Number of Availability Zones                               | NumberOfAZs               | 2                               |                                                              |
+   | EKS cluster name                                           | EKSClusterName            | spot2azuseast2                  |                                                              |
+   | Number of nodes                                            | NumberOfNodes             | 2                               |                                                              |
+   | Maximum number of nodes                                    | MaxNumberOfNodes          | 3                               | **IMPORTANT Instructor-Led:** Adjust for class size, about 1 node per 5 students. |
+   | Node group type                                            | NodeGroupType             | Unmanaged                       |                                                              |
+   | Node instance family                                       | NodeInstanceFamily        | Standard                        | Auto DevOps will not work on ARM clusters                    |
+   | Cluster Autoscaler                                         | ClusterAutoScaler         | Enabled                         |                                                              |
+   | Kubernetes Version                                         | KubernetesVersion         |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
+   | Amazon EC2 configuration: On-demand percentage             | OnDemandBastionPercentage |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
+   | Default EKS node group configuration: On-demand percentage | OnDemandPercentage        |                                 | **Ignored and overidden by ‘Advanced Configuration Template’** |
+   |                                                            |                           |                                 |                                                              |
+
 10. Verify the above values - **including any name substitutions you have elected to make.** 
 
 11. At 'the bottom of the page' *Check* **I acknowledge that AWS CloudFormation might create IAM resources with custom names.**
