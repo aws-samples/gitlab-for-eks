@@ -1,0 +1,109 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description:
+  This AWS CloudFormation Template configures an EKS Cluster and GitLab runners
+  for the Ultimate GitOps Workshop on AWS EKS.
+  There is additional manual setup steps required to integrate the cluster to GitLab.
+  For AWS Event Engine, must be deployed to us-east-1
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      -
+        Label:
+          default: "Details for Runner Fleet"
+        Parameters:
+          - 3GITLABRunnerInstanceURL
+          - 3GITLABRunnerRegTokenList
+          - 4ASGDesiredCapacity
+      -
+        Label:
+          default: "Details for EKS"
+        Parameters:
+          - AvailabilityZones
+    ParameterLabels:
+      3GITLABRunnerInstanceURL:
+        default: "GitLab Instance URL (generally gitlab.com)"
+      3GITLABRunnerRegTokenList:
+        default: "The runner registration token for the precreated 'classgroup'"
+      4ASGDesiredCapacity:
+        default: "Specify the number of attendees divided by 5. So for 20 attendees 20/5 = 4."
+      AvailabilityZones:
+        Description: Availability zones for EKS. Must be in us-east-1 for AWS Event Engine.
+Parameters:
+  3GITLABRunnerInstanceURL:
+    Description: >
+      The url of the instance that the runner will register (must be reachable from runner instance on port 443 with return conversations).
+    Type: String
+    Default: https://gitlab.com/
+  3GITLABRunnerRegTokenList:
+    Description: One or more runner tokens to register (semicolon delimited)
+    Type: String
+    NoEcho: true
+    MinLength: 5
+    ConstraintDescription: You must provide at least one runner registration token.
+  4ASGDesiredCapacity:
+    Description: >
+      Specify the number of attendees divided by 5. So for 20 attendees 20/5 = 4.
+    Type: Number
+    Default: 5
+  AvailabilityZones:
+    Description: Availability zones for EKS. Must be in us-east-1 for Event Engine.
+    Type: List<AWS::EC2::AvailabilityZone::Name>
+    Default: us-east-1b,us-east-1c
+Resources:
+  EKSSetAdvancedParameters:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL:
+        https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml
+      Parameters:
+        ConfigSetName: spotT2Mediumv120paramset
+        KubernetesVersion: 1.21
+        NodeInstanceType2: t3.medium
+        NodeInstanceType3: t3.large
+        OnDemandPercentage: 0
+  EKSCluster:
+    DependsOn: EKSSetAdvancedParameters
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL:
+        https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-entrypoint-new-vpc.template.yaml
+      Parameters:
+        AvailabilityZones: !Join [ ',', !Ref 'AvailabilityZones' ]
+        RemoteAccessCIDR: 198.51.100.0/24
+        ConfigSetName: spotT2Mediumv120paramset
+        NodeInstanceType: t2.medium
+        EKSClusterName: spot2azuseast1
+        NumberOfAZs: 2
+        NumberOfNodes: 2
+        MaxNumberOfNodes: 3
+        NodeGroupType: Unmanaged
+        NodeInstanceFamily: Standard
+        ClusterAutoScaler: Enabled
+  GitlabRunnerFleet:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL:
+        https://gl-public-templates.s3.amazonaws.com/cfn/v1.5.0-beta1/GitLabElasticScalingRunner.cf.yml
+      Parameters:
+        1OSPeggedAMIID: AlwaysUseLatest
+        1OSInstanceOSPlatform: Linux
+        1OSPatchScope: NoPatching
+        3GITLABRunnerInstanceURL: !Ref 3GITLABRunnerInstanceURL
+        3GITLABRunnerRegTokenList: !Ref 3GITLABRunnerRegTokenList
+        3INSTConfigurationScript: https://gitlab.com/guided-explorations/aws/gitlab-runner-autoscaling-aws-asg/-/raw/v1.4.9-alpha14/runner_configs/amazon-linux-2-docker.sh
+        3GITLABRunnerTagList: AWS-Workshop
+        3INSTEbsVolumeSize: 30
+        4ASGDesiredCapacity: !Ref 4ASGDesiredCapacity
+        #4ASGScheduledShutdownCron: !Ref 4ASGScheduledShutdownCron
+        #4ASGScheduledStartupCron: !Ref 4ASGScheduledStartupCron
+        4ASGSpecifyVPC: DefaultVPC
+        5ASGSelfMonitorTerminationInterval: 1 #Should always be the lowest possible value for spot
+        5ASGAutoScalingEnabled: false
+        5ASGInstanceType1: t3.medium
+        5ASGInstanceType2: t3.large
+        5ASGInstanceType3: t2.medium
+        5ASGInstanceType4: t2.large
+        5SPOTOnDemandPercentageAboveBaseCapacity: 0
+        8DBGKeypairName: ""
+        9AWSRetrieveLatestAWSOSAmiIdFromSSM: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+Outputs: {}
