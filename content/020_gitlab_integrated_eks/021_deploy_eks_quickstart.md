@@ -28,6 +28,12 @@ The exercises, as written, assume that the cluster was prepared with the EKS Qui
 
 {{< admonition type=abstract title="Target Outcomes" open=true >}}
 
+{{< admonition type=warning title="IMPORTANT: Time Saving Automation" open=true >}}
+
+A new CloudFormation template can simplify your setup to one template run rather than three to automate both the EKS Cluster and Runner Fleet creation. You must skip ahead and do the steps in Prep Lab 2.2 for creating 'classgroup' and retrieving the Runner Registration Token from that group. Then running this template results in completion of Prep Lab 2.1 and 2.2. Prep Lab 2.3 will still need to be done. [UltimateGitOpsEKSInfrastructure.cf.yml (Click for QuickLaunch in AWS)](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.us-west-2.amazonaws.com/gl-public-templates/UltimateGitOpsEKSInfrastructure.cf.yml)
+
+{{< /admonition >}}
+
 1. Create an EKS Cluster that is very cost optimized for training scenarios.
 
 2. Do so very quickly by leveraging AWS official Managed Infrastructure as Code known as “AWS Quick Starts”.
@@ -62,7 +68,7 @@ In order to take advantage of spot support and specifying the Kubernetes version
    | Config set name                                              | ConfigSetName             | spot-t2-medium-paramset                                      |                                                              |
    | Kubernetes version                                           | KubernetesVersion         | 1.21                                                         | GitLab integrated K8s clusters must use specific versions    |
    | Instance type 2                                              | NodeInstanceType2         | t3.medium                                                    | Instance type cannot match what is used for NodeInstanceType<br /> in the EKS Quick Start deployment (next template below) as that value<br /> is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
-   | Instance type 2                                              | NodeInstanceType3         | t3.large                                                     | Instance type cannot match what is used for NodeInstanceType in the EKS Quick Start deployment (next template below) as that value is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
+   | Instance type 3                                              | NodeInstanceType3         | t3.large                                                     | Instance type cannot match what is used for NodeInstanceType in the EKS Quick Start deployment (next template below) as that value is used for the first spot type when spot is configured and all NodeInstanceTypes in a spot configuration must be unique from each other. |
    | Default EKS node group configuration: On-demand percentage   | OnDemandPercentage        | 0                                                            |                                                              |
    | Bastion configuration: On-demand percentage                  | OnDemandBastionPercentage | 0                                                            | Sets bastion host to be spot.                                |
 
