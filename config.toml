@@ -42,7 +42,7 @@ autoHeadingID = true
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "mine"
   custom_css = [ "css/highlights.css", "css/admonition.css"]
-  siteversion = 'v1.3.2'
+  siteversion = 'v1.3.3'
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
