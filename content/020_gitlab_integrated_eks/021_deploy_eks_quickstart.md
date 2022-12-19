@@ -41,6 +41,14 @@ A new CloudFormation template can simplify your setup to one template run rather
 3. **Not a Target**: Learning the detailed ins and outs of deploying and configuring EKS.
    {{< /admonition >}}
 
+{{< admonition type=warning title="IMPORTANT: Time Saving Automation" open=true >}}
+
+A new CloudFormation template can simplify your setup to one template run rather than three to automate both the EKS Cluster and Runner Fleet creation. You must skip ahead and do the steps in Prep Lab 2.2 for creating 'classgroup' and retrieving the Runner Registration Token from that group. Then running this template results in completion of Prep Lab 2.1 and 2.2. Prep Lab 2.3 will still need to be done. [UltimateGitOpsEKSInfrastructure.cf.yml (Click for QuickLaunch in AWS)](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https://s3.us-west-2.amazonaws.com/gl-public-templates/UltimateGitOpsEKSInfrastructure.cf.yml)
+
+**This is the preferred way to deploy AWS Event Engine accounts when cohosted by AWS. AWS Event Engine deployments can only be done in us-east-1.**
+
+{{< /admonition >}}
+
 ## Deploy Official AWS EKS QuickStart with Spot Nodes
 
 > **Keyboard Time**: 5 mins, **Automation Wait Time**: 60 mins
