@@ -109,6 +109,8 @@ This source project followed several specific principles that makes it this easy
 For the next steps you will create a Project Deployment Token so that the Environment Deployment project can read the container image of this Application Build project. If you have a paid GitLab license, a project or group level ‘Access Token’ can give the same access to all container registries in a group heirarchy. This works well if there is high trust between all Application Build and Environment Deployment projects as there are fewer credentials granted at an appropriate level.
 {{< /admonition >}}
 
+![registry_read_token](images/registry_read_token.png)
+
 1. While in 'yourpersonalgroup/hello-world' in the left navigation, *Click* **Settings => Repository** (button) 
 
 2. Next to ‘Deploy tokens’ *Click* **Expand**

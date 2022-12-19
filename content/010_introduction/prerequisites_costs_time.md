@@ -66,7 +66,7 @@ Based on us-east-1
 | Top Level Group (Can be a GitLab.com Namespace)   | Classgroup                                                   |                           |
 | Cluster management group and project path         | classgroup/cluster-management                                |                           |
 | Personal group                                    | yourpersonalgroup (subgroup of classgroup)                   |                           |
-| agent path segment (which is also the agent name) | spot2azuseast2-agent1<br />**Note:** does not have to match EKS name like it does here |                           |
+| agent path segment (which is also the agent name) | spot2az-agent1<br />**Note:** does not have to match EKS name like it does here |                           |
 | Cluster Auto DevOps domain with SSL               | <mark>\<the Load Balancer IP\></mark>.nip.io                 |                           |
 
 ### A Production Pattern That is Training Ready

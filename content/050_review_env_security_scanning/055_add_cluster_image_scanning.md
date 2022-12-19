@@ -93,7 +93,7 @@ Until [361792](https://gitlab.com/gitlab-org/gitlab/-/issues/361972) is resolved
 
 2. To see scanning results, while in 'classgroup/cluster-management’
 
-3. *Click* **Infrastructure => Kubernetes clusters => spot2azuseast2-agent1 => Security** (Tab)
+3. *Click* **Infrastructure => Kubernetes clusters => spot2az-agent1 => Security** (Tab)
 
 4. Under ‘Status’ *Click* **[to expand the drop down]** and then *Click* **All statuses**
 

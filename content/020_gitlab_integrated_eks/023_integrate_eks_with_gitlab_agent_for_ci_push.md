@@ -58,27 +58,23 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 
    3. Near the top right of the page *Click* **Web IDE** (button)
 
-   4. After opening in the Web IDE, add a directory to 'classgroup/cluster-management' *Locate* the word **Edit**
+   4. After opening in the Web IDE, *Locate* the word **Edit**
 
-   5. Next to ‘Edit’, *Click* the <mark class="hlgreen">folder with a plus sign</mark> icon
-      in the path specify `.gitlab/agents/spot2azuseast2-agent1` and *Click* **Create directory**.
+      > In the next step, you do NOT have to recreate the directory - all missing subdirectories will be automatically created.
+   
+5. Next to ‘Edit’, *Click* the <mark class="hlgreen">file with a plus sign</mark> icon
+      in the path specify `.gitlab/agents/spot2az-agent1/config.yaml` and *Click* **Create file**.
 
-   6. In the Web IDE file selector, *Click* the new leaf directory level '**spot2azuseast2-agent1**'
-
-   7. *Click* <mark class="hlgreen">the three dots to the right of the directory name</mark> and *Click* **New file**
-
-   8. In the popup, for 'Name' *Type* **config.yaml** (do not abbreviate to `.yml`) and *Click* **Create file**
-
-   9. IMPORTANT: Verify that your full file path is `.gitlab/agents/spot2azuseast2-agent1/config.yaml` - the agent registration will not show the option to register `spot2azuseast2` if the path is not exactly like this.
+   6. In the Web IDE file selector, *Click* the new file '**config.yaml**'
 
    10. Place these contents in the file - substitute your actual class group name for the text `_replace_with_path_to_classgroup_` for instance for a group https://gitlab.com/awesomeclassgroup you would specify only `awesomeclassgroup`.
 
       >  Dispite the `id:` yaml parameter name this is the text group path, not the group id.
 
       ```
-      #id: = Full group path without instance url 
+   #id: = Full group path without instance url 
       # and without leading or trailing slashes.
-      # for https://gitlab.com/this/is/an/example, id would be:
+   # for https://gitlab.com/this/is/an/example, id would be:
       # - id: this/is/an/example 
       
       ci_access:
@@ -89,9 +85,9 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
         logging:
           level: debug
       ```
-
+   
       **Important**: The above configuration represents Traditional Runner CD Push access to every project below the root level group <mark class="hlgreen">classgroup</mark> the scope of projects can be made tighter with more group levels by continuing to specify a GitLab group hiearchy like <mark class="hlgreen">classgroup/mysubgroup</mark> Also use the <mark class="hlgreen">projects:</mark> key word instead of <mark class="hlgreen">groups:</mark> if scoping right to a project. Documentation: [Authorize the agent](https://docs.gitlab.com/ee/user/clusters/agent/ci_cd_tunnel.html#authorize-the-agent).
-
+   
    11. *Click* **Create commit...**
 
    12. **IMPORTANT:** *Select* **Commit to master branch** (non-default selection)
@@ -106,7 +102,7 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 
    16. Click **Connect a cluster** (button). (DO NOT Click the down arrow next to the button)
 
-   17. In the field **Select an agent or enter a new name to create new** Click the dropdown list arrow, select <mark class="hlgreen">spot2azuseast2-agent1</mark> and *Click* **Register** (button)
+   17. In the field **Select an agent or enter a new name to create new** Click the dropdown list arrow, select <mark class="hlgreen">spot2az-agent1</mark> and *Click* **Register** (button)
 
    18. GitLab generates a registration token for this agent. Securely store this secret token. You need it to install the agent in your cluster and to [update the agent](https://docs.gitlab.com/ee/user/clusters/agent/install/#update-the-agent-version) to another version.
 
@@ -135,7 +131,7 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
 
    6. Refresh the page.
 
-   7. Under 'Agents' your agent named <mark class="hlgreen">spot2azuseast2-agent1</mark> (or whatever your actual name is) should have 'Connected' in the 'Connection status' column. If it does not show connected yet, keep refreshing until it does.
+   7. Under 'Agents' your agent named <mark class="hlgreen">spot2az-agent1</mark> (or whatever your actual name is) should have 'Connected' in the 'Connection status' column. If it does not show connected yet, keep refreshing until it does.
 
       > KUBE_CONTEXT and KUBE_NAMESPACE are used for both agent registration and agent usage in Auto DevOps - therefore we are configuring it at the top group level for which we would like the agent to be usable for Auto DevOps for all downbound groups and projects.
 
@@ -153,7 +149,7 @@ This guide uses the **GitLab CI/CD workflow** and the **Single project** approac
    
        | Key                            | Value                                                        | Protect | Mask |
        | ------------------------------ | ------------------------------------------------------------ | ------- | ---- |
-       | KUBE_CONTEXT                   | <mark class="hlgreen">classgroup</mark>/cluster-management:spot2azuseast2-agent1 | No      | No   |
+       | KUBE_CONTEXT                   | <mark class="hlgreen">classgroup</mark>/cluster-management:spot2az-agent1 | No      | No   |
        | KUBE_NAMESPACE                 | $CI_PROJECT_NAME-$CI_PROJECT_ID                              | No      | No   |
        | AUTO_DEPLOY_IMAGE_VERSION      | v2.25.0                                                      | No      | No   |
        | DAST_AUTO_DEPLOY_IMAGE_VERSION | v2.25.0                                                      | No      | No   |
@@ -242,13 +238,13 @@ Production application setups would generally not use this specific Ingress inst
 
 
     ```
-    error: no context exists with the name: "gitlab-learn-labs/gitops/classgroup-abc:spot2azuseast2-agent1"
+    error: no context exists with the name: "gitlab-learn-labs/gitops/classgroup-abc:spot2az-agent1"
     ```
-
+    
     Can be caused by:
-
-    The agent path is not correct in the classgroup level variable **KUBE_CONTEXT** (or the variable was not set), notice in this case it leaves out the name of the project “cluster-management”, the correct path would be gitlab-learn-labs/gitops/classgroup-abc**/cluster-management**:spot2azuseast2-agent1
-
+    
+    The agent path is not correct in the classgroup level variable **KUBE_CONTEXT** (or the variable was not set), notice in this case it leaves out the name of the project “cluster-management”, the correct path would be gitlab-learn-labs/gitops/classgroup-abc**/cluster-management**:spot2az-agent1
+    
     {{< /admonition >}}
 
 17. When the job “diff” has completed successfully, from the pipeline view, on the job “Sync”, *Click* **[the play icon]**
