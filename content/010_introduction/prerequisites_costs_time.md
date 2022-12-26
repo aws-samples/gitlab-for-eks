@@ -44,12 +44,12 @@ Based on us-east-1
 | Item                                                | Estimated Cost          | Fixed or <br />Varaible | Reduce or Eliminate                                    |
 | --------------------------------------------------- | ----------------------- | ---------------------- | ------------------------------------------------------ |
 | K8s Node Instances (2 x t3.medium spot)             | $0.03/hr (0.014/hr x 2) | Variable               | Cost = $0 by Scaling EKS Nodes to Zero                       |
-| Bastion Host (1 x t2.micro)                         | $0.05/hr                | Variable               | Cost = $0 by Scaling EKS Nodes to Zero                       |
+| Bastion Host (1 x t2.micro spot)                    | $0.0035/hr          | Variable               | Cost = $0 by Scaling EKS Nodes to Zero                       |
 | EKS Control Plane                                   | $0.10/hr ($73/Mo)       | Fixed                  | Cannot be turned off, only destroying elimintates cost |
 | ELB for Ingress Controller (Auto DevOps Requirement) | 0.025/hr ($18/Mo)       | Fixed                  | Cannot be turned off, only destroying elimintates cost |
 
 - Total Fixed Costs Whether Scaled to 0 or not: 0.35/hr ($25/wk, $101/mo)
-- Variable Costs While Turned on (for two t3.medium spot instances): $0.08/hr
+- Variable Costs While Turned on (for two t3.medium spot instances + t2.micro spot bastion): $0.0835/hr
 - The EKS Quick Start and Ingress controller make teardown and setup relatively easy if avoiding the fixed costs between periods of usage is necessary.
 
 ## Values to Substitute Throughout Exercises
@@ -66,7 +66,7 @@ Based on us-east-1
 | Top Level Group (Can be a GitLab.com Namespace)   | Classgroup                                                   |                           |
 | Cluster management group and project path         | classgroup/cluster-management                                |                           |
 | Personal group                                    | yourpersonalgroup (subgroup of classgroup)                   |                           |
-| agent path segment (which is also the agent name) | spot2azuseast2-agent1<br />**Note:** does not have to match EKS name like it does here |                           |
+| agent path segment (which is also the agent name) | spot2az-agent1<br />**Note:** does not have to match EKS name like it does here |                           |
 | Cluster Auto DevOps domain with SSL               | <mark>\<the Load Balancer IP\></mark>.nip.io                 |                           |
 
 ### A Production Pattern That is Training Ready

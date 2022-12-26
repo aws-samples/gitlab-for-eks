@@ -56,11 +56,12 @@ Resources:
       TemplateURL:
         https://s3.amazonaws.com/aws-quickstart/quickstart-amazon-eks/templates/amazon-eks-advanced-configuration.template.yaml
       Parameters:
-        ConfigSetName: spotT2Mediumv120paramset
+        ConfigSetName: spotT2Mediumparamset
         KubernetesVersion: 1.21
         NodeInstanceType2: t3.medium
         NodeInstanceType3: t3.large
         OnDemandPercentage: 0
+        OnDemandBastionPercentage: 0
   EKSCluster:
     DependsOn: EKSSetAdvancedParameters
     Type: 'AWS::CloudFormation::Stack'
@@ -70,7 +71,7 @@ Resources:
       Parameters:
         AvailabilityZones: !Join [ ',', !Ref 'AvailabilityZones' ]
         RemoteAccessCIDR: 198.51.100.0/24
-        ConfigSetName: spotT2Mediumv120paramset
+        ConfigSetName: spotT2Mediumparamset
         NodeInstanceType: t2.medium
         EKSClusterName: spot2azuseast1
         NumberOfAZs: 2

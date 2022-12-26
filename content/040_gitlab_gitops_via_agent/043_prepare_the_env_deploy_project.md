@@ -66,6 +66,8 @@ Projects that are used by the GitLab Agent must be public when the agent registr
 
 {{< /admonition >}}
 
+![project_write_token](images/project_write_token.png)
+
 {{< admonition type=pick title="Token Option 1: Using a Project Access Token (Paid Licenses Only Feature)" open=true >}}
 
 **IMPORTANT**: Requires a paid GitLab license, even an ultimate trial will not have the Project Level Access Token Feature. The project menu choice **Settings => Access Tokens** will not exist. You will need to use “Token Option 2” below.
